@@ -1,31 +1,124 @@
-# travel-guides
+<div align="center">
 
-中国旅行攻略静态网页合集，纯 HTML + 图片，无任何构建依赖，浏览器直接打开即可浏览。
+# 中国旅行指南 · travel-guides
 
-## 包含站点
+### 稻城亚丁　·　漠河　·　新疆
 
-| 目的地 | 目录 | 页面 |
-| --- | --- | --- |
-| 稻城亚丁 | `daocheng-yading/` | `index.html` |
-| 漠河 | `mohe-travel/` | `index.html` |
-| 新疆 | `xinjiang-travel/` | `index.html` |
+三份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
 
-每个站点结构相同：`index.html` 为页面，`assets/` 存放图片等资源，全部使用相对路径引用。
+纯 HTML / CSS / JavaScript 单页　·　零依赖　·　零构建　·　浏览器打开即用
 
-## 本地预览
+![type](https://img.shields.io/badge/type-静态网页-444?logo=html5&logoColor=white)
+![dependencies](https://img.shields.io/badge/dependencies-无-success)
+![build](https://img.shields.io/badge/build-不需要-success)
+![language](https://img.shields.io/badge/language-中文-red)
+![pages](https://img.shields.io/badge/GitHub-Pages-222?logo=github)
 
-直接用浏览器打开对应目录下的 `index.html` 即可；也可以在仓库根目录启动任意静态服务器，例如：
+</div>
+
+---
+
+## 目的地
+
+### 1. 稻城亚丁
+
+> 蓝色星球上的最后一片净土 · 三神山与三海子的雪域秘境
+
+[![稻城亚丁](daocheng-yading/assets/hero.jpg)](https://ttlook111.github.io/travel-guides/daocheng-yading/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 四川甘孜 · 香格里拉镇，国家 5A 级景区 |
+| 建议时长 | 景区内 2 天；长线最高点 4700 m · 五色海 |
+| 最佳窗口 | 9 月下旬 – 10 月上旬 |
+| 攻略涵盖 | 先到香格里拉镇，再分「短线 / 长线」进山；四季景观对比；门票交通、高原反应与装备清单 |
+
+[:globe_with_meridians: 在线预览](https://ttlook111.github.io/travel-guides/daocheng-yading/)　·　[:file_folder: 源码目录](daocheng-yading/)
+
+---
+
+### 2. 漠河
+
+> 一路向北 · 漠河与大兴安岭
+
+[![漠河](mohe-travel/assets/hero_aurora.jpg)](https://ttlook111.github.io/travel-guides/mohe-travel/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 中国最北 · 大兴安岭北麓，先到哈尔滨再一路向北 |
+| 路线 | 3 天 2 晚 · 寻北经典线 |
+| 最佳季节 | 首选 9 月中下旬 – 10 月初金秋；12 – 2 月极致冰雪、极光概率相对更高；6 – 8 月避暑与极昼 |
+| 攻略涵盖 | 漠河与大兴安岭的关系、交通方式、3 天 2 晚经典线、四季四种模样、最佳月份选择、出发前提醒 |
+
+[:globe_with_meridians: 在线预览](https://ttlook111.github.io/travel-guides/mohe-travel/)　·　[:file_folder: 源码目录](mohe-travel/)
+
+---
+
+### 3. 新疆
+
+> 新疆不是一个景点，而是一整个大陆的缩影 —— 什么时候去，决定了你能看见什么
+
+[![新疆](xinjiang-travel/assets/hero-sayram-lake.jpg)](https://ttlook111.github.io/travel-guides/xinjiang-travel/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 区域格局 | 北疆看风景，南疆看人文 |
+| 最佳时间 | 如果只能选一个时间：**9 月**；十二个月对应四种完全不同的新疆 |
+| 路线规划 | 第一次去按六步走；三条经典环线，对号入座 |
+| 攻略涵盖 | 南北疆差异、十二个月季节历、最佳月份对比、三条经典环线、行前关键提醒 |
+
+[:globe_with_meridians: 在线预览](https://ttlook111.github.io/travel-guides/xinjiang-travel/)　·　[:file_folder: 源码目录](xinjiang-travel/)
+
+---
+
+## 仓库结构
+
+```text
+travel-guides/
+├── daocheng-yading/        稻城亚丁攻略
+│   ├── index.html
+│   └── assets/             页面配图
+├── mohe-travel/            漠河攻略
+│   ├── index.html
+│   └── assets/
+├── xinjiang-travel/        新疆攻略
+│   ├── index.html
+│   └── assets/
+├── .gitignore
+└── README.md
+```
+
+## 本地浏览
+
+**方式一：** 直接用浏览器打开对应目录下的 `index.html`，无需任何环境。
+
+**方式二：** 在仓库根目录启动一个静态服务器：
 
 ```bash
 python -m http.server 8000
 ```
 
-然后访问 http://localhost:8000/daocheng-yading/ 等路径。
+然后访问：
 
-## GitHub Pages 部署
+- http://localhost:8000/daocheng-yading/
+- http://localhost:8000/mohe-travel/
+- http://localhost:8000/xinjiang-travel/
 
-仓库 Settings → Pages → Source 选择 `Deploy from a branch`，分支选 `main` / `(root)` 后，可通过以下地址访问：
+## 部署到 GitHub Pages
 
-- https://ttlook111.github.io/travel-guides/daocheng-yading/
-- https://ttlook111.github.io/travel-guides/mohe-travel/
-- https://ttlook111.github.io/travel-guides/xinjiang-travel/
+1. 打开仓库 **Settings → Pages**；
+2. **Source** 选择 **Deploy from a branch**，分支选 **main** / **(root)**，点击 **Save**；
+3. 等待 1 – 2 分钟，即可通过以下地址访问：
+
+| 目的地 | 在线地址 |
+| :--- | :--- |
+| 稻城亚丁 | https://ttlook111.github.io/travel-guides/daocheng-yading/ |
+| 漠河 | https://ttlook111.github.io/travel-guides/mohe-travel/ |
+| 新疆 | https://ttlook111.github.io/travel-guides/xinjiang-travel/ |
+
+## 说明
+
+- 三个页面均为纯静态页面，无后端、无框架、无构建步骤；
+- 图片全部使用 `assets/...` 相对路径引用，整个文件夹离线拷贝也能正常浏览；
+- `_shots/`、`_parts/` 是制作过程中的预览截图与中间文件，已通过 `.gitignore` 排除；
+- 仓库暂未添加开源协议，默认保留所有权利。
