@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" markdown="1">
 
 # 中国旅行指南 · travel-guides
 
@@ -33,7 +33,7 @@
 | 最佳窗口 | 9 月下旬 – 10 月上旬 |
 | 攻略涵盖 | 先到香格里拉镇，再分「短线 / 长线」进山；四季景观对比；门票交通、高原反应与装备清单 |
 
-[:globe_with_meridians: 在线预览](https://ttlook111.github.io/travel-guides/daocheng-yading/)　·　[:file_folder: 源码目录](daocheng-yading/)
+**[在线预览](https://ttlook111.github.io/travel-guides/daocheng-yading/)**　·　**[源码目录](daocheng-yading/)**
 
 ---
 
@@ -50,7 +50,7 @@
 | 最佳季节 | 首选 9 月中下旬 – 10 月初金秋；12 – 2 月极致冰雪、极光概率相对更高；6 – 8 月避暑与极昼 |
 | 攻略涵盖 | 漠河与大兴安岭的关系、交通方式、3 天 2 晚经典线、四季四种模样、最佳月份选择、出发前提醒 |
 
-[:globe_with_meridians: 在线预览](https://ttlook111.github.io/travel-guides/mohe-travel/)　·　[:file_folder: 源码目录](mohe-travel/)
+**[在线预览](https://ttlook111.github.io/travel-guides/mohe-travel/)**　·　**[源码目录](mohe-travel/)**
 
 ---
 
@@ -67,7 +67,7 @@
 | 路线规划 | 第一次去按六步走；三条经典环线，对号入座 |
 | 攻略涵盖 | 南北疆差异、十二个月季节历、最佳月份对比、三条经典环线、行前关键提醒 |
 
-[:globe_with_meridians: 在线预览](https://ttlook111.github.io/travel-guides/xinjiang-travel/)　·　[:file_folder: 源码目录](xinjiang-travel/)
+**[在线预览](https://ttlook111.github.io/travel-guides/xinjiang-travel/)**　·　**[源码目录](xinjiang-travel/)**
 
 ---
 
