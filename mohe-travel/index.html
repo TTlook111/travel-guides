@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一路向北 · 漠河与大兴安岭旅行指南</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314291E'/%3E%3Cpath d='M16 5v22M7.5 9.5l17 13M24.5 9.5l-17 13M16 9.5l-4.2-4.2M16 9.5l4.2-4.2M16 22.5l-4.2 4.2M16 22.5l4.2 4.2' stroke='%23D9A441' stroke-width='1.8' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='2.2' fill='%235CD6C0'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --forest-950:#0E1D15;
+  --forest-900:#14291E;
+  --pine-700:#1E4D36;
+  --pine-500:#2F7A54;
+  --pine-300:#6FAB8C;
+  --birch:#F3EFE2;
+  --snow:#FBF9F2;
+  --ink:#23322A;
+  --ink-soft:#5A6B60;
+  --gold-500:#D9A441;
+  --gold-600:#B9852F;
+  --aurora:#5CD6C0;
+  --frost:#7FA69A;
+  --line:rgba(20,41,30,.14);
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --shadow:0 10px 30px rgba(14,29,21,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--birch);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:76px 0}
+.eyebrow{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:.18em;color:var(--pine-500);margin-bottom:14px}
+.eyebrow::before{content:"";width:34px;height:2px;background:var(--gold-500);flex:none}
+h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:900;letter-spacing:.04em;color:var(--forest-900);margin-bottom:10px}
+.lead{color:var(--ink-soft);font-size:15.5px;max-width:640px}
+.lead b{color:var(--pine-700);font-weight:600}
+/* ===== 顶部导航 ===== */
+.nav{position:sticky;top:0;z-index:50;background:rgba(14,29,21,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{max-width:1120px;margin:0 auto;padding:0 24px;height:58px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-weight:700;color:#F3EFE2;font-size:16px;letter-spacing:.06em;white-space:nowrap}
+.brand svg{width:22px;height:22px;flex:none}
+.nav-links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:rgba(243,239,226,.82);font-size:13.5px;padding:6px 12px;border-radius:999px;white-space:nowrap;transition:all .2s}
+.nav-links a:hover{color:#fff;background:rgba(255,255,255,.10)}
+/* ===== Hero ===== */
+.hero{position:relative;min-height:94vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#F3EFE2;overflow:hidden;background:var(--forest-950)}
+.hero-bg{position:absolute;inset:0;background:url('assets/hero_aurora.jpg') center/cover no-repeat;filter:saturate(1.05)}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,29,21,.55) 0%,rgba(14,29,21,.38) 45%,rgba(14,29,21,.82) 100%)}
+.hero-inner{position:relative;z-index:2;padding:120px 24px 90px;max-width:900px}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:.3em;color:#BEE8DB;border:1px solid rgba(92,214,192,.4);padding:7px 18px;border-radius:999px;margin-bottom:28px;background:rgba(14,29,21,.35)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(38px,6.4vw,72px);line-height:1.14;letter-spacing:.08em;text-shadow:0 4px 30px rgba(0,0,0,.45)}
+.hero h1 .accent{color:var(--gold-500)}
+.hero-sub{margin-top:22px;font-size:clamp(15px,1.6vw,18px);color:rgba(243,239,226,.92);font-weight:300;letter-spacing:.05em}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:52px}
+.stat{background:rgba(14,29,21,.45);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:18px 12px;backdrop-filter:blur(6px)}
+.stat .num{font-family:var(--serif);font-weight:900;font-size:clamp(22px,2.6vw,30px);color:#fff;letter-spacing:.02em}
+.stat .num small{font-size:.62em;color:#BEE8DB;font-weight:600;margin-left:2px}
+.stat .lab{margin-top:4px;font-size:12.5px;color:rgba(243,239,226,.78);letter-spacing:.06em}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(243,239,226,.75);font-size:12px;letter-spacing:.28em;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint::after{content:"";width:1px;height:34px;background:linear-gradient(180deg,rgba(243,239,226,.8),transparent)}
+/* ===== 认识这里 ===== */
+.relate{background:var(--snow)}
+.relate-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;margin-top:30px;align-items:start}
+.relate-copy h3{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--forest-900);margin:18px 0 8px}
+.relate-copy p{color:var(--ink-soft);font-size:15px;margin-bottom:12px}
+.relate-copy p b{color:var(--pine-700)}
+.tree{background:var(--birch);border:1px solid var(--line);border-radius:16px;padding:26px 26px 20px;box-shadow:var(--shadow)}
+.tree-title{font-family:var(--serif);font-weight:700;color:var(--pine-700);font-size:14px;letter-spacing:.14em;margin-bottom:18px}
+.node{display:flex;align-items:center;gap:12px;position:relative;padding:13px 0}
+.node::before{content:"";position:absolute;left:13px;top:44px;bottom:-14px;width:2px;background:rgba(47,122,84,.25)}
+.node:last-child::before{display:none}
+.node .dot{width:28px;height:28px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;background:var(--pine-500)}
+.node.root .dot{background:var(--forest-900)}
+.node.mid .dot{background:var(--pine-300)}
+.node .txt b{display:block;font-size:15px;color:var(--forest-900)}
+.node .txt span{font-size:13px;color:var(--ink-soft)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
+.fact{background:var(--birch);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.fact .n{font-family:var(--serif);font-weight:900;font-size:20px;color:var(--pine-700)}
+.fact .d{font-size:12.5px;color:var(--ink-soft);margin-top:2px;line-height:1.5}
+/* ===== 月份选择器 ===== */
+.mchip{border:1px solid var(--line);background:var(--snow);color:var(--ink-soft);font-family:var(--sans);font-size:13.5px;padding:8px 15px;border-radius:999px;cursor:pointer;transition:all .18s}
+.mchip:hover{border-color:var(--pine-300);color:var(--pine-700)}
+.mchip.on{background:var(--pine-700);border-color:var(--pine-700);color:#fff;font-weight:600;box-shadow:0 4px 12px rgba(30,77,54,.28)}
+.season-card{transition:transform .22s}
+.season-card:hover{transform:translateY(-4px)}
+.tip{transition:transform .22s}
+.tip:hover{transform:translateY(-3px)}
+.md-grid{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:start}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+.itinerary{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px}
+.icard{background:var(--birch);border:1px solid var(--line);padding:26px 22px}
+@media (max-width:960px){
+  .relate-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .season-grid{grid-template-columns:repeat(2,1fr)}
+  .verdict,.tip-grid{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:1fr!important}
+  .itinerary{grid-template-columns:1fr!important;gap:14px!important}
+  .icard{border-left:1px solid var(--line)!important;border-radius:16px!important}
+}
+@media (max-width:640px){
+  section{padding:56px 0}
+  .season-grid,.verdict,.tip-grid{grid-template-columns:1fr}
+  .g2{grid-template-columns:1fr!important}
+  .md-grid{grid-template-columns:1fr}
+  .hero-inner{padding-top:90px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1E4D36"/><path d="M16 6v20M8 10l16 12M24 10L8 22M16 10l-4-4M16 10l4-4M16 22l-4 4M16 22l4 4" stroke="#D9A441" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.2" fill="#5CD6C0"/></svg>
+      一路向北
+    </a>
+    <div class="nav-links">
+      <a href="#about">认识这里</a>
+      <a href="#how-to-go">怎么去</a>
+      <a href="#itinerary">怎么玩</a>
+      <a href="#seasons">四季与月份</a>
+      <a href="#best">最佳季节</a>
+      <a href="#tips">行前贴士</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <span class="hero-kicker">北纬 53° · 中国最北 · 极光与林海</span>
+    <h1>一路向北<br><span class="accent">漠河</span> · 大兴安岭</h1>
+    <p class="hero-sub">在最北的村庄看极昼与极光，在白桦与雪原之间，完成一场「找北」之旅</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="num">53°33′<small>N</small></div><div class="lab">漠河 · 中国最北端</div></div>
+      <div class="stat"><div class="num">-3.8<small>℃</small></div><div class="lab">年均气温</div></div>
+      <div class="stat"><div class="num">-28.5<small>℃</small></div><div class="lab">1 月平均气温</div></div>
+      <div class="stat"><div class="num">≈21<small>h</small></div><div class="lab">夏至前后白昼时长</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint">向下 · 开启找北之旅</div>
+</header>
+
+<section class="relate" id="about">
+  <div class="wrap">
+    <div class="eyebrow">01 · 认识这里</div>
+    <h2 class="title">漠河与大兴安岭，是什么关系？</h2>
+    <p class="lead">一句话：<b>漠河是大兴安岭「地区」下辖的一个县级市</b>，它们既是行政上的上下级，也同处一条山脉之中——你去的「大兴安岭」，很大一部分行程其实就发生在漠河境内。</p>
+    <div class="relate-grid">
+      <div class="relate-copy">
+        <h3>行政上：隶属关系</h3>
+        <p><b>大兴安岭地区</b>是黑龙江省的一个地级行政区（注意它叫「地区」而不是「市」，级别相当于地级市），行政公署驻地在加格达奇。<b>漠河市</b>就是它下辖的县级市，位于整个地区的最北端。</p>
+        <h3>地理上：同处一条山脉</h3>
+        <p>漠河地处<b>大兴安岭山脉北麓</b>、黑龙江上游南岸，整片区域都是连绵的林海——松苑原始森林、白桦林、九曲十八弯湿地，全都属于大兴安岭林区。可以说，看大兴安岭的风景，漠河就是最精华的窗口之一。</p>
+        <h3>所以去玩怎么理解？</h3>
+        <p>你订机票、火车票的目的地是<b>漠河</b>，行程围绕<b>漠河市区、北极村、北红村</b>展开，而沿途的森林、河湾、白桦林就是「大兴安岭」本身。两者不用分开规划，把它们当成同一个目的地即可。</p>
+      </div>
+      <div class="tree">
+        <div class="tree-title">行政隶属关系</div>
+        <div class="node root"><div class="dot">省</div><div class="txt"><b>黑龙江省</b><span>省级行政区</span></div></div>
+        <div class="node mid"><div class="dot">地</div><div class="txt"><b>大兴安岭地区</b><span>地级行政区 · 行署驻加格达奇</span></div></div>
+        <div class="node"><div class="dot">市</div><div class="txt"><b>漠河市</b><span>县级市 · 中国最北端</span></div></div>
+        <div class="facts">
+          <div class="fact"><div class="n">-52.3℃</div><div class="d">漠河极端最低气温纪录</div></div>
+          <div class="fact"><div class="n">18.6℃</div><div class="d">7 月平均气温（最暖月）</div></div>
+          <div class="fact"><div class="n">7 个月</div><div class="d">月均温 0℃ 以下的月份数</div></div>
+          <div class="fact"><div class="n">≈90 天</div><div class="d">无霜期，夏季短暂</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== 怎么去 ===== -->
+<section id="how-to-go" style="background:var(--birch)">
+  <div class="wrap">
+    <div class="eyebrow">02 · 怎么去</div>
+    <h2 class="title">先到哈尔滨，再一路向北</h2>
+    <p class="lead">漠河没有高铁，大交通几乎都要经<b>哈尔滨</b>中转；当地玩周边景点则普遍靠<b>包车或拼车</b>。</p>
+    <div class="g3" style="margin-top:30px">
+      <div style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px 20px;box-shadow:var(--shadow)">
+        <div style="font-family:var(--serif);font-weight:700;color:var(--gold-600);font-size:13px;letter-spacing:.16em;margin-bottom:8px">方案 A · 飞机</div>
+        <div style="font-family:var(--serif);font-weight:900;font-size:19px;color:var(--forest-900);margin-bottom:10px">哈尔滨 → 漠河古莲机场</div>
+        <p style="font-size:14px;color:var(--ink-soft)">航程约 1.5–2 小时，目前主要是哈尔滨直飞航线。旺季机票偏贵，建议提前留意特价票。</p>
+      </div>
+      <div style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px 20px;box-shadow:var(--shadow)">
+        <div style="font-family:var(--serif);font-weight:700;color:var(--gold-600);font-size:13px;letter-spacing:.16em;margin-bottom:8px">方案 B · 火车</div>
+        <div style="font-family:var(--serif);font-weight:900;font-size:19px;color:var(--forest-900);margin-bottom:10px">K5171 / K7041 / K7039 等</div>
+        <p style="font-size:14px;color:var(--ink-soft)">哈尔滨出发，夕发朝至约 12–18 小时，硬卧 200–270 元。「雪国列车」冬季一票难求，建议提前一周订票，沿途可看林区雪景。</p>
+      </div>
+      <div style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px 20px;box-shadow:var(--shadow)">
+        <div style="font-family:var(--serif);font-weight:700;color:var(--gold-600);font-size:13px;letter-spacing:.16em;margin-bottom:8px">当地交通</div>
+        <div style="font-family:var(--serif);font-weight:900;font-size:19px;color:var(--forest-900);margin-bottom:10px">大巴 + 包车</div>
+        <p style="font-size:14px;color:var(--ink-soft)">漠河站/机场到北极村有大巴（约 21 元、1–1.5 小时）；去龙江第一湾、北红村建议包车/拼车（约 400–600 元/天），冬季路滑不建议自驾。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 怎么玩 ===== -->
+<section id="itinerary" style="background:var(--snow)">
+  <div class="wrap">
+    <div class="eyebrow">03 · 怎么玩</div>
+    <h2 class="title">3 天 2 晚 · 寻北经典线</h2>
+    <p class="lead">新手首选路线，把「找北」的核心景点走一遍：湿地林海 → 界江大湾 → 最北村庄。时间充裕可加长到 5 天，补上驯鹿部落与更多林区徒步。</p>
+
+    <div class="itinerary">
+      <div class="icard" style="border-top-left-radius:16px;border-bottom-left-radius:16px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <span style="flex:none;width:44px;height:44px;border-radius:50%;background:var(--pine-500);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:900;font-size:17px">1</span>
+          <div>
+            <div style="font-family:var(--serif);font-weight:700;font-size:17px;color:var(--forest-900)">Day 1 · 抵达 & 林海</div>
+            <div style="font-size:12.5px;color:var(--ink-soft)">住漠河县城</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--ink-soft)">抵达漠河 → <b>松苑原始森林公园</b>（免费）→ <b>九曲十八弯</b>登高看湿地林海 → 公路沿线<b>白桦林</b>打卡。</p>
+      </div>
+      <div class="icard" style="border-left:0">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <span style="flex:none;width:44px;height:44px;border-radius:50%;background:var(--pine-500);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:900;font-size:17px">2</span>
+          <div>
+            <div style="font-family:var(--serif);font-weight:700;font-size:17px;color:var(--forest-900)">Day 2 · 界江 & 最北点</div>
+            <div style="font-size:12.5px;color:var(--ink-soft)">住北红村民宿</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--ink-soft)">包车出发 → <b>龙江第一湾</b>（Ω 形中俄界江）→ <b>乌苏里浅滩</b>（真正的中国最北点）→ 原生态<b>北红村</b>，夜晚看星空银河。</p>
+      </div>
+      <div class="icard" style="border-top-right-radius:16px;border-bottom-right-radius:16px;border-left:0">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <span style="flex:none;width:44px;height:44px;border-radius:50%;background:var(--pine-500);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:900;font-size:17px">3</span>
+          <div>
+            <div style="font-family:var(--serif);font-weight:700;font-size:17px;color:var(--forest-900)">Day 3 · 北极村</div>
+            <div style="font-size:12.5px;color:var(--ink-soft)">午后返程</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--ink-soft)"><b>北极村</b>全天：神州北极石碑、<b>最北邮局</b>寄明信片、北极沙洲、北陲哨所、138 号界碑，午后返漠河。</p>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px;align-items:stretch">
+      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:230px;position:relative">
+        <img src="assets/village_hut.jpg" alt="北极村木刻楞小木屋" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+        <div style="position:absolute;left:0;right:0;bottom:0;padding:38px 18px 12px;background:linear-gradient(180deg,transparent,rgba(14,29,21,.82));color:#F3EFE2;font-size:13px">北极村的「木刻楞」小木屋 · 林区特有的木头民居</div>
+      </div>
+      <div style="background:var(--birch);border:1px solid var(--line);border-radius:16px;padding:22px 22px 16px;box-shadow:var(--shadow)">
+        <div style="font-family:var(--serif);font-weight:700;color:var(--pine-700);font-size:14px;letter-spacing:.14em;margin-bottom:12px">必打卡清单</div>
+        <div class="g2" style="font-size:14px;color:var(--ink)">
+          <div style="display:flex;gap:8px;align-items:baseline"><span style="color:var(--gold-500);font-weight:700">·</span>北极村（中国最北村庄）</div>
+          <div style="display:flex;gap:8px;align-items:baseline"><span style="color:var(--gold-500);font-weight:700">·</span>龙江第一湾</div>
+          <div style="display:flex;gap:8px;align-items:baseline"><span style="color:var(--gold-500);font-weight:700">·</span>乌苏里浅滩（最北点）</div>
+          <div style="display:flex;gap:8px;align-items:baseline"><span style="color:var(--gold-500);font-weight:700">·</span>九曲十八弯湿地</div>
+          <div style="display:flex;gap:8px;align-items:baseline"><span style="color:var(--gold-500);font-weight:700">·</span>松苑原始森林公园</div>
+          <div style="display:flex;gap:8px;align-items:baseline"><span style="color:var(--gold-500);font-weight:700">·</span>公路沿线白桦林</div>
+          <div style="display:flex;gap:8px;align-items:baseline"><span style="color:var(--gold-500);font-weight:700">·</span>北红村（最北村落）</div>
+          <div style="display:flex;gap:8px;align-items:baseline"><span style="color:var(--gold-500);font-weight:700">·</span>最北邮局（寄明信片）</div>
+        </div>
+        <p style="font-size:13px;color:var(--ink-soft);margin-top:14px;border-top:1px dashed var(--line);padding-top:12px">5 天深度线：加<b>敖鲁古雅驯鹿部落</b>（鄂温克驯鹿）、漠河舞厅、林区徒步；建议天数 5–7 天，预算经济型约 3000–4000 元/人，舒适型约 5000–7000 元/人。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 四季与月份 ===== -->
+<section id="seasons" style="background:var(--birch)">
+  <div class="wrap">
+    <div class="eyebrow">04 · 四季与月份</div>
+    <h2 class="title">一年只有「冬夏」？其实有四种模样</h2>
+    <p class="lead">漠河没有传统意义的春天和秋天——它们是<b>冰雪与绿意之间的过渡季</b>，却各自藏着最美的瞬间：5 月的兴安杜鹃、9 月的金色白桦。先看全年气温走势，再点月份看细节。</p>
+
+    <div id="tempChart" style="width:100%;height:420px;margin-top:26px;background:var(--snow);border:1px solid var(--line);border-radius:16px;padding:10px 4px 0;box-shadow:var(--shadow)"></div>
+    <p style="font-size:12.5px;color:var(--ink-soft);margin-top:10px">数据口径：漠河逐月日均最高/最低气温（日均值取整），月平均为两者均值推算。参考：中国天气网漠河气候数据、漠河市百科（1 月均温 -28.5℃ / 7 月均温 18.6℃）。</p>
+
+    <div class="month-picker" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:22px">
+      <button class="mchip" data-m="1">1 月</button>
+      <button class="mchip" data-m="2">2 月</button>
+      <button class="mchip" data-m="3">3 月</button>
+      <button class="mchip" data-m="4">4 月</button>
+      <button class="mchip" data-m="5">5 月</button>
+      <button class="mchip" data-m="6">6 月</button>
+      <button class="mchip" data-m="7">7 月</button>
+      <button class="mchip" data-m="8">8 月</button>
+      <button class="mchip" data-m="9">9 月</button>
+      <button class="mchip" data-m="10">10 月</button>
+      <button class="mchip" data-m="11">11 月</button>
+      <button class="mchip" data-m="12">12 月</button>
+    </div>
+
+    <div id="monthDetail" style="background:var(--snow);border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:14px;box-shadow:var(--shadow);min-height:150px"></div>
+
+    <div class="season-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px">
+      <figure class="season-card">
+        <div style="position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:12px 12px 0 0">
+          <img src="assets/spring_rhodo.jpg" alt="春季兴安杜鹃" style="width:100%;height:100%;object-fit:cover">
+          <span style="position:absolute;top:10px;left:10px;background:rgba(14,29,21,.7);color:#F3EFE2;font-size:12px;padding:4px 10px;border-radius:999px;letter-spacing:.08em">春 · 5 月中–6 月初</span>
+        </div>
+        <figcaption style="background:var(--snow);border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:16px">
+          <div style="font-family:var(--serif);font-weight:700;color:var(--forest-900);font-size:16px;margin-bottom:6px">杜鹃花开 · 短暂的春</div>
+          <p style="font-size:13.5px;color:var(--ink-soft);margin-bottom:8px">5 月兴安杜鹃漫山绽放，白桦新绿。气温 0–17℃，早晚仍冷，冰雪消融期部分路面泥泞。</p>
+          <span style="display:inline-block;font-size:12px;color:var(--pine-700);background:rgba(47,122,84,.12);padding:3px 10px;border-radius:999px">适合摄影 · 人少</span>
+        </figcaption>
+      </figure>
+      <figure class="season-card">
+        <div style="position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:12px 12px 0 0">
+          <img src="assets/summer_forest.jpg" alt="夏季大兴安岭林海" style="width:100%;height:100%;object-fit:cover">
+          <span style="position:absolute;top:10px;left:10px;background:rgba(14,29,21,.7);color:#F3EFE2;font-size:12px;padding:4px 10px;border-radius:999px;letter-spacing:.08em">夏 · 6–8 月</span>
+        </div>
+        <figcaption style="background:var(--snow);border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:16px">
+          <div style="font-family:var(--serif);font-weight:700;color:var(--forest-900);font-size:16px;margin-bottom:6px">极昼林海 · 避暑胜地</div>
+          <p style="font-size:13.5px;color:var(--ink-soft);margin-bottom:8px">6 月夏至前后白昼近 21 小时；7 月森林最绿、蓝莓成熟，15–26℃ 清凉避暑；8 月可采蘑菇捡山货。</p>
+          <span style="display:inline-block;font-size:12px;color:var(--pine-700);background:rgba(47,122,84,.12);padding:3px 10px;border-radius:999px">避暑 · 白夜 · 性价比</span>
+        </figcaption>
+      </figure>
+      <figure class="season-card">
+        <div style="position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:12px 12px 0 0">
+          <img src="assets/autumn_birch.jpg" alt="秋季金色白桦林" style="width:100%;height:100%;object-fit:cover">
+          <span style="position:absolute;top:10px;left:10px;background:rgba(14,29,21,.7);color:#F3EFE2;font-size:12px;padding:4px 10px;border-radius:999px;letter-spacing:.08em">秋 · 9 月中–10 月初</span>
+        </div>
+        <figcaption style="background:var(--snow);border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:16px">
+          <div style="font-family:var(--serif);font-weight:700;color:var(--forest-900);font-size:16px;margin-bottom:6px">金色林海 · 颜值巅峰</div>
+          <p style="font-size:13.5px;color:var(--ink-soft);margin-bottom:8px">白桦与落叶松尽染金黄，龙江第一湾层林尽染。白天约 16℃、早晚逼近 0℃，需要厚外套。</p>
+          <span style="display:inline-block;font-size:12px;color:var(--pine-700);background:rgba(47,122,84,.12);padding:3px 10px;border-radius:999px">金秋摄影 · 最出片</span>
+        </figcaption>
+      </figure>
+      <figure class="season-card">
+        <div style="position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:12px 12px 0 0">
+          <img src="assets/winter_bay.jpg" alt="冬季龙江第一湾" style="width:100%;height:100%;object-fit:cover">
+          <span style="position:absolute;top:10px;left:10px;background:rgba(14,29,21,.7);color:#F3EFE2;font-size:12px;padding:4px 10px;border-radius:999px;letter-spacing:.08em">冬 · 12–次年 2 月</span>
+        </div>
+        <figcaption style="background:var(--snow);border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;padding:16px">
+          <div style="font-family:var(--serif);font-weight:700;color:var(--forest-900);font-size:16px;margin-bottom:6px">冰雪世界 · 极致找北</div>
+          <p style="font-size:13.5px;color:var(--ink-soft);margin-bottom:8px">气温常低至 -30~-40℃，泼水成冰、马拉爬犁、滑雪冬捕，雾凇与星空极光可遇不可求。</p>
+          <span style="display:inline-block;font-size:12px;color:var(--pine-700);background:rgba(47,122,84,.12);padding:3px 10px;border-radius:999px">极致体验 · 需充足防寒</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- ===== 最佳季节 ===== -->
+<section id="best" style="background:var(--snow)">
+  <div class="wrap">
+    <div class="eyebrow">05 · 最佳季节</div>
+    <h2 class="title">只去一次，最推荐哪个月？</h2>
+    <p class="lead">综合气温舒适度、风景颜值与游玩体验，我们把答案放在最前面：</p>
+
+    <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:20px;margin-top:28px">
+      <div style="background:linear-gradient(135deg,var(--forest-900),var(--pine-700));border-radius:18px;padding:34px 30px;color:#F3EFE2;box-shadow:var(--shadow)">
+        <div style="display:inline-block;background:var(--gold-500);color:#14291E;font-family:var(--serif);font-weight:900;font-size:13px;letter-spacing:.14em;padding:5px 14px;border-radius:999px;margin-bottom:16px">首选推荐</div>
+        <div style="font-family:var(--serif);font-weight:900;font-size:clamp(26px,3vw,36px);letter-spacing:.04em">9 月中下旬 – 10 月初</div>
+        <div style="color:var(--aurora);font-size:14.5px;letter-spacing:.12em;margin:8px 0 18px">金秋大兴安岭 · 颜值巅峰</div>
+        <div style="display:grid;gap:12px;font-size:14.5px;color:rgba(243,239,226,.94)">
+          <div style="display:flex;gap:10px"><span style="color:var(--gold-500)">◆</span>白桦与落叶松尽染金黄，龙江第一湾、九曲十八弯进入全年最美状态，随手出片</div>
+          <div style="display:flex;gap:10px"><span style="color:var(--gold-500)">◆</span>气温适中：白天约 16℃、早晚 0–1℃，只需厚外套，不用对抗 -30℃ 严寒</div>
+          <div style="display:flex;gap:10px"><span style="color:var(--gold-500)">◆</span>避开了暑期与雪季高峰，住宿交通好订，体验更从容</div>
+        </div>
+      </div>
+      <div style="background:var(--birch);border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:var(--shadow)">
+        <div style="font-family:var(--serif);font-weight:700;color:var(--pine-700);font-size:14px;letter-spacing:.14em;margin-bottom:14px">按你的偏好换季节</div>
+        <div style="display:grid;gap:14px">
+          <div style="border-left:3px solid var(--pine-500);padding-left:14px">
+            <div style="font-weight:700;font-size:15px;color:var(--forest-900)">想追极昼与极光 · 避暑</div>
+            <div style="font-size:13.5px;color:var(--ink-soft)">选 <b>6 月下旬</b>（夏至前后近 21 小时白昼，游客少物价低）或 7–8 月绿意最盛。</div>
+          </div>
+          <div style="border-left:3px solid var(--pine-500);padding-left:14px">
+            <div style="font-weight:700;font-size:15px;color:var(--forest-900)">想要极致冰雪体验</div>
+            <div style="font-size:13.5px;color:var(--ink-soft)">选 <b>12–2 月</b>：泼水成冰、马拉爬犁、雪地星空，够冷也够美（怕冷慎选）。</div>
+          </div>
+          <div style="border-left:3px solid var(--pine-500);padding-left:14px">
+            <div style="font-weight:700;font-size:15px;color:var(--forest-900)">想看花 · 错峰清静</div>
+            <div style="font-size:13.5px;color:var(--ink-soft)">选 <b>5 月中下旬</b>兴安杜鹃花期，人少景新，但部分路面泥泞。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="verdict" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px">
+      <div style="background:var(--birch);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)">
+        <div style="font-family:var(--serif);font-weight:900;font-size:22px;color:var(--gold-600);margin-bottom:6px">9 月</div>
+        <div style="font-size:13px;color:var(--pine-700);letter-spacing:.1em;margin-bottom:8px">摄影 / 首次到访</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">金秋颜值巅峰，气温可接受，综合体验最均衡——大多数攻略的「最佳秋色」窗口。</p>
+      </div>
+      <div style="background:var(--birch);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)">
+        <div style="font-family:var(--serif);font-weight:900;font-size:22px;color:var(--pine-500);margin-bottom:6px">6–8 月</div>
+        <div style="font-size:13px;color:var(--pine-700);letter-spacing:.1em;margin-bottom:8px">避暑 / 亲子 / 极昼</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">清凉舒适、白昼极长，夏至前后有机会邂逅极光（概率低，可遇不可求）。</p>
+      </div>
+      <div style="background:var(--birch);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)">
+        <div style="font-family:var(--serif);font-weight:900;font-size:22px;color:var(--frost);margin-bottom:6px">12–2 月</div>
+        <div style="font-size:13px;color:var(--pine-700);letter-spacing:.1em;margin-bottom:8px">冰雪 / 找北仪式感</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">极致严寒里的独特体验，极光概率相对略高，但需做好充足防寒与行程弹性。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 行前贴士 ===== -->
+<section id="tips" style="background:var(--birch)">
+  <div class="wrap">
+    <div class="eyebrow">06 · 行前贴士</div>
+    <h2 class="title">出发前，把这几点记牢</h2>
+    <div class="tip-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px">
+      <div class="tip" style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pine-500)" stroke-width="1.8" stroke-linecap="round" style="margin-bottom:12px"><path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5L4.9 17.5M12 6.5L8 2.5M12 6.5l4-4M12 17.5l-4 4M12 17.5l4 4"/><circle cx="12" cy="12" r="2.4" fill="var(--gold-500)" stroke="none"/></svg>
+        <div style="font-weight:700;font-size:15.5px;color:var(--forest-900);margin-bottom:6px">冬季防寒是头等大事</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">加厚羽绒服 + 加绒冲锋裤 + 防滑雪地靴 + 帽子围巾手套；相机手机贴暖宝宝防低温关机，泼水成冰要用刚烧开的热水。</p>
+      </div>
+      <div class="tip" style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pine-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:12px"><rect x="3" y="5" width="18" height="15" rx="3"/><path d="M3 10h18M8 3v4M16 3v4M7 15h3"/></svg>
+        <div style="font-weight:700;font-size:15.5px;color:var(--forest-900);margin-bottom:6px">订票要趁早</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">「雪国列车」卧铺冬季紧张，建议提前一周以上购票；北极村、北红村民宿旺季同样需要早订。</p>
+      </div>
+      <div class="tip" style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pine-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:12px"><path d="M4 15a8 8 0 0 1 16 0"/><rect x="3" y="15" width="18" height="4" rx="2"/><path d="M7 15v-2a5 5 0 0 1 10 0v2"/></svg>
+        <div style="font-weight:700;font-size:15.5px;color:var(--forest-900);margin-bottom:6px">夏季也有温差</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">漠河「一日四季」，夏天白天穿短袖、早晚要外套；白昼长日照强，注意防晒；7–8 月多阵雨，随身带雨具。</p>
+      </div>
+      <div class="tip" style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pine-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:12px"><path d="M12 3l1.8 4.6L18.5 9l-4.7 1.4L12 15l-1.8-4.6L5.5 9l4.7-1.4z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/><path d="M5 16l.7 1.8L7.5 18.5l-1.8.7L5 21l-.7-1.8L2.5 18.5l1.8-.7z"/></svg>
+        <div style="font-weight:700;font-size:15.5px;color:var(--forest-900);margin-bottom:6px">极光：可遇不可求</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">漠河纬度仍低于极光带，看极光要靠太阳活动与晴天叠加。想追极光可选 12–2 月或夏至前后，出行前查 KP 指数与云图。</p>
+      </div>
+      <div class="tip" style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pine-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:12px"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <div style="font-weight:700;font-size:15.5px;color:var(--forest-900);margin-bottom:6px">林区防火与安全</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">大兴安岭是重点林区，全程禁烟禁明火；冬季路面结冰，包车选有经验司机，勿自行驾车进林区。</p>
+      </div>
+      <div class="tip" style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pine-500)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:12px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <div style="font-weight:700;font-size:15.5px;color:var(--forest-900);margin-bottom:6px">时间与预算</div>
+        <p style="font-size:13.5px;color:var(--ink-soft)">建议 5–7 天；预算经济型约 3000–4000 元/人（火车往返 + 简单住宿），舒适型约 5000–7000 元/人（飞机 + 包车 + 中档住宿）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="background:var(--forest-950);color:rgba(243,239,226,.75);padding:52px 0 40px">
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:9px;font-family:var(--serif);font-weight:700;color:#F3EFE2;font-size:17px;margin-bottom:14px">
+      <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1E4D36"/><path d="M16 6v20M8 10l16 12M24 10L8 22M16 10l-4-4M16 10l4-4M16 22l-4 4M16 22l4 4" stroke="#D9A441" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="16" r="2.2" fill="#5CD6C0"/></svg>
+      一路向北 · 漠河与大兴安岭旅行指南
+    </div>
+    <p style="font-size:12.5px;line-height:1.9;max-width:860px;color:rgba(243,239,226,.55)">
+      内容说明：气候数据参考中国天气网漠河气候资料（1 月均温 -30.9℃、极端低温 -52.3℃、7 月均温 18.4℃）与漠河市公开资料（年均温 -3.8℃、1 月 -28.5℃、7 月 18.6℃）；逐月日均最高/最低气温为天气网站多年均值（取整），月平均为二者均值推算。行程与价格参考携程、去哪儿、抖音等平台近期攻略（2025–2026），实际以出发时为准。风景图片来自网络公开图片站点，仅供示意。
+    </p>
+    <div style="font-size:12.5px;color:rgba(243,239,226,.55);margin-top:12px;display:flex;flex-wrap:wrap;gap:8px 18px">
+      <span>参考来源：</span>
+      <a href="https://www.weather.com.cn/cityintro/101050703.shtml" target="_blank" rel="noopener" style="color:rgba(92,214,192,.9)">中国天气网 · 漠河</a>
+      <a href="https://m.baike.com/wiki/%E6%BC%A0%E6%B2%B3%E5%B8%82/19496519" target="_blank" rel="noopener" style="color:rgba(92,214,192,.9)">漠河市百科</a>
+      <a href="https://touch.go.qunar.com/299685/guide?typeId=415" target="_blank" rel="noopener" style="color:rgba(92,214,192,.9)">去哪儿 · 漠河攻略</a>
+      <a href="https://www.tianqi.com/qiwen/city_mohe/" target="_blank" rel="noopener" style="color:rgba(92,214,192,.9)">天气网 · 漠河气温</a>
+      <a href="https://m.ctrip.com/webapp/you/community/detail?articleId=373156799&hidePublishButton=true&hideTitle=true&allianceid=7144873&sid=263483165" target="_blank" rel="noopener" style="color:rgba(92,214,192,.9)">携程 · 寻北之旅攻略</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js';"></script>
+<script>
+(function(){
+  /* ---------- ECharts 气温图 ---------- */
+  var el = document.getElementById('tempChart');
+  if (window.echarts) {
+    var chart = echarts.init(el);
+    var months = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+    var high = [-21,-13,-3,8,17,24,26,23,16,5,-11,-21];
+    var low  = [-36,-33,-24,-8,0,7,11,9,1,-10,-25,-34];
+    var avg  = [-28.5,-23,-13.5,0,8.5,15.5,18.5,16,8.5,-2.5,-18,-27.5];
+    chart.setOption({
+      color: ['#D9A441','#7FA69A','#1E4D36'],
+      tooltip: { trigger:'axis', triggerOn:'mousemove|click', confine:true, valueFormatter:function(v){return v+'℃';} },
+      legend: { top:8, left:14, icon:'roundRect', itemWidth:14, itemHeight:6, textStyle:{color:'#23322A',fontSize:12} },
+      grid: { left:12, right:20, top:52, bottom:34, containLabel:true },
+      xAxis: { type:'category', boundaryGap:false, data:months,
+        axisLine:{lineStyle:{color:'rgba(20,41,30,.35)'}},
+        axisLabel:{color:'#5A6B60',fontSize:11,interval:0},
+        axisTick:{show:false} },
+      yAxis: { type:'value', name:'气温(℃)', nameTextStyle:{color:'#5A6B60',fontSize:11},
+        splitLine:{lineStyle:{color:'rgba(20,41,30,.08)'}},
+        axisLabel:{color:'#5A6B60',fontSize:11} },
+      series: [
+        { name:'日均最低', type:'line', data:low, smooth:true, symbol:'circle', symbolSize:5, lineStyle:{width:1.6}, emphasis:{focus:'series'} },
+        { name:'日均最高', type:'line', data:high, smooth:true, symbol:'circle', symbolSize:5, lineStyle:{width:1.6}, emphasis:{focus:'series'} },
+        { name:'月平均(推算)', type:'line', data:avg, smooth:true, symbol:'circle', symbolSize:7, lineStyle:{width:3},
+          markArea: { silent:true, itemStyle:{color:'transparent'},
+            data:[
+              [{xAxis:'6月',itemStyle:{color:'rgba(47,122,84,.09)'}},{xAxis:'8月'}],
+              [{xAxis:'9月',itemStyle:{color:'rgba(217,164,65,.16)'}},{xAxis:'9月'}],
+              [{xAxis:'12月',itemStyle:{color:'rgba(127,166,154,.14)'}},{xAxis:'2月'}]
+            ]},
+          markPoint: {
+            symbol:'pin', symbolSize:42, label:{fontSize:10,color:'#fff',formatter:'{b}'},
+            data:[
+              {type:'min', name:'最冷 -28.5℃', itemStyle:{color:'#1E4D36'}},
+              {type:'max', name:'最暖 18.5℃', itemStyle:{color:'#B9852F'}}
+            ]
+          },
+          emphasis:{focus:'series'}
+        }
+      ]
+    });
+    window.addEventListener('resize', function(){ chart.resize(); });
+  } else {
+    el.innerHTML = '<div style="padding:46px;text-align:center;color:#5A6B60;font-size:14px">气温图表需要联网加载（ECharts 未加载成功），可查看下方逐月说明。</div>';
+  }
+
+  /* ---------- 逐月详情 ---------- */
+  var MONTHS = {
+    1:{avg:-28.5,high:-21,low:-36,season:'冬',weather:'极寒 · 冰雪巅峰',tips:'泼水成冰、冰雕雪雕、冬捕；冬至前后极光概率相对略高',wear:'最厚羽绒服+加绒裤+防滑雪地靴，全副武装',rate:3},
+    2:{avg:-23,high:-13,low:-33,season:'冬',weather:'持续严寒 · 雪季高潮',tips:'春节冰雪游、滑雪、马拉爬犁、星空雪原',wear:'同 1 月冬季重装备',rate:3},
+    3:{avg:-13.5,high:-3,low:-24,season:'冬',weather:'冬末 · 回暖前奏',tips:'滑雪季尾段，林海雪原开始融化，人少清静',wear:'厚羽绒服，防水鞋靴',rate:2},
+    4:{avg:0,high:8,low:-8,season:'春',weather:'冰雪消融 · 泥泞期',tips:'淡季，游客极少，残雪与初绿交替',wear:'羽绒服+防水鞋，路面泥泞',rate:1},
+    5:{avg:8.5,high:17,low:0,season:'春',weather:'初春 · 杜鹃花季',tips:'兴安杜鹃漫山绽放，白桦吐新绿，摄影友好',wear:'夹克/薄毛衣+外套，早晚仍冷',rate:2},
+    6:{avg:15.5,high:24,low:7,season:'夏',weather:'清凉初夏 · 极昼白夜',tips:'夏至前后白昼近 21 小时，极光观测季，游客少物价低',wear:'长袖 T 恤+早晚外套，防晒',rate:5},
+    7:{avg:18.5,high:26,low:11,season:'夏',weather:'盛夏 · 森林最绿',tips:'满目翠绿、蓝莓成熟，避暑旺季；多阵雨带雨具',wear:'短袖+外套（一日四季），防晒防雨',rate:5},
+    8:{avg:16,high:23,low:9,season:'夏',weather:'夏末 · 山货季',tips:'采蘑菇捡山货，依然翠绿凉爽，人稍回落',wear:'短袖+外套',rate:4},
+    9:{avg:8.5,high:16,low:1,season:'秋',weather:'金秋 · 层林尽染',tips:'白桦与落叶松金黄，龙江第一湾秋色，全年最出片',wear:'厚外套/轻羽绒，早晚逼近 0℃',rate:5},
+    10:{avg:-2.5,high:5,low:-10,season:'秋',weather:'深秋 · 初雪将至',tips:'秋色尾声，10 月可能飘雪，游客散去',wear:'羽绒服',rate:3},
+    11:{avg:-18,high:-11,low:-25,season:'冬',weather:'入冬 · 雪季开启',tips:'林海开始积雪，淡季出行性价比高',wear:'厚羽绒服',rate:2},
+    12:{avg:-27.5,high:-21,low:-34,season:'冬',weather:'严冬 · 冰雪世界',tips:'跨年冰雪游、泼水成冰、雾凇与星空',wear:'最厚装备，注意保暖与行程弹性',rate:4}
+  };
+  var chips = document.querySelectorAll('.mchip');
+  var detail = document.getElementById('monthDetail');
+  function stars(n){
+    var s='';
+    for(var i=1;i<=5;i++){ s += '<span style="width:22px;height:8px;border-radius:4px;background:'+(i<=n?'#D9A441':'rgba(20,41,30,.12)')+';display:inline-block;margin-right:4px"></span>'; }
+    return s;
+  }
+  function render(m){
+    var d = MONTHS[m];
+    detail.innerHTML =
+      '<div class="md-grid">'+
+        '<div style="text-align:center">'+
+          '<div style="font-family:var(--serif);font-weight:900;font-size:44px;color:var(--forest-900)">'+m+'<span style="font-size:20px">月</span></div>'+
+          '<div style="font-size:13px;color:var(--pine-700);margin:4px 0 10px">'+d.weather+'</div>'+
+          '<div style="font-size:13px;color:var(--ink-soft)">月均 <b style="color:var(--forest-900)">'+d.avg+'℃</b>　白天 <b style="color:var(--forest-900)">'+d.high+'℃</b><br>夜间 <b style="color:var(--forest-900)">'+d.low+'℃</b></div>'+
+        '</div>'+
+        '<div>'+
+          '<div style="display:flex;gap:8px;align-items:center;margin-bottom:8px"><span style="font-size:12.5px;color:var(--ink-soft);letter-spacing:.1em">推荐指数</span>'+stars(d.rate)+'</div>'+
+          '<div style="background:var(--birch);border-radius:10px;padding:12px 14px;margin-bottom:8px"><div style="font-size:12.5px;color:var(--pine-700);letter-spacing:.1em;margin-bottom:3px">当月亮点</div><div style="font-size:14px;color:var(--ink)">'+d.tips+'</div></div>'+
+          '<div style="background:var(--birch);border-radius:10px;padding:12px 14px"><div style="font-size:12.5px;color:var(--pine-700);letter-spacing:.1em;margin-bottom:3px">怎么穿</div><div style="font-size:14px;color:var(--ink)">'+d.wear+'</div></div>'+
+        '</div>'+
+      '</div>';
+  }
+  function activate(m){
+    chips.forEach(function(c){ c.classList.toggle('on', c.getAttribute('data-m')==String(m)); });
+    render(m);
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){ activate(parseInt(c.getAttribute('data-m'),10)); });
+  });
+  activate(9);
+})();
+</script>
+</body>
+</html>

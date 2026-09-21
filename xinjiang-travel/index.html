@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新疆旅行指南 · 什么时候去，决定了你能看见什么</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231E2E27'/%3E%3Cpath d='M8 48 L25 22 L36 37 L42 29 L56 48 Z' fill='%23F2D9A8'/%3E%3Ccircle cx='47' cy='17' r='5' fill='%23C08436'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<style>
+:root{
+  --paper:#F5F1E6;
+  --paper-2:#EFE9DA;
+  --ink:#22302A;
+  --ink-soft:#46544C;
+  --pine:#1E2E27;
+  --lake:#2F6E8C;
+  --lake-deep:#234E63;
+  --grass:#6E8B4F;
+  --gold:#C08436;
+  --gold-soft:#D8A960;
+  --apricot:#CE8A86;
+  --frost:#7E97A6;
+  --line:#D5CCB8;
+  --serif:"Noto Serif SC", "Songti SC", "STSong", serif;
+  --sans:"Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.8;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* ---------- 刊头 ---------- */
+.masthead{
+  border-bottom:1px solid var(--line);
+  background:var(--paper);
+  position:sticky;top:0;z-index:50;
+}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-family:var(--serif);font-weight:900;font-size:19px;letter-spacing:3px}
+.brand small{font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:1px;color:var(--ink-soft);margin-left:10px}
+.nav{display:flex;gap:26px;font-size:13.5px;color:var(--ink-soft)}
+.nav a{padding:4px 2px;border-bottom:2px solid transparent;transition:.2s}
+.nav a:hover{color:var(--lake);border-bottom-color:var(--lake)}
+@media(max-width:820px){.nav{display:none}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;color:#F7F4EA}
+.hero-img{position:absolute;inset:0}
+.hero-img img{object-position:center 58%}
+.hero-img::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(20,32,28,.42) 0%,rgba(20,32,28,.2) 38%,rgba(18,28,24,.58) 64%,rgba(14,24,20,.86) 100%)}
+.hero-inner{position:relative;max-width:1180px;margin:0 auto;padding:150px 28px 92px}
+.hero-kicker{font-size:13px;letter-spacing:6px;opacity:.92;margin-bottom:22px;text-shadow:0 1px 8px rgba(10,20,16,.5)}
+.hero-kicker span{border:1px solid rgba(247,244,234,.65);padding:5px 14px;border-radius:2px;background:rgba(16,26,22,.18)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(32px,5.4vw,60px);line-height:1.28;letter-spacing:2px;max-width:17em;text-shadow:0 2px 20px rgba(8,18,14,.5)}
+.hero p{margin-top:24px;font-size:clamp(14px,1.6vw,17px);font-weight:300;max-width:44em;opacity:.95;text-shadow:0 1px 10px rgba(8,18,14,.6)}
+.hero-meta{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap;font-size:13px;opacity:.92;text-shadow:0 1px 8px rgba(8,18,14,.65)}
+.hero-meta b{font-family:var(--serif);font-size:26px;font-weight:700;display:block;letter-spacing:1px}
+
+/* ---------- 结论条 ---------- */
+.verdict-bar{background:var(--pine);color:#EFEAD9}
+.verdict-bar .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(213,204,184,.25)}
+.vb-cell{background:var(--pine);padding:30px 26px;position:relative}
+.vb-cell .rk{font-family:var(--serif);font-size:13px;letter-spacing:3px;color:var(--gold-soft)}
+.vb-cell .mo{font-family:var(--serif);font-size:30px;font-weight:700;margin:8px 0 6px}
+.vb-cell p{font-size:13px;color:#C9C2AE;line-height:1.7}
+.vb-cell.lead{background:#274035}
+.vb-cell.lead .mo{color:#F2D9A8}
+@media(max-width:760px){.verdict-bar .wrap{grid-template-columns:1fr}}
+
+/* ---------- 章节通用 ---------- */
+section{padding:84px 0}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:14px}
+.sec-no{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold);letter-spacing:2px;white-space:nowrap}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:clamp(24px,3.4vw,36px);letter-spacing:2px;color:var(--ink)}
+.sec-sub{color:var(--ink-soft);font-size:15px;max-width:52em;margin-bottom:44px;font-weight:300}
+.sec-rule{height:1px;background:var(--line);margin-bottom:40px}
+
+/* ---------- 流程时间轴 ---------- */
+.flow{display:grid;grid-template-columns:64px 28px 1fr;row-gap:0}
+.flow-step{padding:0 0 38px}
+.flow-step .st-no{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--lake);line-height:1.3}
+.flow-axis{position:relative;justify-self:center}
+.flow-axis::before{content:"";position:absolute;top:8px;bottom:-6px;left:50%;width:2px;background:var(--line);transform:translateX(-50%)}
+.flow:last-child .flow-axis::before{display:none}
+.flow-dot{width:13px;height:13px;border-radius:50%;background:var(--paper);border:3px solid var(--lake);margin:6px auto 0;position:relative;z-index:2}
+.flow-body{padding:0 0 38px 8px}
+.flow-body h3{font-family:var(--serif);font-size:19px;font-weight:700;margin-bottom:6px}
+.flow-body p{font-size:14px;color:var(--ink-soft);font-weight:300;max-width:50em}
+.flow-body .tag{display:inline-block;font-size:12px;background:var(--paper-2);border:1px solid var(--line);padding:1px 10px;border-radius:20px;margin:8px 6px 0 0;color:var(--lake-deep)}
+
+/* ---------- 南北疆 ---------- */
+.region-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.region-card{background:#FBF9F2;border:1px solid var(--line);overflow:hidden}
+.region-img{height:280px;position:relative}
+.region-img figcaption{position:absolute;left:0;bottom:0;right:0;padding:26px 22px 12px;color:#fff;font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:2px;
+  background:linear-gradient(180deg,transparent,rgba(18,28,24,.78))}
+.region-body{padding:24px 26px 28px}
+.region-body .rl{font-size:12px;letter-spacing:3px;color:var(--gold);margin-bottom:8px}
+.region-body p{font-size:13.5px;color:var(--ink-soft);font-weight:300;margin-bottom:14px}
+.spot-list{display:flex;flex-wrap:wrap;gap:8px}
+.spot-list span{font-size:12.5px;background:var(--paper-2);padding:4px 12px;border-radius:3px;color:var(--ink)}
+.region-tip{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:13px;color:var(--lake-deep)}
+@media(max-width:760px){.region-grid{grid-template-columns:1fr}}
+
+/* ---------- 四季 ---------- */
+.season-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.season-card{background:#FBF9F2;border:1px solid var(--line)}
+.season-img{height:250px;position:relative;overflow:hidden}
+.season-badge{position:absolute;top:16px;left:16px;background:rgba(247,244,234,.94);font-family:var(--serif);font-weight:700;font-size:16px;padding:6px 16px;letter-spacing:3px;border-radius:2px}
+.season-badge small{font-family:var(--sans);font-weight:400;font-size:11px;letter-spacing:1px;margin-left:8px;color:var(--ink-soft)}
+.season-body{padding:24px 26px 26px}
+.season-body .temp{font-size:12.5px;color:var(--ink-soft);margin-bottom:12px;letter-spacing:1px}
+.season-body ul{list-style:none;margin-bottom:14px}
+.season-body li{font-size:13.5px;font-weight:300;color:var(--ink-soft);padding-left:18px;position:relative;margin-bottom:7px}
+.season-body li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:2px}
+.season-foot{font-size:12.5px;padding-top:12px;border-top:1px dashed var(--line);color:var(--ink)}
+.season-foot b{font-weight:500}
+.s-spring .season-badge{color:#B05E5B}.s-spring li::before{background:var(--apricot)}
+.s-summer .season-badge{color:var(--lake-deep)}.s-summer li::before{background:var(--lake)}
+.s-autumn .season-badge{color:#9A6420}.s-autumn li::before{background:var(--gold)}
+.s-winter .season-badge{color:#4E6A7C}.s-winter li::before{background:var(--frost)}
+.s-autumn{box-shadow:0 0 0 2px var(--gold-soft)}
+.crown{position:absolute;top:14px;right:14px;background:var(--gold);color:#fff;font-size:12px;padding:5px 12px;border-radius:2px;letter-spacing:2px;z-index:2}
+@media(max-width:760px){.season-grid{grid-template-columns:1fr}}
+
+/* ---------- 月历 ---------- */
+.calendar-sec{background:var(--paper-2)}
+#monthChart{width:100%;height:380px;margin-bottom:40px}
+.month-table{width:100%;border-collapse:collapse;background:#FBF9F2;font-size:13px;table-layout:fixed}
+.month-table th,.month-table td{border:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.month-table th{background:var(--pine);color:#EFEAD9;font-weight:500;font-size:12.5px;letter-spacing:1px;text-align:center}
+.month-table td.m{font-family:var(--serif);font-weight:700;text-align:center;vertical-align:middle;background:var(--paper-2)}
+.month-table td.verdict{text-align:center;vertical-align:middle;font-size:12px}
+.star{color:var(--gold);letter-spacing:1px}
+.peak{background:#F6E7CE!important}
+.avoid{color:#A3644F}
+.table-note{font-size:12px;color:var(--ink-soft);margin-top:12px;font-weight:300}
+
+/* ---------- 环线 ---------- */
+.route-tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.route-tab{font-family:var(--sans);font-size:14px;padding:11px 24px;border:1px solid var(--line);background:#FBF9F2;cursor:pointer;letter-spacing:1px;transition:.2s}
+.route-tab.active{background:var(--lake-deep);color:#fff;border-color:var(--lake-deep)}
+.route-panel{display:none}
+.route-panel.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.route-top{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start;margin-bottom:38px}
+.route-img{height:300px}
+.route-info h3{font-family:var(--serif);font-size:23px;font-weight:700;margin-bottom:6px}
+.route-info .rmeta{font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:14px}
+.route-info p{font-size:13.5px;color:var(--ink-soft);font-weight:300;margin-bottom:12px}
+.route-info .best{font-size:13px;background:var(--paper-2);border-left:3px solid var(--gold);padding:10px 14px}
+.route-line{display:flex;flex-wrap:wrap;align-items:center;gap:0;margin-top:6px}
+.r-node{background:#FBF9F2;border:1px solid var(--line);padding:9px 15px;font-size:13px;text-align:center;min-width:96px;position:relative}
+.r-node b{display:block;font-family:var(--serif);font-size:13.5px}
+.r-node small{font-size:11px;color:var(--ink-soft)}
+.r-arrow{color:var(--lake);font-size:16px;padding:0 7px}
+@media(max-width:820px){.route-top{grid-template-columns:1fr}.route-img{height:220px}.route-line{flex-direction:column;align-items:stretch}.r-node{text-align:left}.r-arrow{transform:rotate(90deg);padding:0;align-self:center;height:26px;width:40px;display:flex;align-items:center;justify-content:center;flex:none}}
+
+/* ---------- 最终推荐 ---------- */
+.final-sec{background:var(--pine);color:#EFEAD9}
+.final-sec .sec-head h2{color:#F4EEDD}
+.final-sec .sec-sub{color:#C3BCA8}
+.final-sec .sec-no{color:var(--gold-soft)}
+.final-sec .sec-rule{background:rgba(213,204,184,.3)}
+.final-hero{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;margin-bottom:50px}
+.final-hero .fh-img{height:340px}
+.fh-text .big{font-family:var(--serif);font-size:clamp(30px,4vw,46px);font-weight:900;color:#F2D9A8;letter-spacing:3px;line-height:1.3}
+.fh-text .win{font-size:13px;letter-spacing:4px;color:var(--gold-soft);margin-bottom:14px}
+.fh-text p{font-size:14px;color:#D2CBB8;font-weight:300;margin-top:16px;max-width:36em}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.who-card{border:1px solid rgba(213,204,184,.35);padding:22px 22px;background:rgba(255,255,255,.03)}
+.who-card h4{font-family:var(--serif);font-size:16px;color:#F2D9A8;margin-bottom:8px}
+.who-card .when{font-size:13px;color:#fff;margin-bottom:6px;font-weight:500}
+.who-card p{font-size:12.5px;color:#B7B0A0;font-weight:300}
+@media(max-width:820px){.final-hero{grid-template-columns:1fr}.who-grid{grid-template-columns:1fr}.fh-text .big{font-size:30px}}
+
+/* ---------- 贴士 ---------- */
+.tips-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.tip-card{background:#FBF9F2;border:1px solid var(--line);padding:24px 26px}
+.tip-card h4{font-family:var(--serif);font-size:17px;margin-bottom:10px;color:var(--lake-deep)}
+.tip-card p{font-size:13.5px;color:var(--ink-soft);font-weight:300}
+@media(max-width:760px){.tips-grid{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:var(--pine);color:#9C9684;padding:38px 0;font-size:12.5px;text-align:center;font-weight:300}
+footer .brand{color:#D8D1BF;display:block;margin-bottom:8px;font-size:16px}
+</style>
+</head>
+<body>
+
+<!-- ===== 刊头 ===== -->
+<header class="masthead">
+  <div class="wrap">
+    <div class="brand">远方手册<small>XINJIANG TRAVEL</small></div>
+    <nav class="nav">
+      <a href="#flow">出行流程</a>
+      <a href="#region">南北疆</a>
+      <a href="#season">四季</a>
+      <a href="#calendar">月历</a>
+      <a href="#route">环线</a>
+      <a href="#final">最佳季节</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<div class="hero">
+  <div class="hero-img"><img src="assets/hero-sayram-lake.jpg" alt="赛里木湖夏季全景，雪山、蓝湖与草坡"></div>
+  <div class="hero-inner">
+    <div class="hero-kicker"><span>新疆旅行完全指南 · 四季 · 路线 · 时机</span></div>
+    <h1>新疆不是一个景点，<br>而是一整个大陆的缩影</h1>
+    <p>166 万平方公里，同一天里北部盆地能比南部低地凉 20℃。来新疆的时间和路线不对，等于白来——这份手册回答三件事：一般怎么个流程去、十二个月分别能看到什么、到底哪个季节最值得。</p>
+    <div class="hero-meta">
+      <div><b>166万km²</b>国土面积的六分之一</div>
+      <div><b>7–16天</b>单条环线到南北疆全景</div>
+      <div><b>3个</b>不可错过的黄金窗口</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 结论条 ===== -->
+<div class="verdict-bar">
+  <div class="wrap">
+    <div class="vb-cell lead">
+      <div class="rk">综合首选</div>
+      <div class="mo">9 月</div>
+      <p>9 月 10–30 日喀纳斯与禾木白桦林鎏金，白天 10–22℃，暑假人潮退去、几乎无沙尘，第一次去、拍照、舒适度全部拉满。</p>
+    </div>
+    <div class="vb-cell">
+      <div class="rk">绿意巅峰</div>
+      <div class="mo">6 月上中旬</div>
+      <p>赛里木湖呈现“电光蓝”，伊犁花海全开，独库公路刚通车，人流与价格尚未冲上暑期峰值。</p>
+    </div>
+    <div class="vb-cell">
+      <div class="rk">性价比之选</div>
+      <div class="mo">5 月</div>
+      <p>草原返青、野花初放，景区执行淡季票价、住宿便宜，只是春季风大，需备防风外套。</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 第一章 出行流程 ===== -->
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">01 / 流程</span><h2>第一次去新疆，按这六步走</h2></div>
+    <p class="sec-sub">新疆的景点之间动辄四到八小时车程，每天都在换住处。它不适合“到了再说”的随性玩法，顺序想清楚，能省下大几千元和大量折返的路。</p>
+    <div class="sec-rule"></div>
+    <div class="flow">
+      <div class="flow-step"><div class="st-no">01</div></div>
+      <div class="flow-axis"><div class="flow-dot"></div></div>
+      <div class="flow-body">
+        <h3>先定时间：季节决定你能看见什么</h3>
+        <p>新疆是全国“四季差异最大”的目的地——同一个喀纳斯，6 月是翠绿湖泊、9 月底是鎏金白桦、1 月是齐膝深雪。先想清楚自己要看花海、金秋还是冰雪，再倒推出发月份。</p>
+        <span class="tag">看花海 → 6月</span><span class="tag">看金秋 → 9月中下旬</span><span class="tag">看杏花 → 4月上中旬</span><span class="tag">看雪 → 1–2月</span>
+      </div>
+
+      <div class="flow-step"><div class="st-no">02</div></div>
+      <div class="flow-axis"><div class="flow-dot"></div></div>
+      <div class="flow-body">
+        <h3>再选区域：北疆看风景，南疆看人文</h3>
+        <p>天山以北的阿勒泰、伊犁是雪山、湖泊、草原、花海的自然长廊；天山以南的喀什、帕米尔是古城、巴扎、高原与胡杨的人文腹地。第一次去、偏爱自然风光，建议先走北疆。</p>
+        <span class="tag">自然风光 → 北疆</span><span class="tag">人文历史 → 南疆</span><span class="tag">时间充裕 → 南北疆连走</span>
+      </div>
+
+      <div class="flow-step"><div class="st-no">03</div></div>
+      <div class="flow-axis"><div class="flow-dot"></div></div>
+      <div class="flow-body">
+        <h3>定天数：别想着一次玩完</h3>
+        <p>单条经典环线建议 7–8 天（不含往返大交通）；北疆两条环线都走约 10–12 天；南北疆精华一次看遍需要 13–16 天。假期不足 7 天，宁可只深度玩一条线，也不要南北疆两头赶。</p>
+        <span class="tag">7–8天 · 一条环线</span><span class="tag">10–12天 · 北疆全景</span><span class="tag">13–16天 · 南北疆全景</span>
+      </div>
+
+      <div class="flow-step"><div class="st-no">04</div></div>
+      <div class="flow-axis"><div class="flow-dot"></div></div>
+      <div class="flow-body">
+        <h3>选环线：三条主线对号入座</h3>
+        <p>阿勒泰环线（喀纳斯、禾木、可可托海）、伊犁环线（赛里木湖、那拉提、巴音布鲁克、独库公路）、南疆环线（喀什、帕米尔高原、胡杨林）。下文第五章有每条线的逐日节点。</p>
+        <span class="tag">童话村落 → 阿勒泰</span><span class="tag">草原花海 → 伊犁</span><span class="tag">古城高原 → 南疆</span>
+      </div>
+
+      <div class="flow-step"><div class="st-no">05</div></div>
+      <div class="flow-axis"><div class="flow-dot"></div></div>
+      <div class="flow-body">
+        <h3>交通与住宿：包车自驾为主，旺季提前订房</h3>
+        <p>各地航班与高铁基本都在乌鲁木齐中转。当地游玩以包车 / 拼车 / 自驾为主，公共交通串联景区很吃力。7–8 月与国庆期间，喀纳斯、禾木的房源紧张，建议提前 1–2 个月预订；独库公路通常 6 月初通车、10 月初关闭，出行前务必确认路况。</p>
+        <span class="tag">中转枢纽 · 乌鲁木齐</span><span class="tag">独库开放 · 约6月–10月初</span><span class="tag">旺季提前1–2月订房</span>
+      </div>
+
+      <div class="flow-step"><div class="st-no">06</div></div>
+      <div class="flow-axis"><div class="flow-dot"></div></div>
+      <div class="flow-body">
+        <h3>行前准备：分层穿衣、硬防晒、证件</h3>
+        <p>昼夜温差普遍 10–15℃，按“短袖＋抓绒＋防风外套”分层打包；高原与湖区紫外线极强，SPF50 防晒、墨镜、唇膏必备。身份证全程必带，去南疆塔县等边境地区还需提前办理边防证。</p>
+        <span class="tag">分层穿衣</span><span class="tag">SPF50 防晒</span><span class="tag">边防证（塔县等）</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第二章 南北疆 ===== -->
+<section id="region" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">02 / 区域</span><h2>北疆看风景，南疆看人文</h2></div>
+    <p class="sec-sub">天山把新疆切成两个性格迥异的世界。绝大多数人第一次进疆走北疆——它兑现你对“新疆风光”的全部想象；南疆则属于第二次、或者想看真实西域生活的人。</p>
+    <div class="sec-rule"></div>
+    <div class="region-grid">
+      <div class="region-card">
+        <figure class="region-img">
+          <img src="assets/summer-grassland.jpg" alt="北疆伊犁喀拉峻草原夏季花海与雪山">
+          <figcaption>北疆 · 阿勒泰 ＋ 伊犁</figcaption>
+        </figure>
+        <div class="region-body">
+          <div class="rl">自然风光的天花板</div>
+          <p>雪山、冰川、湖泊、森林、草原、花海在一条环线里密集出现，车程即风景。夏季平均 20–25℃，是天然避暑地；秋季喀纳斯的金色白桦林被誉为“神的后花园”。</p>
+          <div class="spot-list">
+            <span>喀纳斯</span><span>禾木</span><span>白哈巴</span><span>可可托海</span><span>赛里木湖</span><span>那拉提</span><span>喀拉峻</span><span>巴音布鲁克</span><span>独库公路</span><span>天山天池</span>
+          </div>
+          <div class="region-tip">建议天数：7–12 天　｜　最佳：6 月花海、9 月金秋</div>
+        </div>
+      </div>
+      <div class="region-card">
+        <figure class="region-img">
+          <img src="assets/south-pamir.jpg" alt="南疆帕米尔高原慕士塔格峰与喀拉库勒湖">
+          <figcaption>南疆 · 喀什 ＋ 帕米尔</figcaption>
+        </figure>
+        <div class="region-body">
+          <div class="rl">活着的西域与高原</div>
+          <p>喀什古城里的土巷、巴扎和清真寺延续着丝路烟火；再往西是帕米尔高原，慕士塔格峰与喀拉库勒湖壮阔苍凉，秋季塔里木的胡杨林金黄一片。受季节影响相对小，8 月中旬之后天气转凉最舒服。</p>
+          <div class="spot-list">
+            <span>喀什古城</span><span>艾提尕尔清真寺</span><span>喀拉库勒湖</span><span>慕士塔格峰</span><span>塔什库尔干</span><span>白沙湖</span><span>塔里木胡杨林</span><span>塔克拉玛干沙漠</span>
+          </div>
+          <div class="region-tip">建议天数：6–8 天　｜　最佳：8 月中–10 月；塔县需边防证</div>
+        </div>
+      </div>
+    </div>
+    <p class="table-note" style="margin-top:26px">想一次看遍：常见走法是“先北疆后南疆”，在乌鲁木齐休整中转，全程约 13–16 天，比分别飞两趟省下一段机票钱。</p>
+  </div>
+</section>
+
+<!-- ===== 第三章 四季 ===== -->
+<section id="season">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">03 / 四季</span><h2>十二个月，四个完全不同的新疆</h2></div>
+    <p class="sec-sub">春天追花、夏天避暑、秋天拍金、冬天玩雪——每一季的主角和区域都不同，下面按季节拆解看点、气温与避坑要点。</p>
+    <div class="sec-rule"></div>
+    <div class="season-grid">
+
+      <div class="season-card s-spring">
+        <div class="season-img">
+          <img src="assets/spring-apricot.jpg" alt="春季伊犁吐尔根杏花沟野杏花盛开">
+          <div class="season-badge">春<small>3月 – 5月</small></div>
+        </div>
+        <div class="season-body">
+          <div class="temp">北疆约 5–25℃　·　南疆白天可达 25℃，夜冷</div>
+          <ul>
+            <li>3 月：南疆帕米尔、托克逊杏花率先开放，黄土戈壁衬雪白杏花</li>
+            <li>4 月：伊犁吐尔根、大西沟野杏花沟漫山粉白，花期仅约一周，随气温浮动</li>
+            <li>5 月：赛里木湖冰雪消融、湖水澄澈，那拉提草原返青，喀纳斯道路通常 5 月上中旬重新开放</li>
+            <li>景区多执行淡季票价，游客少、住宿便宜，光线通透</li>
+          </ul>
+          <div class="season-foot"><b>要注意：</b>春季达坂城一带有大风甚至沙尘，杏花日期不可提前太久锁死，行程要留弹性。</div>
+        </div>
+      </div>
+
+      <div class="season-card s-summer">
+        <div class="season-img">
+          <img src="assets/summer-lavender.jpg" alt="夏季霍城薰衣草花田与天山雪峰">
+          <div class="season-badge">夏<small>6月 – 8月</small></div>
+        </div>
+        <div class="season-body">
+          <div class="temp">北疆山区 20–28℃　·　吐鲁番低地可达 40–45℃</div>
+          <ul>
+            <li>6 月：赛里木湖进入“电光蓝”，霍城薰衣草与伊犁野花相继盛开，草原全面返绿</li>
+            <li>独库公路通常 6 月初全线通车，“一日过四季、十里不同天”</li>
+            <li>7–8 月：暑假旺季，喀纳斯、禾木房源紧张、价格高企；7 月昭苏有赛马等传统节庆</li>
+            <li>高海拔的喀纳斯、巴音布鲁克白天仅 15–22℃，是避暑核心区</li>
+          </ul>
+          <div class="season-foot"><b>最佳节奏：</b>赶 6 月上中旬，景美且人少价低；7 月下旬至 8 月只建议待在北疆山区，避开吐鲁番正午。</div>
+        </div>
+      </div>
+
+      <div class="season-card s-autumn">
+        <div class="season-img">
+          <div class="crown">全年最推荐</div>
+          <img src="assets/autumn-kanas.jpg" alt="秋季禾木村金色白桦林与晨雾炊烟">
+          <div class="season-badge">秋<small>9月 – 11月初</small></div>
+        </div>
+        <div class="season-body">
+          <div class="temp">9 月白天 10–22℃　·　10 月夜间转至零下</div>
+          <ul>
+            <li>9 月 10–30 日：喀纳斯、禾木的白桦与落叶松进入鎏金峰值，晨雾、三湾出片率极高</li>
+            <li>9 月中旬开学后游客骤减，湖边栈道常常能独享，几乎没有沙尘</li>
+            <li>国庆黄金周（10 月 1–7 日）喀纳斯日客流可达数万人、房价翻数倍，务必避开</li>
+            <li>10 月 8–25 日：金秋尾巴叠加初雪，金白同框；南疆塔里木胡杨林同期转黄</li>
+          </ul>
+          <div class="season-foot"><b>要注意：</b>9 月是摄影客的抢手档期，喀纳斯、禾木住宿建议 8 月就订好。</div>
+        </div>
+      </div>
+
+      <div class="season-card s-winter">
+        <div class="season-img">
+          <img src="assets/winter-hemu.jpg" alt="冬季禾木村雪蘑菇木屋与炊烟">
+          <div class="season-badge">冬<small>11月底 – 次年2月</small></div>
+        </div>
+        <div class="season-body">
+          <div class="temp">北疆 −25～−10℃　·　南疆喀什 −10～5℃</div>
+          <ul>
+            <li>禾木、喀纳斯化身冰雪童话：雪蘑菇木屋、雾凇白桦、雪地炊烟，可体验马拉爬犁与滑雪</li>
+            <li>赛里木湖有蓝冰与“冰推”奇观，库尔德宁等秘境人迹罕至</li>
+            <li>北疆部分道路封闭，禾木需换乘专用冬季交通进入，属“探险级”出行</li>
+            <li>南疆喀什古城雪中安静、住宿便宜，是冬季相对容易抵达的部分</li>
+          </ul>
+          <div class="season-foot"><b>适合谁：</b>有严寒旅行经验、专门为冰雪景观而来的人；普通游客不建议贸然深冬进北疆。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第四章 月历 ===== -->
+<section id="calendar" class="calendar-sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">04 / 月历</span><h2>十二个月，哪个月最值得？</h2></div>
+    <p class="sec-sub">下图综合风景表现、天气舒适度、道路可达性与人流价格，对北疆、南疆逐月打分（编辑评估，满分 100）。可以直观看到：北疆的窗口集中在 5–10 月，南疆则在春秋两季更友好。</p>
+    <div class="sec-rule"></div>
+    <div id="monthChart"></div>
+    <table class="month-table">
+      <colgroup><col style="width:9%"><col style="width:34%"><col style="width:34%"><col style="width:23%"></colgroup>
+      <thead>
+        <tr><th>月份</th><th>北疆（阿勒泰 · 伊犁）</th><th>南疆（喀什 · 帕米尔）</th><th>推荐度</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="m">1月</td><td>大雪封山，禾木仅冰雪专线可达，约 −25～−10℃</td><td>喀什古城偶雪、游客极少，帕米尔视天气通行</td><td class="verdict"><span class="star">★☆</span><br>仅限冬旅</td></tr>
+        <tr><td class="m">2月</td><td>同属深冬，春节期间部分民宿歇业</td><td>白天略回暖，古城安静</td><td class="verdict"><span class="star">★☆</span><br>不推荐</td></tr>
+        <tr><td class="m">3月</td><td>冬季路况尾声，道路开放不稳定</td><td>和田一带杏花下旬初放</td><td class="verdict"><span class="star">★★</span><br>过渡观望</td></tr>
+        <tr><td class="m">4月</td><td>伊犁河谷返青，赛湖下旬融冰，约 5–18℃</td><td>15–25℃ 舒适；吐尔根杏花上中旬</td><td class="verdict"><span class="star">★★★★</span><br>宝藏淡季</td></tr>
+        <tr class="peak"><td class="m">5月</td><td>喀纳斯道路重开、赛湖全开、草原返青，15–25℃</td><td>温暖不晒，各处顺畅</td><td class="verdict"><span class="star">★★★★★</span><br>最佳窗口</td></tr>
+        <tr class="peak"><td class="m">6月</td><td>赛湖电光蓝、薰衣草与野花地毯，20–28℃，独库通车</td><td>低地开始转热</td><td class="verdict"><span class="star">★★★★★</span><br>最佳窗口</td></tr>
+        <tr><td class="m">7月</td><td>风景正盛，但暑假人潮与价格见顶，需早订房</td><td class="avoid">吐鲁番 40–45℃，仅帕米尔高原可去</td><td class="verdict"><span class="star">★★★</span><br>暑期无奈</td></tr>
+        <tr><td class="m">8月</td><td>山区白天 15–22℃ 依旧舒适，仍是旺季</td><td class="avoid">低地酷热，建议只走高海拔</td><td class="verdict"><span class="star">★★★</span><br>只走山区</td></tr>
+        <tr class="peak"><td class="m">9月</td><td><b>白桦鎏金、10–22℃、人潮退去、几乎无沙尘</b></td><td>暖而不晒，全年最舒服</td><td class="verdict"><span class="star">★★★★★</span><br>全年第一</td></tr>
+        <tr><td class="m">10月</td><td>上旬金秋叠加初雪；黄金周爆满涨价，下旬 0–12℃</td><td>塔里木胡杨林金黄，气温温和</td><td class="verdict"><span class="star">★★★★</span><br>避开黄金周</td></tr>
+        <tr><td class="m">11月</td><td>喀纳斯道路通常上旬关闭，禾木转为滑雪目的地</td><td>古城安静，帕米尔初雪后或封闭</td><td class="verdict"><span class="star">★★</span><br>只走南疆</td></tr>
+        <tr><td class="m">12月</td><td>全面深冬，只适合冰雪玩家</td><td>喀什淡季，低角度阳光很出片</td><td class="verdict"><span class="star">★★</span><br>冬境喀什</td></tr>
+      </tbody>
+    </table>
+    <p class="table-note">注：评分为编辑结合天气、景观、道路通行与旺季人流的综合判断；杏花、初雪、通车日期每年随气温浮动，出行前一周请再次确认景区与独库公路公告。</p>
+  </div>
+</section>
+
+<!-- ===== 第五章 环线 ===== -->
+<section id="route">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">05 / 路线</span><h2>三条经典环线，对号入座</h2></div>
+    <p class="sec-sub">第一次去不用自己拼景点——新疆的旅行产品几乎都围绕下面三条成熟环线展开。点击切换，查看每条线的走向、天数与最佳档期。</p>
+    <div class="sec-rule"></div>
+
+    <div class="route-tabs" role="tablist">
+      <button class="route-tab active" data-route="r1" type="button">阿勒泰环线 · 7天</button>
+      <button class="route-tab" data-route="r2" type="button">伊犁环线 · 7–8天</button>
+      <button class="route-tab" data-route="r3" type="button">南疆环线 · 6–8天</button>
+    </div>
+
+    <div class="route-panel active" id="r1">
+      <div class="route-top">
+        <figure class="route-img"><img src="assets/autumn-moon-bay.jpg" alt="阿勒泰环线：喀纳斯月亮湾金秋"></figure>
+        <div class="route-info">
+          <h3>阿勒泰环线：童话湖泊与村落</h3>
+          <div class="rmeta">约 1700 公里　·　建议 7 天　·　乌鲁木齐起止</div>
+          <p>北疆最经典的入门线，一路串联天山天池、可可托海、喀纳斯、禾木与魔鬼城，地貌从雪山湖泊到戈壁雅丹轮番切换，不走回头路。</p>
+          <div class="best">最佳档期：6–8 月看翠绿湖泊；<b>9 月中旬–10 月初看鎏金秋色（首选）</b>；12 月–次年 3 月看冰雪童话。</div>
+        </div>
+      </div>
+      <div class="route-line">
+        <div class="r-node"><b>乌鲁木齐</b><small>集合·大巴扎</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>天山天池</b><small>博格达峰</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>可可托海</b><small>额尔齐斯峡谷</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>布尔津</b><small>五彩滩日落</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>喀纳斯</b><small>三湾·观鱼台</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>禾木</b><small>晨雾·星空</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>白哈巴</b><small>西北第一村</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>魔鬼城</b><small>乌尔禾雅丹</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>乌鲁木齐</b><small>返程</small></div>
+      </div>
+    </div>
+
+    <div class="route-panel" id="r2">
+      <div class="route-top">
+        <figure class="route-img"><img src="assets/bayanbulak.jpg" alt="伊犁环线：巴音布鲁克九曲十八弯日落"></figure>
+        <div class="route-info">
+          <h3>伊犁环线：草原花海与天山公路</h3>
+          <div class="rmeta">约 1800 公里　·　建议 7–8 天　·　乌鲁木齐起止</div>
+          <p>新疆夏季风光的巅峰：赛里木湖的蓝、霍城的紫、喀拉峻与那拉提的绿，再以巴音布鲁克九曲十八弯的日落收尾，走一段独库公路堪称精华。</p>
+          <div class="best">最佳档期：<b>6 月中旬–7 月中旬花海全盛</b>；独库公路通常 6 月初通车、10 月初关闭，出发前确认路况。</div>
+        </div>
+      </div>
+      <div class="route-line">
+        <div class="r-node"><b>乌鲁木齐</b><small>集合</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>赛里木湖</b><small>环湖·电光蓝</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>果子沟</b><small>峡谷大桥</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>伊宁</b><small>六星街</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>霍城</b><small>薰衣草</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>喀拉峻</b><small>人体草原</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>那拉提</b><small>空中草原</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>巴音布鲁克</b><small>九曲十八弯</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>独库公路</b><small>一日四季</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>乌鲁木齐</b><small>返程</small></div>
+      </div>
+    </div>
+
+    <div class="route-panel" id="r3">
+      <div class="route-top">
+        <figure class="route-img"><img src="assets/south-pamir.jpg" alt="南疆环线：帕米尔高原慕士塔格峰"></figure>
+        <div class="route-info">
+          <h3>南疆环线：古城、巴扎与帕米尔</h3>
+          <div class="rmeta">建议 6–8 天　·　飞抵喀什起止更省时</div>
+          <p>从喀什古城的丝路烟火一路上升到帕米尔高原，白沙湖、喀拉库勒湖与“冰山之父”慕士塔格峰壮阔苍凉；秋季可加看塔里木胡杨林。风景受季节影响小，人文体验才是主角。</p>
+          <div class="best">最佳档期：<b>8 月中旬–10 月</b>，避开低地酷暑；胡杨金黄在 10 月中下旬。前往塔什库尔干需提前办理边防证。</div>
+        </div>
+      </div>
+      <div class="route-line">
+        <div class="r-node"><b>飞抵喀什</b><small>古城·艾提尕尔</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>百年老巴扎</b><small>市井烟火</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>白沙湖</b><small>帕米尔入口</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>喀拉库勒湖</b><small>慕士塔格倒影</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>塔什库尔干</b><small>石头城·边防证</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>金草滩</b><small>湿地日落</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>返回喀什</b><small>古城夜色</small></div><span class="r-arrow">→</span>
+        <div class="r-node"><b>塔里木</b><small>10月胡杨林</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 第六章 最终推荐 ===== -->
+<section id="final" class="final-sec">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">06 / 结论</span><h2>如果只能选一个时间：9 月</h2></div>
+    <p class="sec-sub">问过反复进疆的旅行者与摄影师，答案高度一致。9 月把天气、景色、人流三件事同时解决了——这在新疆十二个月里独此一份。</p>
+    <div class="sec-rule"></div>
+
+    <div class="final-hero">
+      <figure class="fh-img"><img src="assets/autumn-mist-bay.jpg" alt="9月喀纳斯神仙湾晨雾鎏金"></figure>
+      <div class="fh-text">
+        <div class="win">THE SINGLE BEST MONTH</div>
+        <div class="big">9 月 10 日 – 30 日<br>北疆金秋窗口</div>
+        <p>喀纳斯与禾木的白桦、落叶松在这十几天里变成纯粹的金色，神仙湾晨雾、月亮湾弯月、观鱼台俯瞰全部到位；白天 10–22℃ 干爽通透，几乎零沙尘；暑假大军在 9 月中旬前退场，湖边栈道常常只剩你和风景。唯一的代价：8 月就得订好喀纳斯、禾木的房。</p>
+        <p>赶不上 9 月？<b style="color:#F2D9A8">6 月上中旬</b>是第二选择——湖蓝、花海、独库初开，人还没涌进来；再退一步，<b style="color:#F2D9A8">5 月</b>用淡季价格换嫩绿草原。</p>
+      </div>
+    </div>
+
+    <div class="who-grid">
+      <div class="who-card">
+        <h4>第一次去、求稳妥</h4>
+        <div class="when">9 月中下旬 · 阿勒泰环线</div>
+        <p>天气、景色、人流同时在线，七天集中看喀纳斯、禾木、可可托海，容错率最高。</p>
+      </div>
+      <div class="who-card">
+        <h4>想看绿色与花海</h4>
+        <div class="when">6 月上中旬 · 伊犁环线</div>
+        <p>赛里木湖最蓝、草原野花全盛，赶在暑假涨价和人潮之前，独库公路刚通车。</p>
+      </div>
+      <div class="who-card">
+        <h4>摄影发烧友</h4>
+        <div class="when">9 月下旬–10 月初 / 10 月中下旬</div>
+        <p>前者拍北疆白桦鎏金，后者拍南疆塔里木胡杨；务必避开国庆黄金周（10 月 1–7 日）。</p>
+      </div>
+      <div class="who-card">
+        <h4>预算优先</h4>
+        <div class="when">4–5 月 或 11 月</div>
+        <p>景区淡季票价、住宿全年低位，4 月还能追杏花；代价是春风沙尘与部分路况不确定。</p>
+      </div>
+      <div class="who-card">
+        <h4>亲子避暑</h4>
+        <div class="when">7–8 月 · 只待北疆山区</div>
+        <p>喀纳斯、巴音布鲁克白天仅 15–25℃，但要接受旺季人流与高房价，提前订房、放弃吐鲁番。</p>
+      </div>
+      <div class="who-card">
+        <h4>专题玩家</h4>
+        <div class="when">1–2 月冰雪 / 3 月底–4 月中杏花</div>
+        <p>禾木雪村与赛里木湖蓝冰是冬季限定；杏花花期仅约一周且随气温变化，行程必须留弹性。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 实用贴士 ===== -->
+<section id="tips">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-no">07 / 贴士</span><h2>出发前记住这几件事</h2></div>
+    <div class="sec-rule"></div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h4>时差与作息</h4>
+        <p>新疆官方使用北京时间，但地理位置上晚约 2 小时：夏季要到 22 点才天黑。当地普遍上午 10 点吃早饭、14 点午饭、21 点晚饭，看日落、赶景区班车都按“新疆时间”重新估算。</p>
+      </div>
+      <div class="tip-card">
+        <h4>距离与交通</h4>
+        <p>两个景点之间车程 4–8 小时是常态，环线旅行几乎每天换酒店。主流方式是包车、拼车或自驾，纯公共交通很难串联景区；独库公路等山区道路仅 6 月初至 10 月初前后通行。</p>
+      </div>
+      <div class="tip-card">
+        <h4>证件与边境</h4>
+        <p>身份证全程必备且检查频繁；去塔什库尔干、红其拉甫等边境地区需提前办理边防证（可在喀什办理，户籍地也可提前办）。无人机在很多景区受限，起飞前先查规定。</p>
+      </div>
+      <div class="tip-card">
+        <h4>穿衣与防晒</h4>
+        <p>昼夜温差 10–15℃，按“短袖＋抓绒＋防风外套”分层打包；高原湖区紫外线极强，SPF50 防晒、墨镜、唇膏缺一不可。帕米尔塔县海拔约 3100 米，红其拉甫逾 4700 米，注意高反。</p>
+      </div>
+      <div class="tip-card">
+        <h4>预算节奏</h4>
+        <p>7–8 月与国庆是价格顶峰，喀纳斯、禾木住宿最贵且需提前 1–2 个月订；4–5 月、11 月为淡季，门票常有半价。跟团省心但自由度低，包车拼小团是多数人第一次的折中选择。</p>
+      </div>
+      <div class="tip-card">
+        <h4>别贪多</h4>
+        <p>新疆面积相当于伊朗，没有“一次玩遍”这回事。7 天以内就专注一条环线；想看遍南北疆精华，老老实实留出 13–16 天，并在乌鲁木齐安排中转休整。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">远方手册 · 新疆卷</span>
+    季节与道路信息综合自新疆旅游公开攻略与逐月旅行指南，花期、初雪、独库通车日期每年浮动，出行前请以景区最新公告为准。
+  </div>
+</footer>
+
+<script>
+/* ---------- 环线 Tab 切换 ---------- */
+(function(){
+  var tabs = document.querySelectorAll('.route-tab');
+  var panels = document.querySelectorAll('.route-panel');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var id = tab.getAttribute('data-route');
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      tab.classList.add('active');
+      document.getElementById(id).classList.add('active');
+    });
+  });
+})();
+
+/* ---------- 逐月适宜度图表 ---------- */
+(function(){
+  var el = document.getElementById('monthChart');
+  if(!el || typeof echarts === 'undefined') return;
+  var chart = echarts.init(el);
+  var months = ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+  var north = [25,25,40,68,88,92,72,70,96,78,38,28];
+  var south = [45,45,55,72,80,75,48,62,90,92,72,58];
+
+  chart.setOption({
+    color:['#2F6E8C','#C08436'],
+    grid:{left:46,right:24,top:54,bottom:40},
+    legend:{
+      data:['北疆综合适宜度','南疆综合适宜度'],
+      top:10,icon:'roundRect',itemWidth:16,itemHeight:4,
+      textStyle:{color:'#46544C',fontSize:13,fontFamily:'Noto Sans SC'}
+    },
+    tooltip:{trigger:'axis',backgroundColor:'#1E2E27',borderColor:'#1E2E27',
+      textStyle:{color:'#EFEAD9',fontSize:12},
+      axisPointer:{lineStyle:{color:'#B9AF97'}}},
+    xAxis:{type:'category',data:months,boundaryGap:false,
+      axisLine:{lineStyle:{color:'#B9AF97'}},
+      axisLabel:{color:'#46544C',fontSize:12},
+      axisTick:{show:false}},
+    yAxis:{type:'value',min:0,max:100,interval:25,
+      axisLabel:{color:'#8A8172',fontSize:11,formatter:'{value}'},
+      splitLine:{lineStyle:{color:'#DCD5C3',type:'dashed'}},
+      name:'综合评分',nameTextStyle:{color:'#8A8172',fontSize:11,padding:[0,0,0,-30]}},
+    series:[
+      {name:'北疆综合适宜度',type:'line',data:north,smooth:true,symbolSize:7,
+        lineStyle:{width:3},
+        areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,
+          colorStops:[{offset:0,color:'rgba(47,110,140,.22)'},{offset:1,color:'rgba(47,110,140,.01)'}]}},
+        markPoint:{symbol:'pin',symbolSize:46,
+          label:{fontSize:11,color:'#fff'},
+          data:[{coord:['9月',96],value:'最佳'}],
+          itemStyle:{color:'#C08436'}},
+        markArea:{silent:true,itemStyle:{opacity:.5},
+          data:[
+            [{name:'冬',xAxis:'1月',itemStyle:{color:'rgba(126,151,166,.14)'},label:{color:'#5E7484',fontSize:11}},{xAxis:'2月'}],
+            [{name:'春',xAxis:'3月',itemStyle:{color:'rgba(206,138,134,.14)'},label:{color:'#B05E5B',fontSize:11}},{xAxis:'5月'}],
+            [{name:'夏',xAxis:'6月',itemStyle:{color:'rgba(47,110,140,.12)'},label:{color:'#2F6E8C',fontSize:11}},{xAxis:'8月'}],
+            [{name:'秋',xAxis:'9月',itemStyle:{color:'rgba(192,132,54,.16)'},label:{color:'#9A6420',fontSize:11}},{xAxis:'11月'}],
+            [{xAxis:'12月',itemStyle:{color:'rgba(126,151,166,.14)'}},{xAxis:'12月'}]
+          ]}
+      },
+      {name:'南疆综合适宜度',type:'line',data:south,smooth:true,symbolSize:7,
+        lineStyle:{width:3,type:'solid'},
+        areaStyle:{color:{type:'linear',x:0,y:0,x2:0,y2:1,
+          colorStops:[{offset:0,color:'rgba(192,132,54,.18)'},{offset:1,color:'rgba(192,132,54,.01)'}]}}}
+    ]
+  });
+  window.addEventListener('resize',function(){ chart.resize(); });
+})();
+</script>
+</body>
+</html>
+</body>
+</html>

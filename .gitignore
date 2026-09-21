@@ -1,0 +1,8 @@
+# 生成过程中的预览截图与中间分片，不纳入版本库
+_shots/
+_parts/
+
+# 系统与编辑器杂项
+.DS_Store
+Thumbs.db
+desktop.ini
