@@ -190,6 +190,16 @@ section{padding:88px 0}
 .pc-good li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:2px;background:var(--teal)}
 .pc-bad li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-right:2px solid var(--rust);border-bottom:2px solid var(--rust);transform:rotate(45deg)}
 
+/* ===== 沿线图集 ===== */
+.shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.shot{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/2;margin:0}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.shot:hover img{transform:scale(1.06)}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 44%,rgba(13,38,47,.84));pointer-events:none}
+.shot figcaption{position:absolute;left:22px;right:22px;bottom:16px;z-index:2;color:#fff}
+.shot figcaption b{display:block;font-family:var(--serif);font-size:18px;letter-spacing:1px;margin-bottom:3px}
+.shot figcaption span{font-size:13px;color:rgba(255,255,255,.86);line-height:1.55}
+
 /* ===== 最佳季节高亮 ===== */
 .best{position:relative;border-radius:22px;overflow:hidden;margin-top:64px;box-shadow:0 26px 60px -28px rgba(20,58,70,.55)}
 .best-img{position:absolute;inset:0}
@@ -253,6 +263,7 @@ footer{background:var(--pine-deep);color:rgba(255,255,255,.75);padding:54px 0 40
   .ticket-row{grid-template-columns:1fr 1fr}
   .policy-note{grid-column:span 1}
   .routes,.season-grid{grid-template-columns:1fr}
+  .shot-grid{grid-template-columns:1fr}
   .pros-cons{grid-template-columns:1fr 1fr}
   .best-inner{max-width:100%;padding:44px 30px}
   .best-veil{background:linear-gradient(180deg,rgba(20,45,55,.88),rgba(20,45,55,.78))}
@@ -305,6 +316,7 @@ footer{background:var(--pine-deep);color:rgba(255,255,255,.75);padding:54px 0 40
     <div class="nav-links">
       <a href="#overview">认识亚丁</a>
       <a href="#route">游玩流程</a>
+      <a href="#gallery">沿线风景</a>
       <a href="#seasons">四季指南</a>
       <a href="#tips">实用贴士</a>
     </div>
@@ -548,11 +560,40 @@ footer{background:var(--pine-deep);color:rgba(255,255,255,.75);padding:54px 0 40
   </div>
 </section>
 
+<!-- ===== 沿线图集 ===== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">03 / 沿线风景</div>
+      <h2>除了三神山与三海子，沿途还藏着这些画面</h2>
+      <p>从稻城城北的白塔群到进山路上的冲古寺，从秋天限定的桑堆红草地到长线垭口猎猎经幡——它们共同构成完整的亚丁之旅。</p>
+    </div>
+    <div class="shot-grid">
+      <figure class="shot reveal">
+        <img src="assets/chonggu-temple.jpg" alt="冲古寺鎏金金顶与央迈勇雪山">
+        <figcaption><b>冲古寺</b><span>短线途经的百年古寺，金顶正对央迈勇雪峰</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/white-pagoda.jpg" alt="稻城尊胜塔林白塔群与经幡">
+        <figcaption><b>尊胜塔林</b><span>稻城城北的白塔群，进出县城都会路过的藏地地标</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/red-grassland.jpg" alt="桑堆红草地秋季艳红水草与白杨树">
+        <figcaption><b>桑堆红草地</b><span>仅秋季十几天变红的水草，与金杨、蓝天撞色</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/hike-flags.jpg" alt="长线徒步垭口的五色经幡与雪山">
+        <figcaption><b>长线垭口</b><span>经幡猎猎的碎石坡之上，牛奶海与五色海在更高处</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 四季指南 ===== -->
 <section id="seasons">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-index">03 / 四季指南</div>
+      <div class="sec-index">04 / 四季指南</div>
       <h2>四季皆景，但看到的画面完全不同</h2>
       <p>稻城亚丁的景色随月份剧烈变化：春天看花、夏天看绿、秋天看彩林、冬天看雪。雨季能否见到雪山、冬季长线是否封闭，是选季节时最该权衡的两件事。</p>
     </div>
@@ -675,7 +716,7 @@ footer{background:var(--pine-deep);color:rgba(255,255,255,.75);padding:54px 0 40
 <section id="tips" class="alt">
   <div class="wrap">
     <div class="sec-head">
-      <div class="sec-index">04 / 实用贴士</div>
+      <div class="sec-index">05 / 实用贴士</div>
       <h2>门票交通、高原反应与装备清单</h2>
       <p>稻城亚丁海拔高、天气多变，做好准备能显著提升体验、降低风险。以下信息整理自公开攻略，票价与优惠政策请以景区当年官方公告为准。</p>
     </div>
@@ -745,11 +786,12 @@ footer{background:var(--pine-deep);color:rgba(255,255,255,.75);padding:54px 0 40
         稻城亚丁
       </div>
       <p>三神山终年积雪，三海子澄澈如镜。愿你在最好的季节抵达，慢一点、再慢一点，把这片净土的光与风都收进行囊。</p>
-      <p class="foot-disc">本页为旅行信息整理与行程参考，海拔、里程、票价及免票政策等会随季节与景区公告调整，出行前请通过稻城亚丁景区官方渠道核对最新开放、预约与票务信息，并结合自身体力量力而行。</p>
+      <p class="foot-disc">本页为旅行信息整理与行程参考，海拔、里程、票价及免票政策等会随季节与景区公告调整，出行前请通过稻城亚丁景区官方渠道核对最新开放、预约与票务信息，并结合自身体力量力而行。本页风景配图由 AI 生成，仅供示意，实际景观以当地为准。</p>
     </div>
     <div class="foot-anchor">
       <a href="#overview">认识亚丁</a>
       <a href="#route">游玩流程</a>
+      <a href="#gallery">沿线风景</a>
       <a href="#seasons">四季指南</a>
       <a href="#tips">实用贴士</a>
     </div>
@@ -854,7 +896,5 @@ const FF="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif";
     </linearGradient></defs>${g}</svg>`;
 })();
 </script>
-</body>
-</html>
 </body>
 </html>

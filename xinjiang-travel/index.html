@@ -102,7 +102,8 @@ section{padding:84px 0}
 /* ---------- 南北疆 ---------- */
 .region-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
 .region-card{background:#FBF9F2;border:1px solid var(--line);overflow:hidden}
-.region-img{height:280px;position:relative}
+.region-img{height:280px;position:relative;display:flex}
+.region-img img{flex:1 1 0;min-width:0}
 .region-img figcaption{position:absolute;left:0;bottom:0;right:0;padding:26px 22px 12px;color:#fff;font-family:var(--serif);font-size:21px;font-weight:700;letter-spacing:2px;
   background:linear-gradient(180deg,transparent,rgba(18,28,24,.78))}
 .region-body{padding:24px 26px 28px}
@@ -155,7 +156,8 @@ section{padding:84px 0}
 .route-panel.active{display:block;animation:fade .35s ease}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .route-top{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start;margin-bottom:38px}
-.route-img{height:300px}
+.route-img{height:300px;display:flex;gap:8px}
+.route-img img{flex:1 1 0;min-width:0}
 .route-info h3{font-family:var(--serif);font-size:23px;font-weight:700;margin-bottom:6px}
 .route-info .rmeta{font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:14px}
 .route-info p{font-size:13.5px;color:var(--ink-soft);font-weight:300;margin-bottom:12px}
@@ -318,6 +320,7 @@ footer .brand{color:#D8D1BF;display:block;margin-bottom:8px;font-size:16px}
       <div class="region-card">
         <figure class="region-img">
           <img src="assets/summer-grassland.jpg" alt="北疆伊犁喀拉峻草原夏季花海与雪山">
+          <img src="assets/nalati-grassland.jpg" alt="北疆那拉提空中草原毡房、马群与雪山">
           <figcaption>北疆 · 阿勒泰 ＋ 伊犁</figcaption>
         </figure>
         <div class="region-body">
@@ -331,6 +334,7 @@ footer .brand{color:#D8D1BF;display:block;margin-bottom:8px;font-size:16px}
       </div>
       <div class="region-card">
         <figure class="region-img">
+          <img src="assets/kashgar-oldcity.jpg" alt="南疆喀什古城土黄色老街巷与拱券木门">
           <img src="assets/south-pamir.jpg" alt="南疆帕米尔高原慕士塔格峰与喀拉库勒湖">
           <figcaption>南疆 · 喀什 ＋ 帕米尔</figcaption>
         </figure>
@@ -475,7 +479,10 @@ footer .brand{color:#D8D1BF;display:block;margin-bottom:8px;font-size:16px}
 
     <div class="route-panel active" id="r1">
       <div class="route-top">
-        <figure class="route-img"><img src="assets/autumn-moon-bay.jpg" alt="阿勒泰环线：喀纳斯月亮湾金秋"></figure>
+        <figure class="route-img">
+          <img src="assets/autumn-moon-bay.jpg" alt="阿勒泰环线：喀纳斯月亮湾金秋">
+          <img src="assets/kanas-lake.jpg" alt="喀纳斯湖秋日晨雾与金黄泰加林">
+        </figure>
         <div class="route-info">
           <h3>阿勒泰环线：童话湖泊与村落</h3>
           <div class="rmeta">约 1700 公里　·　建议 7 天　·　乌鲁木齐起止</div>
@@ -498,7 +505,10 @@ footer .brand{color:#D8D1BF;display:block;margin-bottom:8px;font-size:16px}
 
     <div class="route-panel" id="r2">
       <div class="route-top">
-        <figure class="route-img"><img src="assets/bayanbulak.jpg" alt="伊犁环线：巴音布鲁克九曲十八弯日落"></figure>
+        <figure class="route-img">
+          <img src="assets/bayanbulak.jpg" alt="伊犁环线：巴音布鲁克九曲十八弯日落">
+          <img src="assets/doku-highway.jpg" alt="独库公路盘山路段穿越雪山与草原">
+        </figure>
         <div class="route-info">
           <h3>伊犁环线：草原花海与天山公路</h3>
           <div class="rmeta">约 1800 公里　·　建议 7–8 天　·　乌鲁木齐起止</div>
@@ -633,7 +643,7 @@ footer .brand{color:#D8D1BF;display:block;margin-bottom:8px;font-size:16px}
 <footer>
   <div class="wrap">
     <span class="brand">远方手册 · 新疆卷</span>
-    季节与道路信息综合自新疆旅游公开攻略与逐月旅行指南，花期、初雪、独库通车日期每年浮动，出行前请以景区最新公告为准。
+    季节与道路信息综合自新疆旅游公开攻略与逐月旅行指南，花期、初雪、独库通车日期每年浮动，出行前请以景区最新公告为准。本页风景配图由 AI 生成，仅供示意，实际景观以当地为准。
   </div>
 </footer>
 
@@ -708,7 +718,5 @@ footer .brand{color:#D8D1BF;display:block;margin-bottom:8px;font-size:16px}
   window.addEventListener('resize',function(){ chart.resize(); });
 })();
 </script>
-</body>
-</html>
 </body>
 </html>

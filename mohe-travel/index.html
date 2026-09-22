@@ -96,12 +96,43 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
 .itinerary{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:36px}
 .icard{background:var(--birch);border:1px solid var(--line);padding:26px 22px}
+/* ===== 双图画廊 ===== */
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:260px}
+.collage figure{position:relative;min-height:260px;overflow:hidden}
+.collage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.collage figure:hover img{transform:scale(1.06)}
+.collage figcaption{position:absolute;left:0;right:0;bottom:0;padding:36px 14px 11px;background:linear-gradient(180deg,transparent,rgba(14,29,21,.86));color:#F3EFE2;font-size:12.5px;letter-spacing:.04em}
+/* ===== 列车横幅 ===== */
+.train-banner{position:relative;margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);height:316px}
+.train-banner img{width:100%;height:100%;object-fit:cover;object-position:center 58%}
+.train-banner .tb-cap{position:absolute;left:0;right:0;bottom:0;padding:52px 28px 20px;background:linear-gradient(180deg,transparent,rgba(14,29,21,.9));color:#F3EFE2}
+.train-banner .tb-cap b{display:block;font-family:var(--serif);font-size:19px;margin-bottom:5px;letter-spacing:.05em}
+.train-banner .tb-cap span{font-size:13.5px;color:rgba(243,239,226,.86);line-height:1.7}
+/* ===== 找北图集 ===== */
+.dark-sec .eyebrow{color:var(--pine-300)}
+.dark-sec .title{color:#F3EFE2}
+.dark-sec .lead{color:rgba(243,239,226,.78)}
+.dark-sec .lead b{color:var(--aurora)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.g-tile{position:relative;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px -16px rgba(0,0,0,.6);aspect-ratio:3/2}
+.g-tile img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.g-tile:hover img{transform:scale(1.07)}
+.g-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 44%,rgba(10,20,15,.82));pointer-events:none}
+.g-tile figcaption{position:absolute;left:18px;right:18px;bottom:15px;z-index:2;color:#F3EFE2}
+.g-tile figcaption b{display:block;font-family:var(--serif);font-size:16.5px;letter-spacing:.06em;margin-bottom:2px}
+.g-tile figcaption span{font-size:12.5px;color:rgba(243,239,226,.82);line-height:1.5}
+.itin-side{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px;align-items:stretch}
+.season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:36px}
+.verdict{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.tip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
 @media (max-width:960px){
   .relate-grid{grid-template-columns:1fr}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .facts{grid-template-columns:repeat(2,1fr)}
   .season-grid{grid-template-columns:repeat(2,1fr)}
   .verdict,.tip-grid{grid-template-columns:1fr 1fr}
   .g3{grid-template-columns:1fr!important}
+  .gallery-grid{grid-template-columns:1fr 1fr}
   .itinerary{grid-template-columns:1fr!important;gap:14px!important}
   .icard{border-left:1px solid var(--line)!important;border-radius:16px!important}
 }
@@ -109,6 +140,11 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
   section{padding:56px 0}
   .season-grid,.verdict,.tip-grid{grid-template-columns:1fr}
   .g2{grid-template-columns:1fr!important}
+  .gallery-grid{grid-template-columns:1fr}
+  .collage{grid-template-columns:1fr;min-height:0}
+  .collage figure{min-height:210px}
+  .itin-side{grid-template-columns:1fr}
+  .train-banner{height:230px}
   .md-grid{grid-template-columns:1fr}
   .hero-inner{padding-top:90px}
 }
@@ -126,6 +162,7 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
       <a href="#about">认识这里</a>
       <a href="#how-to-go">怎么去</a>
       <a href="#itinerary">怎么玩</a>
+      <a href="#gallery">找北图集</a>
       <a href="#seasons">四季与月份</a>
       <a href="#best">最佳季节</a>
       <a href="#tips">行前贴士</a>
@@ -201,6 +238,14 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
         <p style="font-size:14px;color:var(--ink-soft)">漠河站/机场到北极村有大巴（约 21 元、1–1.5 小时）；去龙江第一湾、北红村建议包车/拼车（约 400–600 元/天），冬季路滑不建议自驾。</p>
       </div>
     </div>
+
+    <figure class="train-banner">
+      <img src="assets/train.jpg" alt="雪国列车穿行在大兴安岭雪岭林海中">
+      <figcaption class="tb-cap">
+        <b>「雪国列车」· 一路向北的仪式感</b>
+        <span>K5171 / K7041 等车次夕发朝至，硬卧约 200–270 元；入夜后车厢暖灯昏黄，醒来窗外已是连绵的大兴安岭雪岭林海。冬季一票难求，务必提前一周以上订票。</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -244,10 +289,16 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:22px;align-items:stretch">
-      <div style="border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:230px;position:relative">
-        <img src="assets/village_hut.jpg" alt="北极村木刻楞小木屋" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;left:0;right:0;bottom:0;padding:38px 18px 12px;background:linear-gradient(180deg,transparent,rgba(14,29,21,.82));color:#F3EFE2;font-size:13px">北极村的「木刻楞」小木屋 · 林区特有的木头民居</div>
+    <div class="itin-side">
+      <div class="collage">
+        <figure>
+          <img src="assets/village_hut.jpg" alt="北极村木刻楞原木民居与夏日小院">
+          <figcaption>北极村 · 木刻楞民居与夏日小院</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/beihong.jpg" alt="北红村黑龙江边黄昏炊烟">
+          <figcaption>北红村 · 界江边的黄昏炊烟</figcaption>
+        </figure>
       </div>
       <div style="background:var(--birch);border:1px solid var(--line);border-radius:16px;padding:22px 22px 16px;box-shadow:var(--shadow)">
         <div style="font-family:var(--serif);font-weight:700;color:var(--pine-700);font-size:14px;letter-spacing:.14em;margin-bottom:12px">必打卡清单</div>
@@ -267,10 +318,45 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
   </div>
 </section>
 
+<!-- ===== 找北图集 ===== -->
+<section id="gallery" class="dark-sec" style="background:var(--forest-950)">
+  <div class="wrap">
+    <div class="eyebrow">04 · 一路找北</div>
+    <h2 class="title">这些画面，是大兴安岭的专属记忆</h2>
+    <p class="lead">从湿地江湾到驯鹿部落，从最北点雪地上的脚印到松苑林间的光束——下面六处画面，串起整条寻北线最值得停留的瞬间。</p>
+    <div class="gallery-grid">
+      <figure class="g-tile">
+        <img src="assets/wetland.jpg" alt="九曲十八弯湿地晨雾">
+        <figcaption><b>九曲十八弯</b><span>晨雾里的湿地林海，登高俯瞰最出片</span></figcaption>
+      </figure>
+      <figure class="g-tile">
+        <img src="assets/bay_autumn.jpg" alt="金秋龙江第一湾Ω形江湾">
+        <figcaption><b>龙江第一湾</b><span>Ω 形界江大拐弯，金秋与冰雪两种巅峰</span></figcaption>
+      </figure>
+      <figure class="g-tile">
+        <img src="assets/wusuli.jpg" alt="乌苏里浅滩雪地上的脚印">
+        <figcaption><b>乌苏里浅滩</b><span>真正的中国最北点，脚印一路向北</span></figcaption>
+      </figure>
+      <figure class="g-tile">
+        <img src="assets/reindeer.jpg" alt="敖鲁古雅鄂温克驯鹿部落">
+        <figcaption><b>敖鲁古雅使鹿部落</b><span>鄂温克猎民的驯鹿与撮罗子，深度线加一站</span></figcaption>
+      </figure>
+      <figure class="g-tile">
+        <img src="assets/songyuan.jpg" alt="松苑原始森林公园樟子松光束">
+        <figcaption><b>松苑原始森林公园</b><span>县城里的百年樟子松林，阳光穿过树冠</span></figcaption>
+      </figure>
+      <figure class="g-tile">
+        <img src="assets/snowbirch.jpg" alt="雪后白桦林雾凇">
+        <figcaption><b>雪岭白桦</b><span>雾凇挂满枝头，冬季清晨的限定画面</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ===== 四季与月份 ===== -->
 <section id="seasons" style="background:var(--birch)">
   <div class="wrap">
-    <div class="eyebrow">04 · 四季与月份</div>
+    <div class="eyebrow">05 · 四季与月份</div>
     <h2 class="title">一年只有「冬夏」？其实有四种模样</h2>
     <p class="lead">漠河没有传统意义的春天和秋天——它们是<b>冰雪与绿意之间的过渡季</b>，却各自藏着最美的瞬间：5 月的兴安杜鹃、9 月的金色白桦。先看全年气温走势，再点月份看细节。</p>
 
@@ -294,7 +380,7 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
 
     <div id="monthDetail" style="background:var(--snow);border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:14px;box-shadow:var(--shadow);min-height:150px"></div>
 
-    <div class="season-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px">
+    <div class="season-grid" style="margin-top:36px">
       <figure class="season-card">
         <div style="position:relative;aspect-ratio:3/2;overflow:hidden;border-radius:12px 12px 0 0">
           <img src="assets/spring_rhodo.jpg" alt="春季兴安杜鹃" style="width:100%;height:100%;object-fit:cover">
@@ -345,7 +431,7 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
 <!-- ===== 最佳季节 ===== -->
 <section id="best" style="background:var(--snow)">
   <div class="wrap">
-    <div class="eyebrow">05 · 最佳季节</div>
+    <div class="eyebrow">06 · 最佳季节</div>
     <h2 class="title">只去一次，最推荐哪个月？</h2>
     <p class="lead">综合气温舒适度、风景颜值与游玩体验，我们把答案放在最前面：</p>
 
@@ -379,7 +465,7 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
       </div>
     </div>
 
-    <div class="verdict" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px">
+    <div class="verdict">
       <div style="background:var(--birch);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)">
         <div style="font-family:var(--serif);font-weight:900;font-size:22px;color:var(--gold-600);margin-bottom:6px">9 月</div>
         <div style="font-size:13px;color:var(--pine-700);letter-spacing:.1em;margin-bottom:8px">摄影 / 首次到访</div>
@@ -402,9 +488,9 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
 <!-- ===== 行前贴士 ===== -->
 <section id="tips" style="background:var(--birch)">
   <div class="wrap">
-    <div class="eyebrow">06 · 行前贴士</div>
+    <div class="eyebrow">07 · 行前贴士</div>
     <h2 class="title">出发前，把这几点记牢</h2>
-    <div class="tip-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px">
+    <div class="tip-grid">
       <div class="tip" style="background:var(--snow);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:var(--shadow)">
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pine-500)" stroke-width="1.8" stroke-linecap="round" style="margin-bottom:12px"><path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5L4.9 17.5M12 6.5L8 2.5M12 6.5l4-4M12 17.5l-4 4M12 17.5l4 4"/><circle cx="12" cy="12" r="2.4" fill="var(--gold-500)" stroke="none"/></svg>
         <div style="font-weight:700;font-size:15.5px;color:var(--forest-900);margin-bottom:6px">冬季防寒是头等大事</div>
@@ -446,7 +532,7 @@ h2.title{font-family:var(--serif);font-size:clamp(26px,3.4vw,38px);font-weight:9
       一路向北 · 漠河与大兴安岭旅行指南
     </div>
     <p style="font-size:12.5px;line-height:1.9;max-width:860px;color:rgba(243,239,226,.55)">
-      内容说明：气候数据参考中国天气网漠河气候资料（1 月均温 -30.9℃、极端低温 -52.3℃、7 月均温 18.4℃）与漠河市公开资料（年均温 -3.8℃、1 月 -28.5℃、7 月 18.6℃）；逐月日均最高/最低气温为天气网站多年均值（取整），月平均为二者均值推算。行程与价格参考携程、去哪儿、抖音等平台近期攻略（2025–2026），实际以出发时为准。风景图片来自网络公开图片站点，仅供示意。
+      内容说明：气候数据参考中国天气网漠河气候资料（1 月均温 -30.9℃、极端低温 -52.3℃、7 月均温 18.4℃）与漠河市公开资料（年均温 -3.8℃、1 月 -28.5℃、7 月 18.6℃）；逐月日均最高/最低气温为天气网站多年均值（取整），月平均为二者均值推算。行程与价格参考携程、去哪儿、抖音等平台近期攻略（2025–2026），实际以出发时为准。本页风景配图由 AI 生成，仅供示意，实际景观以当地为准。
     </p>
     <div style="font-size:12.5px;color:rgba(243,239,226,.55);margin-top:12px;display:flex;flex-wrap:wrap;gap:8px 18px">
       <span>参考来源：</span>
