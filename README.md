@@ -75,7 +75,7 @@
 
 > 九寨归来不看水 · 一百零八个海子串起的童话世界
 
-[![九寨沟](jiuzhaigou-guide/assets/hero_wuhuahai_autumn.jpg)](https://ttlook111.github.io/travel-guides/jiuzhaigou-guide/)
+[![九寨沟](jiuzhaigou-guide/assets/hero.jpg)](https://ttlook111.github.io/travel-guides/jiuzhaigou-guide/)
 
 | 项目 | 说明 |
 | :--- | :--- |
