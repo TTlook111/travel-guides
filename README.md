@@ -2,9 +2,9 @@
 
 # 中国旅行指南 · travel-guides
 
-### 稻城亚丁　·　漠河　·　新疆
+### 稻城亚丁　·　漠河　·　新疆　·　九寨沟
 
-三份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
+四份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
 
 纯 HTML / CSS / JavaScript 单页　·　零依赖　·　零构建　·　浏览器打开即用
 
@@ -71,6 +71,23 @@
 
 ---
 
+### 4. 九寨沟
+
+> 九寨归来不看水 · 一百零八个海子串起的童话世界
+
+[![九寨沟](jiuzhaigou-guide/assets/hero_wuhuahai_autumn.jpg)](https://ttlook111.github.io/travel-guides/jiuzhaigou-guide/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 四川阿坝藏族羌族自治州 · 九寨沟县，世界自然遗产、国家 5A 级景区 |
+| 建议时长 | 3 天 2 晚；沟内 1 日精华，三条主沟呈「Y」字形铺展 |
+| 最佳窗口 | **9 月下旬 – 10 月中旬**，10 月 15 日前后一周彩林最盛、海子最蓝 |
+| 攻略涵盖 | 三天两晚行程与「先上后下」游览顺序、四季景观对比、门票预约与交通、高反装备与拍照机位 |
+
+**[在线预览](https://ttlook111.github.io/travel-guides/jiuzhaigou-guide/)**　·　**[源码目录](jiuzhaigou-guide/)**
+
+---
+
 ## 仓库结构
 
 ```text
@@ -82,6 +99,9 @@ travel-guides/
 │   ├── index.html
 │   └── assets/
 ├── xinjiang-travel/        新疆攻略
+│   ├── index.html
+│   └── assets/
+├── jiuzhaigou-guide/       九寨沟攻略
 │   ├── index.html
 │   └── assets/
 ├── .gitignore
@@ -103,6 +123,7 @@ python -m http.server 8000
 - http://localhost:8000/daocheng-yading/
 - http://localhost:8000/mohe-travel/
 - http://localhost:8000/xinjiang-travel/
+- http://localhost:8000/jiuzhaigou-guide/
 
 ## 部署到 GitHub Pages
 
@@ -115,10 +136,11 @@ python -m http.server 8000
 | 稻城亚丁 | https://ttlook111.github.io/travel-guides/daocheng-yading/ |
 | 漠河 | https://ttlook111.github.io/travel-guides/mohe-travel/ |
 | 新疆 | https://ttlook111.github.io/travel-guides/xinjiang-travel/ |
+| 九寨沟 | https://ttlook111.github.io/travel-guides/jiuzhaigou-guide/ |
 
 ## 说明
 
-- 三个页面均为纯静态页面，无后端、无框架、无构建步骤；
+- 四个页面均为纯静态页面，无后端、无框架、无构建步骤；
 - 图片全部使用 `assets/...` 相对路径引用，整个文件夹离线拷贝也能正常浏览；
 - `_shots/`、`_parts/` 是制作过程中的预览截图与中间文件，已通过 `.gitignore` 排除；
 - 仓库暂未添加开源协议，默认保留所有权利。
