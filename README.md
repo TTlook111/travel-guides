@@ -2,9 +2,9 @@
 
 # 中国旅行指南 · travel-guides
 
-### 稻城亚丁　·　漠河　·　新疆　·　九寨沟
+### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里
 
-四份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
+五份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
 
 纯 HTML / CSS / JavaScript 单页　·　零依赖　·　零构建　·　浏览器打开即用
 
@@ -88,6 +88,23 @@
 
 ---
 
+### 5. 香格里拉 · 梅里雪山 / 雨崩
+
+> 心中的日月，与雪山深处「不去天堂，就去雨崩」的徒步秘境
+
+[![香格里拉·梅里](shangri-la-meili-guide/assets/hero.jpg)](https://ttlook111.github.io/travel-guides/shangri-la-meili-guide/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 云南迪庆 · 香格里拉市至德钦县，卡瓦格博峰 6740 m 为云南第一高峰 |
+| 建议时长 | 7 天 6 晚；香格里拉人文湖泊 2–3 天 + 飞来寺金山 + 雨崩徒步 |
+| 最佳窗口 | **10 月中旬 – 11 月中旬**，日照金山概率最高、彩林金秋；次选 5 月中下旬杜鹃花海 |
+| 攻略涵盖 | 7 天 6 晚行程与海拔适应动线、神瀑 / 冰湖两条徒步线对比、四季与 12 个月适宜度 + 日照金山概率、门票交通、高反与装备贴士 |
+
+**[在线预览](https://ttlook111.github.io/travel-guides/shangri-la-meili-guide/)**　·　**[源码目录](shangri-la-meili-guide/)**
+
+---
+
 ## 仓库结构
 
 ```text
@@ -102,6 +119,9 @@ travel-guides/
 │   ├── index.html
 │   └── assets/
 ├── jiuzhaigou-guide/       九寨沟攻略
+│   ├── index.html
+│   └── assets/
+├── shangri-la-meili-guide/ 香格里拉·梅里雪山/雨崩攻略
 │   ├── index.html
 │   └── assets/
 ├── .gitignore
@@ -124,6 +144,7 @@ python -m http.server 8000
 - http://localhost:8000/mohe-travel/
 - http://localhost:8000/xinjiang-travel/
 - http://localhost:8000/jiuzhaigou-guide/
+- http://localhost:8000/shangri-la-meili-guide/
 
 ## 部署到 GitHub Pages
 
@@ -137,10 +158,11 @@ python -m http.server 8000
 | 漠河 | https://ttlook111.github.io/travel-guides/mohe-travel/ |
 | 新疆 | https://ttlook111.github.io/travel-guides/xinjiang-travel/ |
 | 九寨沟 | https://ttlook111.github.io/travel-guides/jiuzhaigou-guide/ |
+| 香格里拉·梅里/雨崩 | https://ttlook111.github.io/travel-guides/shangri-la-meili-guide/ |
 
 ## 说明
 
-- 四个页面均为纯静态页面，无后端、无框架、无构建步骤；
+- 五个页面均为纯静态页面，无后端、无框架、无构建步骤；
 - 图片全部使用 `assets/...` 相对路径引用，整个文件夹离线拷贝也能正常浏览；
 - `_shots/`、`_parts/` 是制作过程中的预览截图与中间文件，已通过 `.gitignore` 排除；
 - 仓库暂未添加开源协议，默认保留所有权利。

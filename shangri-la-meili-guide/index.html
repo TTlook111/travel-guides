@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>香格里拉 · 梅里雪山 / 雨崩 | 四季指南与徒步全攻略</title>
+<meta name="description" content="香格里拉、梅里雪山飞来寺日照金山、雨崩神瀑与冰湖徒步怎么玩：7天6晚行程动线、四季12个月景色差异与最佳季节、门票交通高反装备全指南。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23143a46'/%3E%3Cpath d='M4 23l7-11 4 5 3-4 10 10z' fill='%23dfe9ec'/%3E%3Cpath d='M11 12l4 5 3-4 3 3.5' fill='none' stroke='%238fb8c2' stroke-width='1'/%3E%3Ccircle cx='23' cy='9' r='2.6' fill='%23cf8a2e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --ink:#22323b;--ink-soft:#51636d;--ink-faint:#75848c;
+  --paper:#f6f2ea;--paper-2:#efe8db;--card:#ffffff;
+  --pine:#1d5160;--pine-deep:#143a46;--teal:#2f8f96;--teal-soft:#dcebed;
+  --gold:#cf8a2e;--gold-soft:#f5e7cf;--rust:#bd5538;--line:#e3dccd;
+  --shadow:0 14px 38px -18px rgba(20,58,70,.32);--radius:16px;
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.serif{font-family:var(--serif)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:19px;color:#fff;letter-spacing:2px}
+.brand svg{width:26px;height:26px}
+.nav-links{display:flex;gap:28px}
+.nav-links a{color:rgba(255,255,255,.88);font-size:15px;font-weight:400;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.nav.scrolled{background:rgba(20,58,70,.92);backdrop-filter:blur(10px);box-shadow:0 6px 24px -12px rgba(0,0,0,.5)}
+.nav.scrolled .brand,.nav.scrolled .nav-links a{color:#fff}
+.hero{position:relative;height:100vh;min-height:620px;max-height:920px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,38,47,.45) 0%,rgba(13,38,47,.10) 38%,rgba(13,38,47,.52) 70%,rgba(13,38,47,.88) 100%)}
+.hero-inner{position:relative;z-index:2;width:min(1120px,92vw);max-width:92%;min-width:0;margin:0 auto;padding-bottom:64px;color:#fff}
+.hero-kicker{font-size:14px;letter-spacing:6px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:18px;font-weight:500}
+.hero-kicker span{display:inline-block;width:34px;height:1px;background:var(--gold);vertical-align:middle;margin-right:14px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,7vw,82px);line-height:1.08;letter-spacing:5px;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero-sub{margin-top:18px;font-size:clamp(16px,2.1vw,21px);font-weight:300;letter-spacing:2px;color:rgba(255,255,255,.92);max-width:36em;overflow-wrap:break-word}
+.hero-stats{display:flex;flex-wrap:wrap;gap:0;margin-top:40px;border-top:1px solid rgba(255,255,255,.25)}
+.hero-stat{flex:1 1 130px;padding:18px 22px 0;border-left:1px solid rgba(255,255,255,.2)}
+.hero-stat:first-child{border-left:none;padding-left:0}
+.hero-stat b{display:block;font-family:var(--serif);font-size:clamp(20px,2.4vw,28px);font-weight:700;color:#fff;line-height:1.2}
+.hero-stat span{font-size:13px;color:rgba(255,255,255,.78);letter-spacing:1px}
+.scroll-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.7);font-size:12px;letter-spacing:3px;text-align:center}
+.scroll-hint svg{width:20px;height:20px;margin:6px auto 0;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+section{padding:88px 0}
+.sec-head{max-width:780px;margin-bottom:52px}
+.sec-index{font-family:var(--serif);color:var(--gold);font-size:15px;letter-spacing:3px;font-weight:600;display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec-index::before{content:"";width:30px;height:1px;background:var(--gold)}
+.sec-head h2{font-family:var(--serif);font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--pine-deep);letter-spacing:2px;line-height:1.25}
+.sec-head p{margin-top:16px;color:var(--ink-soft);font-size:16px}
+.alt{background:var(--paper-2)}
+.overview-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.overview-text p{margin-bottom:18px;color:var(--ink-soft);font-size:16.5px}
+.overview-text p strong{color:var(--pine-deep);font-weight:600}
+.overview-photo{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.overview-photo img{width:100%;height:460px;object-fit:cover;object-position:center 60%}
+.overview-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 22px 16px;background:linear-gradient(transparent,rgba(13,38,47,.82));color:#fff;font-size:13.5px;letter-spacing:1px}
+.peaks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.peak{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;text-align:center}
+.peak .pico{width:40px;height:40px;margin:0 auto 12px;color:var(--teal)}
+.peak h4{font-family:var(--serif);font-size:18px;color:var(--pine-deep);font-weight:700}
+.peak .alt-m{font-size:13px;color:var(--gold);font-weight:600;margin:3px 0 8px;letter-spacing:1px}
+.peak p{font-size:13px;color:var(--ink-faint);line-height:1.6}
+.trans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.trans-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow)}
+.trans-card .tico{width:42px;height:42px;color:var(--pine);margin-bottom:16px}
+.trans-card h4{font-family:var(--serif);font-size:20px;color:var(--pine-deep);margin-bottom:4px}
+.trans-tag{display:inline-block;font-size:12px;padding:2px 11px;border-radius:20px;margin-bottom:14px;letter-spacing:1px}
+.tag-rec{background:var(--teal-soft);color:var(--pine)}
+.tag-fast{background:var(--gold-soft);color:var(--gold)}
+.tag-econ{background:#e7e3d8;color:var(--ink-soft)}
+.trans-card ul{list-style:none;margin-top:6px}
+.trans-card li{font-size:14px;color:var(--ink-soft);padding:7px 0 7px 20px;position:relative;border-bottom:1px dashed var(--line)}
+.trans-card li:last-child{border-bottom:none}
+.trans-card li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.trans-card li b{color:var(--ink);font-weight:600}
+.chart-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 30px 20px;margin-top:56px}
+.chart-card h4{font-family:var(--serif);font-size:20px;color:var(--pine-deep);margin-bottom:4px}
+.chart-card .csub{font-size:13.5px;color:var(--ink-faint);margin-bottom:10px}
+.chart{width:100%;height:380px}
+.flow-bar{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:48px}
+.flow-step{flex:1 1 150px;padding:24px 18px;position:relative;text-align:center}
+.flow-step:not(:last-child)::after{content:"";position:absolute;right:-9px;top:50%;z-index:2;width:18px;height:18px;background:var(--paper);border-top:2px solid var(--teal);border-right:2px solid var(--teal);transform:translateY(-50%) rotate(45deg)}
+.flow-step .fnum{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:2px;font-weight:600}
+.flow-step .fico{width:34px;height:34px;margin:10px auto;color:var(--pine)}
+.flow-step h5{font-size:15px;color:var(--pine-deep);font-family:var(--serif)}
+.flow-step p{font-size:12.5px;color:var(--ink-faint);margin-top:4px;line-height:1.5}
+.routes{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.route{border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.route-photo{position:relative;height:236px;overflow:hidden}
+.route-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.route:hover .route-photo img{transform:scale(1.05)}
+.route-badge{position:absolute;top:16px;left:16px;padding:6px 15px;border-radius:24px;font-size:13px;font-weight:600;letter-spacing:1px;color:#fff}
+.badge-short{background:linear-gradient(120deg,#2f8f96,#1d5160)}
+.badge-long{background:linear-gradient(120deg,#cf8a2e,#bd5538)}
+.route-body{padding:28px 28px 30px;flex:1;display:flex;flex-direction:column}
+.route-body h4{font-family:var(--serif);font-size:23px;color:var(--pine-deep);margin-bottom:2px}
+.route-meta{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 16px}
+.route-meta span{font-size:12.5px;background:var(--paper-2);color:var(--ink-soft);padding:4px 12px;border-radius:20px}
+.route-path{font-size:14px;color:var(--teal);font-weight:500;line-height:1.7;margin-bottom:14px;padding:12px 14px;background:var(--teal-soft);border-radius:10px}
+.route-body ul{list-style:none;margin-bottom:18px}
+.route-body li{font-size:14px;color:var(--ink-soft);padding:6px 0 6px 22px;position:relative}
+.route-body li::before{content:"";position:absolute;left:2px;top:14px;width:8px;height:2px;background:var(--gold)}
+.route-fit{margin-top:auto;font-size:13.5px;padding:12px 16px;border-radius:10px;background:var(--paper);color:var(--ink-soft)}
+.route-fit b{color:var(--pine-deep)}
+.timeline{position:relative;margin-top:20px;--date:150px;--axis:48px}
+.timeline::before{content:"";position:absolute;top:42px;bottom:42px;left:calc(var(--date) + var(--axis)/2 - 1px);width:2px;background:var(--line)}
+.tl-item{display:grid;grid-template-columns:var(--date) var(--axis) 1fr;gap:0;align-items:stretch}
+.tl-day{text-align:right;padding:26px 22px 26px 0}
+.tl-day b{display:block;font-family:var(--serif);font-size:19px;color:var(--pine-deep)}
+.tl-day span{font-size:12.5px;color:var(--ink-faint)}
+.tl-axis{position:relative;display:flex;justify-content:center}
+.tl-dot{width:16px;height:16px;border-radius:50%;background:var(--card);border:3px solid var(--teal);margin-top:30px;z-index:1;justify-self:center}
+.tl-item.hl .tl-dot{border-color:var(--gold);background:var(--gold-soft)}
+.tl-card{margin:14px 0 22px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;box-shadow:var(--shadow)}
+.tl-item.hl .tl-card{border-left:4px solid var(--gold)}
+.tl-card h5{font-family:var(--serif);font-size:17px;color:var(--pine-deep);margin-bottom:5px}
+.tl-card p{font-size:14px;color:var(--ink-soft)}
+.tl-card .tl-tags{margin-top:9px;display:flex;flex-wrap:wrap;gap:7px}
+.tl-card .tl-tags span{font-size:12px;color:var(--pine);background:var(--teal-soft);padding:2px 10px;border-radius:14px}
+.tl-note{margin-top:26px;background:var(--pine-deep);color:#e9f1f2;border-radius:var(--radius);padding:24px 28px;display:flex;gap:16px;align-items:flex-start}
+.tl-note svg{width:26px;height:26px;flex-shrink:0;color:var(--gold)}
+.tl-note p{font-size:14.5px;line-height:1.75}
+.tl-note b{color:var(--gold-soft)}
+.season-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.season{border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.season-photo{height:240px;position:relative;overflow:hidden}
+.season-photo img{width:100%;height:100%;object-fit:cover}
+.season-photo .s-label{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.94);padding:6px 16px;border-radius:24px;font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:1px}
+.season-photo .s-months{position:absolute;bottom:0;left:0;right:0;padding:26px 18px 12px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:13px;letter-spacing:1px}
+.season-body{padding:26px 28px 28px;flex:1;display:flex;flex-direction:column}
+.season-body h4{font-family:var(--serif);font-size:22px;color:var(--pine-deep)}
+.stars{margin:8px 0 14px;letter-spacing:3px;font-size:15px;color:var(--gold)}
+.stars .off{color:var(--line)}
+.season-body .s-desc{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:auto;font-size:13.5px}
+.pros-cons .pc-t{font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:6px;font-size:13px}
+.pc-good .pc-t{color:var(--teal)}
+.pc-bad .pc-t{color:var(--rust)}
+.pros-cons ul{list-style:none}
+.pros-cons li{color:var(--ink-soft);padding:3px 0 3px 14px;position:relative;line-height:1.55}
+.pc-good li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:2px;background:var(--teal)}
+.pc-bad li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-right:2px solid var(--rust);border-bottom:2px solid var(--rust);transform:rotate(45deg)}
+.shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.shot{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/2;margin:0}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.shot:hover img{transform:scale(1.06)}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 44%,rgba(13,38,47,.84));pointer-events:none}
+.shot figcaption{position:absolute;left:22px;right:22px;bottom:16px;z-index:2;color:#fff}
+.shot figcaption b{display:block;font-family:var(--serif);font-size:18px;letter-spacing:1px;margin-bottom:3px}
+.shot figcaption span{font-size:13px;color:rgba(255,255,255,.86);line-height:1.55}
+.best{position:relative;border-radius:22px;overflow:hidden;margin-top:64px;box-shadow:0 26px 60px -28px rgba(20,58,70,.55)}
+.best-img{position:absolute;inset:0}
+.best-img img{width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.best-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,45,55,.93) 0%,rgba(20,45,55,.82) 42%,rgba(20,45,55,.30) 100%)}
+.best-inner{position:relative;z-index:2;padding:58px 54px;color:#fff;max-width:62%}
+.best-crown{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:#3a2a08;font-weight:700;font-size:13.5px;letter-spacing:2px;padding:7px 18px;border-radius:24px;margin-bottom:22px}
+.best-crown svg{width:17px;height:17px}
+.best-inner h3{font-family:var(--serif);font-size:clamp(27px,3.4vw,40px);font-weight:900;letter-spacing:2px;line-height:1.25;margin-bottom:16px}
+.best-inner > p{color:rgba(255,255,255,.9);font-size:15.5px;margin-bottom:24px}
+.best-points{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.best-point{display:flex;gap:12px;align-items:flex-start}
+.best-point svg{width:22px;height:22px;color:var(--gold);flex-shrink:0;margin-top:2px}
+.best-point b{display:block;font-size:14.5px;color:#fff;font-family:var(--serif)}
+.best-point span{font-size:13px;color:rgba(255,255,255,.78);line-height:1.55}
+.best-chips{display:flex;flex-wrap:wrap;gap:12px;margin:-6px 0 26px}
+.best-chips span{border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.2);color:#ffd98a;padding:8px 18px;border-radius:24px;font-size:14px;font-weight:600;letter-spacing:1px}
+.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
+.tip .tico2{width:40px;height:40px;color:var(--pine);margin-bottom:14px}
+.tip h4{font-family:var(--serif);font-size:19px;color:var(--pine-deep);margin-bottom:12px}
+.tip ul{list-style:none}
+.tip li{font-size:13.8px;color:var(--ink-soft);padding:7px 0 7px 18px;position:relative;border-bottom:1px dashed var(--line);line-height:1.6}
+.tip li:last-child{border-bottom:none}
+.tip li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.tip li b{color:var(--pine-deep);font-weight:600}
+.tip.wide{grid-column:span 3;background:linear-gradient(135deg,#fff,var(--teal-soft))}
+.ticket-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:6px}
+.ticket{text-align:left;background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:12px;padding:16px}
+.ticket b{display:block;font-family:var(--serif);font-size:19px;color:var(--pine-deep)}
+.ticket span{font-size:12.5px;color:var(--ink-faint);line-height:1.5;display:block;margin-top:3px}
+.policy-note{grid-column:span 3;font-size:12.5px;color:var(--ink-faint);margin-top:2px;line-height:1.6}
+.gear-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:2px}
+.gear-tags span{font-size:13px;background:var(--paper-2);border:1px solid var(--line);color:var(--ink-soft);padding:6px 14px;border-radius:20px}
+.trek-strip{display:grid;grid-template-columns:1.15fr .85fr;gap:0;margin-top:40px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--card)}
+.trek-strip img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.trek-strip .ts-body{padding:32px 32px 30px;display:flex;flex-direction:column;justify-content:center}
+.trek-strip .ts-tag{font-size:12.5px;color:var(--gold);letter-spacing:2px;font-weight:600;margin-bottom:8px}
+.trek-strip h4{font-family:var(--serif);font-size:22px;color:var(--pine-deep);margin-bottom:10px}
+.trek-strip p{font-size:14.5px;color:var(--ink-soft);margin-bottom:10px}
+.trek-strip .ts-warn{background:var(--gold-soft);border-radius:10px;padding:12px 16px;font-size:13.5px;color:#7a5417;line-height:1.65}
+.trek-strip .ts-warn b{color:var(--rust)}
+footer{background:var(--pine-deep);color:rgba(255,255,255,.75);padding:54px 0 40px}
+.foot-inner{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot-brand{font-family:var(--serif);font-size:22px;color:#fff;letter-spacing:3px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.foot-brand svg{width:26px;height:26px}
+.foot-inner p{font-size:13px;max-width:580px;line-height:1.8}
+.foot-disc{font-size:12px;color:rgba(255,255,255,.5);margin-top:18px;max-width:620px;line-height:1.7;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+.foot-anchor{display:flex;flex-direction:column;gap:10px;font-size:14px}
+.foot-anchor a{color:rgba(255,255,255,.8)}
+.foot-anchor a:hover{color:var(--gold)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media (max-width:900px){
+  section{padding:64px 0}
+  .overview-grid{grid-template-columns:1fr;gap:34px}
+  .overview-photo img{height:340px}
+  .trans-grid,.tips-grid{grid-template-columns:1fr}
+  .tip.wide{grid-column:span 1}
+  .ticket-row{grid-template-columns:1fr 1fr}
+  .policy-note{grid-column:span 1}
+  .routes,.season-grid{grid-template-columns:1fr}
+  .shot-grid{grid-template-columns:1fr}
+  .trek-strip{grid-template-columns:1fr}
+  .trek-strip img{min-height:240px;max-height:300px}
+  .pros-cons{grid-template-columns:1fr 1fr}
+  .best-inner{max-width:100%;padding:44px 30px}
+  .best-veil{background:linear-gradient(180deg,rgba(20,45,55,.88),rgba(20,45,55,.78))}
+  .best-points{grid-template-columns:1fr}
+  .timeline{--date:92px;--axis:32px}
+  .tl-day{padding:24px 10px 24px 0}
+  .tl-day b{font-size:16px}
+  .peaks{grid-template-columns:1fr}
+  .nav-links{gap:16px}
+  .nav-links a{font-size:13px}
+  .hero{flex-direction:column;justify-content:flex-end}
+  .hero-inner{width:92%;max-width:92%;padding-bottom:42px}
+  .hero-kicker{margin-bottom:12px;font-size:12px;letter-spacing:4px}
+  .hero h1{font-size:clamp(34px,9.5vw,48px);letter-spacing:3px}
+  .hero-sub{margin-top:14px;font-size:15px;letter-spacing:1px}
+  .hero-stats{margin-top:26px}
+  .hero-stat{flex:1 1 45%;border-left:none;padding:12px 0 0}
+  .hero-stat:nth-child(odd){padding-right:14px}
+  .hero-stat b{font-size:20px}
+  .scroll-hint{display:none}
+  .chart{height:320px}
+}
+@media (max-width:560px){
+  .brand{font-size:16px;letter-spacing:1px}
+  .nav-links a:nth-child(n+4){display:none}
+  .hero-kicker{display:none}
+  .hero h1{font-size:36px;letter-spacing:2px}
+  .hero-stats{margin-top:22px}
+  .timeline{--date:56px;--axis:30px}
+  .tl-day{padding-right:8px}
+  .tl-day span{display:none}
+  .tl-day b{font-size:14px}
+  .pros-cons{grid-template-columns:1fr}
+  .ticket-row{grid-template-columns:1fr}
+  .flow-step{flex:1 1 40%}
+  .flow-step:nth-child(2n)::after{display:none}
+}
+</style>
+</head>
+<body>
+<!-- ===== 导航 ===== -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" fill="none"><path d="M4 23l7-11 4 5 3-4 10 10z" fill="#e8f0f2"/><path d="M11 12l4 5 3-4 3 3.5" fill="none" stroke="#8fb8c2" stroke-width="1.2"/><circle cx="23" cy="9" r="2.6" fill="#cf8a2e"/></svg>
+      香格里拉 · 梅里
+    </div>
+    <div class="nav-links">
+      <a href="#overview">认识这片土地</a>
+      <a href="#route">行程动线</a>
+      <a href="#gallery">风景图鉴</a>
+      <a href="#trek">雨崩徒步</a>
+      <a href="#seasons">四季指南</a>
+      <a href="#tips">实用贴士</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="hero-img"><img src="assets/hero.jpg" alt="梅里雪山卡瓦格博峰清晨日照金山全景，云海与经幡剪影"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-inner">
+    <div class="hero-kicker"><span></span>YUNNAN · DIQING · SHANGRI-LA &amp; MEILI</div>
+    <h1>香格里拉 · 梅里雪山</h1>
+    <div class="hero-sub">心中的日月，与雪山深处「不去天堂，就去雨崩」的秘境</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>卡瓦格博 6740 m</b><span>云南第一高峰 · 藏区八大神山之首</span></div>
+      <div class="hero-stat"><b>6–7 天</b><span>香格里拉 + 雨崩经典时长</span></div>
+      <div class="hero-stat"><b>10 中 – 11 中</b><span>公认最佳窗口</span></div>
+      <div class="hero-stat"><b>3050–3864 m</b><span>雨崩村至冰湖徒步海拔</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">向下探索
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+</header>
+
+<!-- ===== 认识这片土地 ===== -->
+<section id="overview">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">01 / 认识这片土地</div>
+      <h2>从月光之城，到神山脚下与世隔绝的雨崩</h2>
+    </div>
+    <div class="overview-grid">
+      <div class="overview-text">
+        <p>这条线位于<strong>云南省迪庆藏族自治州</strong>，起点是州府所在地香格里拉（原名中甸，海拔约 3300 米），终点是德钦县梅里雪山脚下的雨崩村，全程约 180 公里公路加两天徒步，海拔从 2000 米的干热河谷一路抬升到近 3900 米的冰湖。</p>
+        <p><strong>梅里雪山</strong>是横断山脉的主体之一，主峰卡瓦格博海拔 6740 米，为云南第一高峰，位列藏区八大神山之首，也是至今<strong>无人登顶</strong>的神山——1991 年山难后，当地立法禁止攀登。清晨阳光率先点亮十三座雪峰，「<strong>日照金山</strong>」是无数人专程守候的画面，飞来寺观景台正是直面群峰的 C 位。</p>
+        <p><strong>雨崩</strong>深藏在卡瓦格博与神女峰缅茨姆之间的冰川谷地中，分上村（约 3150 米）、下村（约 3050 米），长期只有驿道与外界相通，如今仍需换乘越野车或徒步翻越南宗垭口才能进入。雪山、冰川、彩林、牧场与藏式木屋同框，被称作「<strong>徒步者的天堂</strong>」。</p>
+      </div>
+      <figure class="overview-photo">
+        <img src="assets/overview.jpg" alt="雨崩村清晨全景，雪山环抱、炊烟晨雾中的藏式村庄">
+        <figcaption>雨崩村 · 梅里雪山深处的藏族村落，清晨炊烟与雪山同框</figcaption>
+      </figure>
+    </div>
+    <div class="peaks">
+      <div class="peak">
+        <svg class="pico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V10l3-2v-2l3 2v2l10-2v12z"/><path d="M9 12v4M14 11v5"/><rect x="3" y="20" width="18" height="1.6"/></svg>
+        <h4>香格里拉片区</h4>
+        <div class="alt-m">海拔约 3300 m · 行程前 2–3 天</div>
+        <p>独克宗古城、松赞林寺、普达措、纳帕海，先在藏地慢生活中适应海拔</p>
+      </div>
+      <div class="peak">
+        <svg class="pico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="6" r="2"/><path d="M3 19l6-9 4 5 2-2.5 6 6.5z"/><path d="M9 10l4 5"/></svg>
+        <h4>德钦 · 梅里片区</h4>
+        <div class="alt-m">飞来寺约 3400 m · 守候金山</div>
+        <p>金沙江月亮湾、雾浓顶十三白塔、飞来寺日照金山、明永冰川</p>
+      </div>
+      <div class="peak">
+        <svg class="pico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 21s-6-5.2-6-10a4 4 0 016-3.5A4 4 0 0120 11c0 4.8-6 10-6 10z"/><path d="M11.5 11l1 1 2-2.2"/></svg>
+        <h4>雨崩秘境</h4>
+        <div class="alt-m">3050–3864 m · 徒步 2–3 天</div>
+        <p>神瀑线、冰湖线、笑农大本营、尼农峡谷，雪山冰川触手可及</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== 行程动线 ===== -->
+<section id="route" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">02 / 行程动线</div>
+      <h2>先到香格里拉适应海拔，再沿澜沧江深入梅里</h2>
+      <p>整条线是一条「先缓后陡」的海拔适应曲线：在香格里拉停留 2–3 天看寺院与湖泊，再翻山到飞来寺守候日照金山，最后进村用两天时间徒步神瀑与冰湖。</p>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:21px;color:var(--pine-deep);margin-bottom:20px">第一步 · 怎么抵达香格里拉</h3>
+    <div class="trans-grid">
+      <div class="trans-card">
+        <svg class="tico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L11 18v-4.5z"/></svg>
+        <h4>飞机直飞</h4>
+        <span class="trans-tag tag-fast">最省时 · 昆明/成都/重庆</span>
+        <ul>
+          <li>直飞<b>迪庆香格里拉机场</b>，昆明约 1 小时航程</li>
+          <li>机场距市区仅约 <b>5 km</b>，打车十几分钟即到古城</li>
+          <li>落地海拔即约 3250 米，<b>当天动作放慢、不跑跳</b></li>
+        </ul>
+      </div>
+      <div class="trans-card">
+        <svg class="tico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M3 11h18"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/><path d="M7 8h4M7 10.5h6"/></svg>
+        <h4>动车抵达</h4>
+        <span class="trans-tag tag-rec">最推荐 · 丽香铁路</span>
+        <ul>
+          <li>乘动车至<b>香格里拉站</b>（丽香铁路），丽江出发约 <b>1.5 小时</b></li>
+          <li>昆明方向也有动车直达，约 <b>4.5–5 小时</b></li>
+          <li>建议先在丽江（约 2400 m）过渡一晚，再上高原更从容</li>
+        </ul>
+      </div>
+      <div class="trans-card">
+        <svg class="tico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11"/><rect x="3" y="11" width="18" height="6" rx="2"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></svg>
+        <h4>自驾 / 拼车进德钦</h4>
+        <span class="trans-tag tag-econ">最自由 · 山路弯多</span>
+        <ul>
+          <li>香格里拉→德钦飞来寺约 <b>180 km / 4 小时</b>，沿 G214 盘山</li>
+          <li>途经金沙江月亮湾、白马雪山垭口，一路观景台</li>
+          <li>不自驾可在古城拼车 / 坐班车，<b>雨崩私家车不能进村</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h4>全程海拔起伏示意</h4>
+      <div class="csub">从丽江逐步适应，中途下到金沙江河谷再抬升至飞来寺，进村翻越南宗垭口，最高点为冰湖约 3864 米 · 数值为约数、仅作强度示意</div>
+      <div class="chart" id="altChart"></div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:21px;color:var(--pine-deep);margin:60px 0 20px">第二步 · 全程动线一图看懂</h3>
+    <div class="flow-bar">
+      <div class="flow-step">
+        <div class="fnum">STEP 1</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V8l8-5 8 5v12"/><rect x="9" y="13" width="6" height="7"/></svg>
+        <h5>抵香格里拉</h5>
+        <p>宿独克宗古城<br>适应 3300 m</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">STEP 2</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14c2-1 3-1 5 0s3 1 5 0 3-1 5 0"/><path d="M4 18c2.5-1.5 4.5-1.5 7 0s4.5 1.5 7 0"/><circle cx="12" cy="8" r="2.4"/></svg>
+        <h5>寺院与湖泊</h5>
+        <p>松赞林寺<br>普达措 · 纳帕海</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">STEP 3</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="6" r="2"/><path d="M3 19l6-9 4 5 2-2.5 6 6.5z"/></svg>
+        <h5>翻山到德钦</h5>
+        <p>月亮湾 · 雾浓顶<br>宿飞来寺</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">STEP 4</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="14" r="3"/><path d="M12 11V5l5-2M12 14v7"/></svg>
+        <h5>守候金山</h5>
+        <p>清晨飞来寺<br>看日照金山</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">STEP 5</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 21s-6-5.2-6-10a4 4 0 016-3.5A4 4 0 0120 11c0 4.8-6 10-6 10z"/><circle cx="14" cy="11" r="1.3"/></svg>
+        <h5>进雨崩</h5>
+        <p>西当换越野车<br>或徒步南宗垭口</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">STEP 6</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="13" cy="6" r="2.4"/><path d="M13 8.5V14l-4 7M13 14l4 7M9 11l4 2 4-2"/></svg>
+        <h5>徒步出山</h5>
+        <p>神瀑 / 冰湖<br>尼农峡谷出村</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:21px;color:var(--pine-deep);margin-bottom:22px">第三步 · 两段核心行程这样分配</h3>
+    <div class="routes">
+      <div class="route">
+        <div class="route-photo">
+          <img src="assets/songzanlin.jpg" alt="松赞林寺金顶红墙依山而建，湖面倒影">
+          <span class="route-badge badge-short">前段 · 香格里拉人文湖泊</span>
+        </div>
+        <div class="route-body">
+          <h4>古城 · 松赞林寺 · 普达措 · 纳帕海</h4>
+          <div class="route-meta"><span>建议 2–3 天</span><span>轻松适应海拔</span><span>人文 + 高原湖泊</span></div>
+          <div class="route-path">独克宗古城 → 松赞林寺 → 普达措属都湖 → 纳帕海 / 伊拉草原环湖</div>
+          <ul>
+            <li>松赞林寺是云南最大藏传佛教寺院，金顶层叠如「小布达拉宫」，拉姆央措湖可拍倒影</li>
+            <li>普达措由属都湖、碧塔海与高山牧场组成，沿湖木栈道平缓好走，适合到高原的第一天</li>
+            <li>纳帕海免费环湖，夏天是碧蓝湖泊、秋冬退水成金黄草原，黑颈鹤等候鸟越冬</li>
+          </ul>
+          <div class="route-fit"><b>节奏：</b>把这一段当作进高原的「适应期」，不赶景点、不洗澡过勤，为后段徒步打底。</div>
+        </div>
+      </div>
+      <div class="route">
+        <div class="route-photo">
+          <img src="assets/jinshan.jpg" alt="梅里雪山卡瓦格博峰清晨日照金山特写">
+          <span class="route-badge badge-long">后段 · 梅里雪山与雨崩</span>
+        </div>
+        <div class="route-body">
+          <h4>飞来寺金山 · 雨崩神瀑冰湖</h4>
+          <div class="route-meta"><span>建议 3–4 天</span><span>全程高光</span><span>徒步强度中高</span></div>
+          <div class="route-path">香格里拉 → 月亮湾 → 雾浓顶 → 飞来寺（金山）→ 西当 → 雨崩 → 神瀑 / 冰湖 → 尼农出</div>
+          <ul>
+            <li>飞来寺是观赏梅里十三峰日照金山的 C 位，日出前约 40 分钟到观景台占位，晴天概率决定成败</li>
+            <li>进村后两天分别走神瀑线（新手友好）与冰湖线（进阶），雪山、冰川、牧场一次看全</li>
+            <li>出山走尼农峡谷悬崖栈道，沿碧绿江水一路下行，为行程收尾</li>
+          </ul>
+          <div class="route-fit"><b>节奏：</b>这是全程的精华与体力担当，务必等身体适应海拔后再进村，徒步日早出发。</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:21px;color:var(--pine-deep);margin:60px 0 8px">典型行程 · 7 天 6 晚（完整版）</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 1</b><span>抵达香格里拉</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>动车 / 飞机抵达，宿独克宗古城</h5>
+          <p>入住古城后只做轻活动：傍晚登龟山公园，和藏民一起转动世界最大的巨型转经筒，看古城灯火。<b>当天不饮酒、不剧烈运动、谨慎洗头洗澡</b>，让身体适应 3300 米海拔。</p>
+          <div class="tl-tags"><span>适应海拔</span><span>独克宗古城</span><span>大转经筒</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 2</b><span>寺院与草原</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>上午松赞林寺，下午纳帕海环湖</h5>
+          <p>清晨趁光线与团队未到先访松赞林寺，看金顶与拉姆央措倒影；下午租电瓶车或包车环纳帕海，顺时针下午顺光，草甸、水洼、牦牛与远山一路出片。</p>
+          <div class="tl-tags"><span>松赞林寺</span><span>纳帕海</span><span>轻松日</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 3</b><span>普达措</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>普达措国家公园一日，继续宿香格里拉</h5>
+          <p>乘景区观光车进入，沿属都湖木栈道慢行，看碧蓝湖水、原始森林与高山牧场；景区海拔约 3500–3700 米，走累随时乘车。晚上早睡，为次日进山养精蓄锐。</p>
+          <div class="tl-tags"><span>属都湖</span><span>森林栈道</span><span>观光车</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 4</b><span>进山 · 德钦</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>月亮湾 → 雾浓顶 → 飞来寺，宿飞来寺</h5>
+          <p>沿 G214 西行约 4 小时：先俯瞰金沙江 Ω 形月亮湾，再经白马雪山垭口，到雾浓顶迎宾台与十三白塔、梅里十三峰合影。傍晚抵达飞来寺入住，<b>务必住飞来寺而非德钦县城</b>，方便次日看日出。</p>
+          <div class="tl-tags"><span>金沙江月亮湾</span><span>雾浓顶白塔</span><span>宿飞来寺</span></div>
+        </div>
+      </div>
+      <div class="tl-item hl">
+        <div class="tl-day"><b>Day 5</b><span>金山 · 进村</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>清晨守候日照金山，下午进入雨崩（核心日）</h5>
+          <p>日出前约 40 分钟到飞来寺观景台，看金光逐一点亮卡瓦格博与缅茨姆。早餐后出发到西当温泉停车场（私家车统一停放），换乘越野车约 40 分钟翻越南宗垭口进村，或徒步约 12 公里、爬升约 1000 米进村。宿上雨崩，下午只在村边轻走适应。</p>
+          <div class="tl-tags"><span>日照金山</span><span>南宗垭口</span><span>宿雨崩上村</span></div>
+        </div>
+      </div>
+      <div class="tl-item hl">
+        <div class="tl-day"><b>Day 6</b><span>徒步日</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>神瀑线（新手）或冰湖线（进阶），宿雨崩</h5>
+          <p>新手走下雨崩→原始森林→经幡通道→神瀑，往返约 12 公里、4–6 小时，可顺时针绕瀑祈福；进阶者走上雨崩→笑农大本营→冰湖，往返约 14–16 公里、7–10 小时，直抵冰川脚下的翡翠冰湖。两条都走需在雨崩多住一晚。</p>
+          <div class="tl-tags"><span>神瀑 3650 m</span><span>冰湖 3864 m</span><span>徒步核心</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 7</b><span>出村 · 返程</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>尼农峡谷徒步出山，经德钦 / 香格里拉返程</h5>
+          <p>沿尼农峡谷悬崖栈道一路下行约 13 公里到尼农村接駁，碧绿江水相伴，约 4–5 小时；也可乘越野车原路返回西当。之后回到德钦或香格里拉，衔接当晚或次日交通。</p>
+          <div class="tl-tags"><span>尼农峡谷</span><span>约 13 km 下坡</span><span>返程</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      <p><b>时间紧怎么压缩：</b>只走一条徒步线、普达措与纳帕海二选一，可压成 <b>6 天 5 晚</b>；从丽江起止、只看飞来寺金山 + 雨崩一条线，5 天也能完成但较赶。<b>神瀑、冰湖都想走</b>，则需在雨崩住 3 晚、全程 8 天 7 晚。雨季（尤其 7–8 月）<b>不建议走尼农线</b>，防落石塌方，出山改乘越野车。</p>
+    </div>
+  </div>
+</section>
+<!-- ===== 风景图鉴 ===== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">03 / 风景图鉴</div>
+      <h2>从月光古城到冰川脚下，一路都是画面</h2>
+      <p>这条线最不缺的就是层次：金顶红墙的寺院、晨雾里的湖泊、Ω 形的大江拐弯、排列成阵的白塔、穿过森林的低海拔冰川——下面八处，是沿途最值得停留的画面。</p>
+    </div>
+    <div class="shot-grid">
+      <figure class="shot reveal">
+        <img src="assets/dukezong.jpg" alt="独克宗古城夜景，龟山公园金色大转经筒灯火辉煌">
+        <figcaption><b>独克宗古城</b><span>藏语意为「月光城」，龟山公园的巨型转经筒要众人合力才能转动，夜景灯火温暖</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/pudacuo.jpg" alt="普达措属都湖清晨木栈道与湖面晨雾倒影">
+        <figcaption><b>普达措国家公园</b><span>中国大陆首个国家公园，属都湖碧蓝沉静，木栈道沿湖穿过原始森林与牧场</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/napahai.jpg" alt="纳帕海伊拉草原金黄草甸、水洼与牦牛，远处雪山">
+        <figcaption><b>纳帕海 · 伊拉草原</b><span>夏为湖、秋冬为草原的高原湿地，金黄草甸与水洼交错，冬季有黑颈鹤越冬</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/yueliangwan.jpg" alt="金沙江月亮湾Ω形大拐弯航拍，碧绿江水环绕褐黄峡谷">
+        <figcaption><b>金沙江月亮湾</b><span>江水在峡谷中画出完美的 Ω 形大拐弯，又称金沙江大拐弯，是进德钦路上的第一处震撼</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/wunongding.jpg" alt="雾浓顶迎宾台十三座白塔与梅里雪山十三峰全景">
+        <figcaption><b>雾浓顶迎宾台</b><span>十三座白塔对应梅里十三峰，这里视野开阔无遮挡，是白天拍群峰全景的最佳机位之一</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/mingyong.jpg" alt="明永冰川冰舌穿过原始森林倾泻而下">
+        <figcaption><b>明永冰川</b><span>低纬度、低海拔的海洋性冰川，冰舌从卡瓦格博一路倾泻进原始森林，冰体泛着幽蓝</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/yubeng-village.jpg" alt="雨崩下村田园、青稞架与缅茨姆神女峰雪山">
+        <figcaption><b>雨崩上下村</b><span>木屋、青稞架与草甸铺在雪山脚下，上村离冰湖近，下村离神瀑近，夜晚银河清晰</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/xiaonong.jpg" alt="笑农大本营高山牧场木屋，背后卡瓦格博冰川崖壁">
+        <figcaption><b>笑农大本营</b><span>海拔约 3630 米的高山牧场，几座原木牛棚是冰湖线中途唯一的补给点，热水、泡面、炒饭都有</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- ===== 雨崩徒步 ===== -->
+<section id="trek" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">04 / 雨崩徒步</div>
+      <h2>两条经典徒步线，新手与进阶各得其所</h2>
+      <p>雨崩的精华全在两条腿上：神瀑线平缓、台阶为主，是藏民内转朝圣之路；冰湖线更长更陡，直抵卡瓦格博冰川脚下。门票约 55 元、3 日内有效，神瀑与冰湖均不二次收费。</p>
+    </div>
+
+    <div class="routes">
+      <div class="route reveal">
+        <div class="route-photo">
+          <img src="assets/shenpu.jpg" alt="雨崩神瀑悬崖水幕与下方五彩经幡，水雾中彩虹">
+          <span class="route-badge badge-short">神瀑线 · 新手友好</span>
+        </div>
+        <div class="route-body">
+          <h4>神瀑 · 朝圣水幕</h4>
+          <div class="route-meta"><span>往返约 11–12 km</span><span>爬升 600–650 m</span><span>4–6 小时</span><span>最高约 3650 m</span></div>
+          <div class="route-path">下雨崩 → 原始森林 → 玛尼堆经幡通道 → 雨崩神瀑 → 原路返回</div>
+          <ul>
+            <li>约 90% 为石板 / 水泥台阶，坡度温和、基本无岔路，是两条线里最好走的一条</li>
+            <li>神瀑是藏传佛教朝圣圣地，当地人会顺时针绕瀑三圈，让瀑布水淋身祈福</li>
+            <li>晴天上午 10 点到下午 2 点，阳光穿过水雾常挂彩虹，经幡与彩虹同框</li>
+          </ul>
+          <div class="route-fit"><b>适合：</b>第一次高原徒步、带长辈、时间只够走一条线的人。</div>
+        </div>
+      </div>
+      <div class="route reveal">
+        <div class="route-photo">
+          <img src="assets/binghu.jpg" alt="雨崩冰湖翡翠色冰碛湖，浮冰与冰川雪山环绕">
+          <span class="route-badge badge-long">冰湖线 · 进阶挑战</span>
+        </div>
+        <div class="route-body">
+          <h4>冰湖 · 冰川脚下的翡翠</h4>
+          <div class="route-meta"><span>往返约 14–16 km</span><span>爬升约 700 m+</span><span>7–10 小时</span><span>最高约 3864 m</span></div>
+          <div class="route-path">上雨崩 → 沙棘林与牧场 → 笑农大本营（补给）→ 翻冰碛坡 → 冰湖 → 原路返回</div>
+          <ul>
+            <li>前半段穿越原始森林与高山牧场，过笑农大本营后是碎石坡与陡坡，需手脚并用翻最后一段</li>
+            <li>冰湖是梅里冰川融水形成的冰碛湖，湖水呈翡翠色、湖面浮着碎冰，背后冰川崖壁直插天际</li>
+            <li>海拔高、天气说变就变，<b>午后易起云雾甚至降雪</b>，务必早出发、14 点前下撤</li>
+          </ul>
+          <div class="route-fit"><b>适合：</b>有徒步经验、体力较好、想近距离看冰川的人；建议请向导或结伴。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trek-strip reveal">
+      <img src="assets/ninong.jpg" alt="尼农峡谷悬崖栈道与脚下碧绿江水">
+      <div class="ts-body">
+        <div class="ts-tag">进出雨崩 · 三种方式</div>
+        <h4>越野车进、徒步出，是最经典的组合</h4>
+        <p><b style="color:var(--pine-deep)">① 越野车进村（省力）：</b>私家车统一停西当温泉停车场，换乘当地越野车翻越南宗垭口，到上雨崩约 200 元 / 人、下雨崩约 260 元 / 人，车程约 40 分钟（价格以现场为准）。</p>
+        <p><b style="color:var(--pine-deep)">② 徒步南宗垭口进村（经典）：</b>西当→南宗垭口→雨崩，约 12 公里、累计爬升约 1000 米，5–6 小时，上坡路考验体力。</p>
+        <p><b style="color:var(--pine-deep)">③ 尼农峡谷出村：</b>雨崩→尼农村约 13 公里下坡栈道，4–5 小时，悬崖与碧绿江水相伴，省体力又出片。</p>
+        <div class="ts-warn"><b>雨季警示：</b>7–8 月尼农线易遇落石、塌方与蚂蟥，雨后切勿冒险走峡谷，应改乘越野车从西当出山；冬季冰湖、神瀑步道结冰需冰爪，部分路段可能封闭，以景区当日通告为准。</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== 四季指南 ===== -->
+<section id="seasons">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">05 / 四季指南</div>
+      <h2>能不能看到日照金山，季节要负七成责任</h2>
+      <p>梅里地处横断山区，旱雨季分明：旱季（10 月–次年 5 月）天高云淡、雪峰尽露；雨季（6–9 月）云雾紧锁、十天里九天看不到主峰。与此同时，春天有杜鹃、夏天有绿野、秋天有彩林、冬天有雪域，四季的雨崩几乎是四个世界。</p>
+    </div>
+
+    <div class="season-grid">
+      <article class="season reveal">
+        <div class="season-photo">
+          <img src="assets/spring.jpg" alt="春季梅里雪山脚下高山杜鹃花海与雪峰">
+          <span class="s-label" style="color:#2f7d5b">春</span>
+          <div class="s-months">约 3 月 – 5 月 · 雪峰花海</div>
+        </div>
+        <div class="season-body">
+          <h4>杜鹃花开，雪峰仍白</h4>
+          <div class="stars">★★★★<span class="off">★</span></div>
+          <p class="s-desc">3–4 月山里仍冷、雪峰积雪厚重，5 月气温回暖，高山杜鹃从普达措一路开到雨崩，普达措花海峰值约在 5 月下旬至 6 月上旬，粉紫花毯配洁白雪山，层次极强。旱季尚未结束，晴天与日照金山概率仍较高，游客比国庆少得多。</p>
+          <div class="pros-cons">
+            <div class="pc-good"><div class="pc-t">优势</div><ul><li>5 月杜鹃花海限定</li><li>金山概率仍较高</li><li>气温舒适、人不算多</li></ul></div>
+            <div class="pc-bad"><div class="pc-t">留意</div><ul><li>3–4 月早晚仍严寒</li><li>6 月起雨水渐多</li><li>春季高原风较大</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="season reveal">
+        <div class="season-photo">
+          <img src="assets/summer.jpg" alt="夏季雨崩浓绿原始森林、溪流与云雾中的雪山">
+          <span class="s-label" style="color:#2f8f96">夏</span>
+          <div class="s-months">约 6 月 – 8 月 · 雨季绿野</div>
+        </div>
+        <div class="season-body">
+          <h4>满山滴翠，雪山靠缘分</h4>
+          <div class="stars">★★<span class="off">★★★</span></div>
+          <p class="s-desc">雨季是满眼浓绿的避暑季，市区均温仅 15–20℃，纳帕海涨成碧蓝湖泊、一半湖水一半草原，松茸上市、菌子满山。但梅里主峰常被云雾封锁，日照金山可遇不可求；雨崩道路湿滑、尼农线有落石塌方与蚂蟥，又逢暑期人流高峰，是最不推荐专程看雪山的季节。</p>
+          <div class="pros-cons">
+            <div class="pc-good"><div class="pc-t">优势</div><ul><li>绿意最浓、清凉避暑</li><li>纳帕海成湖碧蓝</li><li>松茸菌子季</li></ul></div>
+            <div class="pc-bad"><div class="pc-t">留意</div><ul><li>金山可见概率全年最低</li><li>路滑塌方、尼农慎行</li><li>暑期人多、房价翻倍</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="season reveal">
+        <div class="season-photo">
+          <img src="assets/autumn.jpg" alt="秋季雨崩金色落叶松彩林与梅里雪山">
+          <span class="s-label" style="color:#bd5538">秋</span>
+          <div class="s-months">约 9 月 – 11 月 · 黄金季节</div>
+        </div>
+        <div class="season-body">
+          <h4>彩林金山，全年巅峰</h4>
+          <div class="stars">★★★★★</div>
+          <p class="s-desc">9 月中下旬雨季收尾，纳帕海畔狼毒花转红；10 月中旬起雨崩的落叶松整片金黄，雨季结束、天高云淡，<b>10 月是日照金山成功率最高的月份</b>，纳帕海草原铺金，11 月后黑颈鹤等候鸟陆续抵达。天气稳定、徒步干爽、彩林与雪山同框，是公认的黄金窗口，唯一缺点是国庆人潮与涨价。</p>
+          <div class="pros-cons">
+            <div class="pc-good"><div class="pc-t">优势</div><ul><li>金山概率全年最高</li><li>彩林金秋最出片</li><li>徒步干爽、能见度极佳</li></ul></div>
+            <div class="pc-bad"><div class="pc-t">留意</div><ul><li>国庆人潮、房价高峰</li><li>11 月夜间转冷</li><li>旺季车票客栈需早订</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="season reveal">
+        <div class="season-photo">
+          <img src="assets/winter.jpg" alt="冬季雨崩雪村银装素裹，背景梅里日照金山">
+          <span class="s-label" style="color:#5a7c99">冬</span>
+          <div class="s-months">约 12 月 – 次年 2 月 · 雪域秘境</div>
+        </div>
+        <div class="season-body">
+          <h4>雪村金山，冷门封神</h4>
+          <div class="stars">★★★<span class="off">★★</span></div>
+          <p class="s-desc">一场雪后雨崩银装素裹，被称作「不输阿勒泰的冬天」；旱季晴天极多，<b>日照金山概率可达九成</b>，推开窗就是金光照雪峰，游客稀少、客栈便宜。但气温低至零下十几度，冰湖、神瀑步道结冰需冰爪，部分路段可能封闭，昼短夜长，徒步务必请向导、备齐防寒装备。</p>
+          <div class="pros-cons">
+            <div class="pc-good"><div class="pc-t">优势</div><ul><li>金山概率高达九成</li><li>雪域童话、人最少</li><li>住宿便宜、易出大片</li></ul></div>
+            <div class="pc-bad"><div class="pc-t">留意</div><ul><li>零下十几度、极寒</li><li>步道结冰、或临时封闭</li><li>需冰爪向导、白昼短</li></ul></div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="chart-card reveal">
+      <h4>全年 12 个月 · 综合适宜度与日照金山概率</h4>
+      <div class="csub">金线综合天气、景观与徒步体验；青线为晴天看见梅里主峰 / 日照金山的相对概率（经验性示意，非官方统计）。可见 10–11 月两条线同时处在高位，而 7–8 月双双探底。</div>
+      <div class="chart" id="monthChart" style="height:380px"></div>
+    </div>
+
+    <!-- 最佳季节 -->
+    <div class="best reveal">
+      <div class="best-img"><img src="assets/best-autumn.jpg" alt="十月金秋雨崩俯瞰，金色彩林山谷、翡翠河流与卡瓦格博雪山"></div>
+      <div class="best-veil"></div>
+      <div class="best-inner">
+        <span class="best-crown">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16l-2-9 6 4 3-7 3 7 6-4-2 9z"/><path d="M5 16h14v2H5z"/></svg>
+          最推荐 · 秋季
+        </span>
+        <h3>10 月中旬 – 11 月中旬<br>是走这条线的最佳时间</h3>
+        <p>雨季彻底结束、彩林进入巅峰、日照金山成功率登顶，且避开了国庆人潮——天气、色彩、雪山与徒步体感在这一个月里同时达到全年最好。</p>
+        <div class="best-chips">
+          <span>9 月 20 – 10 月 1 日 · 狼毒花红、初秋人少</span>
+          <span>10 月 8 日 – 11 月 10 日 · 彩林 + 金山双巅峰</span>
+        </div>
+        <div class="best-points">
+          <div class="best-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="20" cy="6" r="2"/><path d="M3 19l6-9 4 5 2-2.5 6 6.5z"/></svg>
+            <div><b>金山概率最高</b><span>10 月晴天稳定，飞来寺守候最值得</span></div>
+          </div>
+          <div class="best-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l4 4v5a6 6 0 01-8 0V7z"/><path d="M9 3h6"/></svg>
+            <div><b>彩林金秋</b><span>雨崩落叶松金黄、狼毒花火红</span></div>
+          </div>
+          <div class="best-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="13" cy="6" r="2.4"/><path d="M13 8.5V14l-4 7M13 14l4 7M9 11l4 2 4-2"/></svg>
+            <div><b>徒步最干爽</b><span>无泥泞塌方之忧，冰湖线安全性高</span></div>
+          </div>
+          <div class="best-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 14c2-1 3-1 5 0s3 1 5 0 3-1 5 0"/><path d="M4 18c2.5-1.5 4.5-1.5 7 0s4.5 1.5 7 0"/></svg>
+            <div><b>草原与候鸟</b><span>纳帕海铺金，黑颈鹤陆续越冬</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== 实用贴士 ===== -->
+<section id="tips" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">06 / 实用贴士</div>
+      <h2>门票交通、高原反应与徒步装备</h2>
+      <p>高原行程，准备充分比什么都重要。以下票价与政策整理自公开攻略，均为参考价，出行前请通过各景区官方渠道核对当年公告。</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip wide reveal">
+        <svg class="tico2" viewBox="0 0 24 24" fill="none" stroke="#1d5160" stroke-width="1.6" style="width:38px;height:38px;margin-bottom:10px"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 9h18M8 14h3M8 17h6"/></svg>
+        <h4>主要门票与交通（参考）</h4>
+        <div class="ticket-row">
+          <div class="ticket"><b>雨崩约 55 元</b><span>3 日内有效，神瀑、冰湖不二次收费；学生与 60–69 岁半价，70 岁以上免票</span></div>
+          <div class="ticket"><b>越野车 200 / 260 元</b><span>西当→上雨崩 / 下雨崩参考价，约 40 分钟；私家车停西当温泉停车场</span></div>
+          <div class="ticket"><b>普达措约 200 元</b><span>门票 + 观光车合计参考价，开放范围与票价近年有调整，以官方为准</span></div>
+          <div class="ticket"><b>松赞林寺 / 梅里观景台</b><span>松赞林寺门票约 90 元；月亮湾、雾浓顶、飞来寺属梅里国家公园通票，约 200 元上下</span></div>
+        </div>
+        <p class="policy-note">提示：独克宗古城、纳帕海环湖免费（私人牧场会收费，勿信路边「免费带你看湖」）。雨崩进村通道与越野车价格可能随道路施工调整，出发前务必查最新攻略与景区通告；飞来寺观景台、松赞林寺等通常另收观光车费。</p>
+      </div>
+
+      <div class="tip reveal">
+        <svg class="tico2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6-7-11a7 7 0 1114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/><path d="M5 12h-2M21 12h-2"/></svg>
+        <h4>高原反应应对</h4>
+        <ul>
+          <li>行程海拔 <b>3300–3864 m</b>，建议丽江（2400 m）或香格里拉先适应 2 晚再进村</li>
+          <li>抵达首日<b>不洗澡、不饮酒、不跑跳</b>，多喝温水、早睡、清淡饮食</li>
+          <li>备葡萄糖、巧克力、便携氧气；徒步放慢节奏、小口多次补水</li>
+          <li>出现剧烈头痛、呕吐、气喘，立即<b>下撤到低海拔</b>并就医；感冒未愈勿上高原</li>
+        </ul>
+      </div>
+
+      <div class="tip reveal">
+        <svg class="tico2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l4 4v5a6 6 0 01-8 0V7z"/><path d="M9 3h6"/><rect x="4" y="10" width="3" height="9" rx="1"/><path d="M17 10h3v9h-3z"/></svg>
+        <h4>穿衣与徒步装备</h4>
+        <ul>
+          <li>高原昼夜温差大，<b>冲锋衣 + 抓绒分层穿</b>，10 月夜间接近 0℃，冬季需羽绒服</li>
+          <li>中高帮防水徒步鞋、登山杖（神瀑冰湖都用得上）、速干袜</li>
+          <li>SPF50+ 防晒、墨镜、遮阳帽、润唇膏，高原紫外线极强</li>
+          <li>雨具、头灯、充电宝随身；雨崩物资靠人背马驮，自备干粮与热水可省钱</li>
+        </ul>
+        <div class="gear-tags" style="margin-top:12px">
+          <span>冲锋衣</span><span>徒步鞋</span><span>登山杖</span><span>墨镜</span><span>氧气</span><span>头灯</span>
+        </div>
+      </div>
+
+      <div class="tip reveal">
+        <svg class="tico2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.2"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+        <h4>避坑与拍照机位</h4>
+        <ul>
+          <li>看日照金山<b>务必住飞来寺</b>，日出前约 40 分钟到观景台；雾浓顶拍十三峰全景更开阔</li>
+          <li>国庆期间房价数倍上涨且一房难求，<b>首选 10 月 8 日后</b>或 9 月下旬错峰</li>
+          <li>冰湖线<b>早出发、14 点前下撤</b>，午后高山易起云雾降雪</li>
+          <li>雨季不赌尼农线、不走野路；徒步请正规向导，买含高海拔活动的保险</li>
+          <li>雨崩村与飞来寺夜间光污染小，<b>星空与银河</b>同样值得守候</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <div class="foot-brand">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M4 23l7-11 4 5 3-4 10 10z" fill="#e8f0f2"/><path d="M11 12l4 5 3-4 3 3.5" fill="none" stroke="#8fb8c2" stroke-width="1.2"/><circle cx="23" cy="9" r="2.6" fill="#cf8a2e"/></svg>
+        香格里拉 · 梅里雪山
+      </div>
+      <p>从月光之城的灯火出发，翻过白马雪山，在飞来寺等一场金光点亮卡瓦格博，再走进雪山深处的雨崩——神瀑的彩虹、冰湖的翡翠、秋山的金黄，都会在最好的十月等你。</p>
+      <p class="foot-disc">本页为旅行信息整理与行程参考，海拔、里程、票价、进村交通及开放政策会随季节、道路施工与景区公告调整（雨崩通道信息尤其请以当年最新通告为准），出行前请通过官方渠道核实，并结合自身体力量力而行。本页风景配图由 AI 生成，仅供示意，实际景观以当地为准。</p>
+    </div>
+    <div class="foot-anchor">
+      <a href="#overview">认识这片土地</a>
+      <a href="#route">行程动线</a>
+      <a href="#gallery">风景图鉴</a>
+      <a href="#trek">雨崩徒步</a>
+      <a href="#seasons">四季指南</a>
+      <a href="#tips">实用贴士</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== 导航滚动态 ===== */
+const nav=document.getElementById('nav');
+const onScroll=()=>{nav.classList.toggle('scrolled',window.scrollY>60)};
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* ===== 滚动揭示 ===== */
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== 通用：平滑折线 ===== */
+function smoothPath(pts){
+  if(pts.length<2)return'';
+  let d=`M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
+    const c1x=p1[0]+(p2[0]-p0[0])/6,c1y=p1[1]+(p2[1]-p0[1])/6;
+    const c2x=p2[0]-(p3[0]-p1[0])/6,c2y=p2[1]-(p3[1]-p1[1])/6;
+    d+=` C${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  return d;
+}
+const FF="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif";
+
+/* ===== 全程海拔起伏图 ===== */
+(function(){
+  const el=document.getElementById('altChart');if(!el)return;
+  const W=760,H=380,L=58,R=30,T=40,B=70,pW=W-L-R,pH=H-T-B;
+  const ymin=1600,ymax=4100;
+  const Y=v=>T+(ymax-v)/(ymax-ymin)*pH;
+  const data=[2400,3300,2000,3400,3700,3150,3650,3864];
+  const labs=[['丽江','约2400m 适应'],['香格里拉','约3300m'],['月亮湾','下到江边'],['飞来寺','约3400m'],['南宗垭口','进村高点'],['雨崩村','3050–3150m'],['神瀑','约3650m'],['冰湖','约3864m']];
+  const X=i=>L+i*pW/(data.length-1);
+  const pts=data.map((v,i)=>[X(i),Y(v)]);
+  const line=smoothPath(pts);
+  const area=line+` L${X(data.length-1).toFixed(1)},${(T+pH).toFixed(1)} L${X(0).toFixed(1)},${(T+pH).toFixed(1)} Z`;
+  let g='';
+  [2000,2500,3000,3500,4000].forEach(v=>{const y=Y(v);
+    g+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#e6e0d3" stroke-dasharray="4 4"/>`;
+    g+=`<text x="${L-9}" y="${y+4}" text-anchor="end" font-size="11" fill="#75848c" font-family="${FF}">${v}</text>`;});
+  const yp=Y(3864);
+  g+=`<line x1="${L}" y1="${yp}" x2="${W-R}" y2="${yp}" stroke="#cf8a2e" stroke-dasharray="6 5" stroke-width="1.6"/>`;
+  g+=`<text x="${L+6}" y="${yp-7}" font-size="11.5" fill="#cf8a2e" font-weight="600" font-family="${FF}">最高点 · 冰湖约 3864m（徒步日量力而行）</text>`;
+  labs.forEach((lb,i)=>{
+    g+=`<text x="${X(i)}" y="${T+pH+24}" text-anchor="middle" font-size="11.5" fill="#33464f" font-weight="600" font-family="${FF}">${lb[0]}</text>`;
+    if(lb[1])g+=`<text x="${X(i)}" y="${T+pH+42}" text-anchor="middle" font-size="10" fill="#8a979e" font-family="${FF}">${lb[1]}</text>`;});
+  g+=`<path d="${area}" fill="url(#altGrad)"/>`;
+  g+=`<path d="${line}" fill="none" stroke="#2f8f96" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+  pts.forEach((p,i)=>{
+    g+=`<circle cx="${p[0]}" cy="${p[1]}" r="5.5" fill="#2f8f96" stroke="#fff" stroke-width="2"><title>${labs[i][0]} · 海拔约 ${data[i]} 米</title></circle>`;
+    if(i===0){
+      g+=`<text x="${p[0]+9}" y="${p[1]+5}" text-anchor="start" font-size="11.5" font-weight="700" fill="#1d5160" font-family="${FF}">${data[i]}</text>`;
+    }else{
+      const up=data[i]>=data[i-1];
+      g+=`<text x="${p[0]}" y="${up?p[1]-11:p[1]+20}" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1d5160" font-family="${FF}">${data[i]}</text>`;
+    }});
+  el.style.height='auto';
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="全程海拔起伏示意图">
+    <defs><linearGradient id="altGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f8f96" stop-opacity="0.34"/><stop offset="1" stop-color="#2f8f96" stop-opacity="0.03"/>
+    </linearGradient></defs>${g}</svg>`;
+})();
+
+/* ===== 12 月：适宜度 + 金山概率 双折线 ===== */
+(function(){
+  const el=document.getElementById('monthChart');if(!el)return;
+  const W=760,H=380,L=48,R=26,T=46,B=44,pW=W-L-R,pH=H-T-B;
+  const ymin=0,ymax=100;
+  const Y=v=>T+(ymax-v)/(ymax-ymin)*pH;
+  const months=['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+  const score=[70,66,60,68,82,70,46,44,78,95,90,76];   /* 综合适宜度 */
+  const sunny=[90,88,78,72,68,42,25,28,55,82,88,90];   /* 晴天见金山概率 */
+  const X=i=>L+i*pW/(months.length-1),step=pW/(months.length-1);
+  const p1=score.map((v,i)=>[X(i),Y(v)]);
+  const p2=sunny.map((v,i)=>[X(i),Y(v)]);
+  const l1=smoothPath(p1),l2=smoothPath(p2);
+  const a1=l1+` L${X(11).toFixed(1)},${(T+pH).toFixed(1)} L${X(0).toFixed(1)},${(T+pH).toFixed(1)} Z`;
+  let g='';
+  /* 黄金窗口高亮：10-11月 */
+  const ax=X(9)-step/2,bx=X(10)+step/2;
+  g+=`<rect x="${ax}" y="${T}" width="${bx-ax}" height="${pH}" fill="#bd5538" opacity="0.10"/>`;
+  g+=`<text x="${(ax+bx)/2}" y="${T+pH-12}" text-anchor="middle" font-size="12.5" font-weight="700" fill="#bd5538" font-family="${FF}" style="paint-order:stroke;stroke:#efe8db;stroke-width:3.5px;stroke-linejoin:round">黄金窗口 · 10月中–11月中</text>`;
+  [0,25,50,75,100].forEach(v=>{const y=Y(v);
+    g+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#e6e0d3" stroke-dasharray="4 4"/>`;
+    g+=`<text x="${L-9}" y="${y+4}" text-anchor="end" font-size="11" fill="#75848c" font-family="${FF}">${v}</text>`;});
+  months.forEach((m,i)=>{g+=`<text x="${X(i)}" y="${T+pH+24}" text-anchor="middle" font-size="12" fill="#51636d" font-family="${FF}">${m}</text>`;});
+  /* 图例 */
+  g+=`<rect x="${L}" y="6" width="12" height="3.5" fill="#cf8a2e"/><text x="${L+17}" y="11" font-size="11.5" fill="#7a5a1e" font-family="${FF}">综合适宜度</text>`;
+  g+=`<rect x="${L+105}" y="6" width="12" height="3.5" fill="#2f8f96"/><text x="${L+122}" y="11" font-size="11.5" fill="#1d5160" font-family="${FF}">晴天 / 日照金山概率</text>`;
+  g+=`<path d="${a1}" fill="url(#monGrad)"/>`;
+  g+=`<path d="${l2}" fill="none" stroke="#2f8f96" stroke-width="2.6" stroke-dasharray="2 0" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>`;
+  g+=`<path d="${l1}" fill="none" stroke="#cf8a2e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+  p1.forEach((p,i)=>{
+    const peak=i===9;
+    g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${peak?6.5:4}" fill="${peak?'#bd5538':'#cf8a2e'}" stroke="#fff" stroke-width="${peak?2.5:1.8}"><title>${months[i]} · 综合适宜度 ${score[i]} / 100</title></circle>`;
+    if(peak)g+=`<text x="${p[0]}" y="${p[1]-13}" text-anchor="middle" font-size="13.5" font-weight="800" fill="#bd5538" font-family="${FF}">95</text>`;
+    if(i===7)g+=`<text x="${p[0]}" y="${p[1]+22}" text-anchor="middle" font-size="12" font-weight="700" fill="#a8781f" font-family="${FF}">44</text>`;
+  });
+  p2.forEach((p,i)=>{
+    g+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.4" fill="#2f8f96" stroke="#fff" stroke-width="1.4"><title>${months[i]} · 晴天见金山概率约 ${sunny[i]}%</title></circle>`;
+  });
+  el.style.height='auto';
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="全年12个月综合适宜度与日照金山概率">
+    <defs><linearGradient id="monGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cf8a2e" stop-opacity="0.28"/><stop offset="1" stop-color="#cf8a2e" stop-opacity="0.03"/>
+    </linearGradient></defs>${g}</svg>`;
+})();
+</script>
+</body>
+</html>
+</body>
+</html>
