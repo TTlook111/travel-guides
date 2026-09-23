@@ -2,9 +2,9 @@
 
 # 中国旅行指南 · travel-guides
 
-### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳　·　西藏阿里·珠峰　·　林芝桃花　·　新疆伊犁
+### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳　·　西藏阿里·珠峰　·　林芝桃花　·　新疆伊犁　·　元阳梯田
 
-九份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
+十份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
 
 纯 HTML / CSS / JavaScript 单页　·　零依赖　·　零构建　·　浏览器打开即用
 
@@ -173,6 +173,23 @@
 
 ---
 
+### 10. 云南 · 元阳梯田
+
+> 大地天空之镜 —— 灌水期的千年梯田与云海
+
+[![元阳梯田](yuanyang-terraces-guide/assets/hero.jpg)](https://ttlook111.github.io/travel-guides/yuanyang-terraces-guide/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 云南红河州元阳县，集散地新街镇海拔约 1600 m、高反轻，红河哈尼梯田为世界文化遗产 |
+| 建议时长 | 4 天 3 晚；多依树日出、坝达/老虎嘴日落、爱春蓝梯田，可串建水古城 |
+| 最佳窗口 | **12 月 – 次年 2 月镜面云海（1、2 月尤佳）**；灌水期 11 月–次年 4 月，9–10 月金黄丰收 |
+| 攻略涵盖 | 三种抵达方式、梯田年历光影时间轴、4 天 3 晚行程、四季 12 个月双指数、门票交通与拍摄贴士 |
+
+**[在线预览](https://ttlook111.github.io/travel-guides/yuanyang-terraces-guide/)**　·　**[源码目录](yuanyang-terraces-guide/)**
+
+---
+
 ## 仓库结构
 
 ```text
@@ -204,6 +221,9 @@ travel-guides/
 ├── yili-guide/             新疆·伊犁薰衣草草原攻略
 │   ├── index.html
 │   └── assets/
+├── yuanyang-terraces-guide/ 云南·元阳梯田攻略
+│   ├── index.html
+│   └── assets/
 ├── .gitignore
 └── README.md
 ```
@@ -229,6 +249,7 @@ python -m http.server 8000
 - http://localhost:8000/tibet-ali-guide/
 - http://localhost:8000/linzhi-peach-guide/
 - http://localhost:8000/yili-guide/
+- http://localhost:8000/yuanyang-terraces-guide/
 
 ## 部署到 GitHub Pages
 
@@ -247,10 +268,11 @@ python -m http.server 8000
 | 西藏阿里·珠峰/冈仁波齐 | https://ttlook111.github.io/travel-guides/tibet-ali-guide/ |
 | 西藏·林芝桃花 | https://ttlook111.github.io/travel-guides/linzhi-peach-guide/ |
 | 新疆·伊犁 | https://ttlook111.github.io/travel-guides/yili-guide/ |
+| 云南·元阳梯田 | https://ttlook111.github.io/travel-guides/yuanyang-terraces-guide/ |
 
 ## 说明
 
-- 九个页面均为纯静态页面，无后端、无框架、无构建步骤；
+- 十个页面均为纯静态页面，无后端、无框架、无构建步骤；
 - 图片全部使用 `assets/...` 相对路径引用，整个文件夹离线拷贝也能正常浏览；
 - `_shots/`、`_parts/` 是制作过程中的预览截图与中间文件，已通过 `.gitignore` 排除；
 - 仓库暂未添加开源协议，默认保留所有权利。
