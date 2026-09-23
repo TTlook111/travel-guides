@@ -2,9 +2,9 @@
 
 # 中国旅行指南 · travel-guides
 
-### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳　·　西藏阿里·珠峰　·　林芝桃花
+### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳　·　西藏阿里·珠峰　·　林芝桃花　·　新疆伊犁
 
-八份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
+九份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
 
 纯 HTML / CSS / JavaScript 单页　·　零依赖　·　零构建　·　浏览器打开即用
 
@@ -156,6 +156,23 @@
 
 ---
 
+### 9. 新疆 · 伊犁
+
+> 塞外江南 —— 薰衣草与草原花海的夏天
+
+[![新疆伊犁](yili-guide/assets/hero.jpg)](https://ttlook111.github.io/travel-guides/yili-guide/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 新疆西部天山河谷，集散地伊宁市海拔约 660 m、高反轻，赛里木湖、那拉提、喀拉峻、霍城薰衣草 |
+| 建议时长 | 7 天 6 晚逆时针环线；赛湖 + 两大草原 + 霍城薰衣草 + 昭苏油菜花 |
+| 最佳窗口 | **6 月中下旬 – 7 月中旬（约 6/20 – 7/10）**；4 月杏花、7 月昭苏油菜花，独库 / 伊昭公路约 6 月中通车 |
+| 攻略涵盖 | 三种抵达方式、六大花事追花时间轴、7 天 6 晚行程、四季 12 个月双指数、门票交通与装备贴士 |
+
+**[在线预览](https://ttlook111.github.io/travel-guides/yili-guide/)**　·　**[源码目录](yili-guide/)**
+
+---
+
 ## 仓库结构
 
 ```text
@@ -184,6 +201,9 @@ travel-guides/
 ├── linzhi-peach-guide/     西藏·林芝桃花攻略
 │   ├── index.html
 │   └── assets/
+├── yili-guide/             新疆·伊犁薰衣草草原攻略
+│   ├── index.html
+│   └── assets/
 ├── .gitignore
 └── README.md
 ```
@@ -208,6 +228,7 @@ python -m http.server 8000
 - http://localhost:8000/ejina-guide/
 - http://localhost:8000/tibet-ali-guide/
 - http://localhost:8000/linzhi-peach-guide/
+- http://localhost:8000/yili-guide/
 
 ## 部署到 GitHub Pages
 
@@ -225,10 +246,11 @@ python -m http.server 8000
 | 内蒙古·额济纳旗 | https://ttlook111.github.io/travel-guides/ejina-guide/ |
 | 西藏阿里·珠峰/冈仁波齐 | https://ttlook111.github.io/travel-guides/tibet-ali-guide/ |
 | 西藏·林芝桃花 | https://ttlook111.github.io/travel-guides/linzhi-peach-guide/ |
+| 新疆·伊犁 | https://ttlook111.github.io/travel-guides/yili-guide/ |
 
 ## 说明
 
-- 八个页面均为纯静态页面，无后端、无框架、无构建步骤；
+- 九个页面均为纯静态页面，无后端、无框架、无构建步骤；
 - 图片全部使用 `assets/...` 相对路径引用，整个文件夹离线拷贝也能正常浏览；
 - `_shots/`、`_parts/` 是制作过程中的预览截图与中间文件，已通过 `.gitignore` 排除；
 - 仓库暂未添加开源协议，默认保留所有权利。
