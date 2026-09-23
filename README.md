@@ -2,9 +2,9 @@
 
 # 中国旅行指南 · travel-guides
 
-### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里
+### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳
 
-五份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
+六份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
 
 纯 HTML / CSS / JavaScript 单页　·　零依赖　·　零构建　·　浏览器打开即用
 
@@ -105,6 +105,23 @@
 
 ---
 
+### 6. 内蒙古 · 额济纳旗
+
+> 一年只美二十天 · 三千年金色胡杨与大漠童话
+
+[![额济纳](ejina-guide/assets/hero.jpg)](https://ttlook111.github.io/travel-guides/ejina-guide/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 内蒙古阿拉善盟 · 额济纳旗，集散地为达来呼布镇，世界仅存三大原始胡杨林之一 |
+| 建议时长 | 4 天 3 晚；胡杨林一道桥至八道桥一整天 + 居延海日出 + 黑城怪树林 |
+| 最佳窗口 | **10 月 5 – 15 日金色巅峰约 11 天**；官方口径 10/4 前后进入最佳期、10/22 前后结束，全年观赏期约 24 天 |
+| 攻略涵盖 | 三种抵达方式、一道桥→八道桥序列、4 天 3 晚行程、河西走廊大环线、四季与 12 个月双指数、门票与防风沙贴士 |
+
+**[在线预览](https://ttlook111.github.io/travel-guides/ejina-guide/)**　·　**[源码目录](ejina-guide/)**
+
+---
+
 ## 仓库结构
 
 ```text
@@ -122,6 +139,9 @@ travel-guides/
 │   ├── index.html
 │   └── assets/
 ├── shangri-la-meili-guide/ 香格里拉·梅里雪山/雨崩攻略
+│   ├── index.html
+│   └── assets/
+├── ejina-guide/            内蒙古·额济纳旗攻略
 │   ├── index.html
 │   └── assets/
 ├── .gitignore
@@ -145,6 +165,7 @@ python -m http.server 8000
 - http://localhost:8000/xinjiang-travel/
 - http://localhost:8000/jiuzhaigou-guide/
 - http://localhost:8000/shangri-la-meili-guide/
+- http://localhost:8000/ejina-guide/
 
 ## 部署到 GitHub Pages
 
@@ -159,10 +180,11 @@ python -m http.server 8000
 | 新疆 | https://ttlook111.github.io/travel-guides/xinjiang-travel/ |
 | 九寨沟 | https://ttlook111.github.io/travel-guides/jiuzhaigou-guide/ |
 | 香格里拉·梅里/雨崩 | https://ttlook111.github.io/travel-guides/shangri-la-meili-guide/ |
+| 内蒙古·额济纳旗 | https://ttlook111.github.io/travel-guides/ejina-guide/ |
 
 ## 说明
 
-- 五个页面均为纯静态页面，无后端、无框架、无构建步骤；
+- 六个页面均为纯静态页面，无后端、无框架、无构建步骤；
 - 图片全部使用 `assets/...` 相对路径引用，整个文件夹离线拷贝也能正常浏览；
 - `_shots/`、`_parts/` 是制作过程中的预览截图与中间文件，已通过 `.gitignore` 排除；
 - 仓库暂未添加开源协议，默认保留所有权利。
