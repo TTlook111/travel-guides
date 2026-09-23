@@ -2,9 +2,9 @@
 
 # 中国旅行指南 · travel-guides
 
-### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳　·　西藏阿里·珠峰
+### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳　·　西藏阿里·珠峰　·　林芝桃花
 
-七份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
+八份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
 
 纯 HTML / CSS / JavaScript 单页　·　零依赖　·　零构建　·　浏览器打开即用
 
@@ -139,6 +139,23 @@
 
 ---
 
+### 8. 西藏 · 林芝桃花
+
+> 雪域江南 —— 雪山之下，中国最美的春天只开一次
+
+[![林芝桃花](linzhi-peach-guide/assets/hero.jpg)](https://ttlook111.github.io/travel-guides/linzhi-peach-guide/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 西藏东南部林芝市，雅鲁藏布江中下游，平均海拔仅约 2900 m，高反轻、雪域江南 |
+| 建议时长 | 6 天 5 晚；嘎拉村 + 大峡谷索松村 + 波密桃花沟 + 巴松措，可串拉萨 |
+| 最佳窗口 | **3 月 25 日 – 4 月 10 日雪山桃花同框黄金期**；桃花随海拔梯度开放，波密最早、工布江达最晚 |
+| 攻略涵盖 | 三种抵达方式、四大赏花地花期梯度甘特图、6 天 5 晚行程、拉萨圣湖大环线、四季 12 个月双指数、门票高反与装备 |
+
+**[在线预览](https://ttlook111.github.io/travel-guides/linzhi-peach-guide/)**　·　**[源码目录](linzhi-peach-guide/)**
+
+---
+
 ## 仓库结构
 
 ```text
@@ -164,6 +181,9 @@ travel-guides/
 ├── tibet-ali-guide/        西藏阿里·珠峰/冈仁波齐攻略
 │   ├── index.html
 │   └── assets/
+├── linzhi-peach-guide/     西藏·林芝桃花攻略
+│   ├── index.html
+│   └── assets/
 ├── .gitignore
 └── README.md
 ```
@@ -187,6 +207,7 @@ python -m http.server 8000
 - http://localhost:8000/shangri-la-meili-guide/
 - http://localhost:8000/ejina-guide/
 - http://localhost:8000/tibet-ali-guide/
+- http://localhost:8000/linzhi-peach-guide/
 
 ## 部署到 GitHub Pages
 
@@ -203,10 +224,11 @@ python -m http.server 8000
 | 香格里拉·梅里/雨崩 | https://ttlook111.github.io/travel-guides/shangri-la-meili-guide/ |
 | 内蒙古·额济纳旗 | https://ttlook111.github.io/travel-guides/ejina-guide/ |
 | 西藏阿里·珠峰/冈仁波齐 | https://ttlook111.github.io/travel-guides/tibet-ali-guide/ |
+| 西藏·林芝桃花 | https://ttlook111.github.io/travel-guides/linzhi-peach-guide/ |
 
 ## 说明
 
-- 七个页面均为纯静态页面，无后端、无框架、无构建步骤；
+- 八个页面均为纯静态页面，无后端、无框架、无构建步骤；
 - 图片全部使用 `assets/...` 相对路径引用，整个文件夹离线拷贝也能正常浏览；
 - `_shots/`、`_parts/` 是制作过程中的预览截图与中间文件，已通过 `.gitignore` 排除；
 - 仓库暂未添加开源协议，默认保留所有权利。
