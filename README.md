@@ -2,9 +2,9 @@
 
 # 中国旅行指南 · travel-guides
 
-### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳
+### 稻城亚丁　·　漠河　·　新疆　·　九寨沟　·　香格里拉·梅里　·　额济纳　·　西藏阿里·珠峰
 
-六份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
+七份亲手整理的交互式旅行攻略，把「什么时候去、怎么走、看什么、要准备什么」讲清楚。
 
 纯 HTML / CSS / JavaScript 单页　·　零依赖　·　零构建　·　浏览器打开即用
 
@@ -122,6 +122,23 @@
 
 ---
 
+### 7. 西藏阿里 · 珠峰 / 冈仁波齐
+
+> 无阿里，不西藏 —— 望世界第一高峰，转四教共尊的世界中心
+
+[![西藏阿里](tibet-ali-guide/assets/hero.jpg)](https://ttlook111.github.io/travel-guides/tibet-ali-guide/)
+
+| 项目 | 说明 |
+| :--- | :--- |
+| 位置 | 西藏西部阿里地区（平均海拔 4500 m+）与日喀则定日县珠峰，沿 G219 南线西进 |
+| 建议时长 | 南线 8–10 天；阿里大北线环线 13–16 天；飞阿里短线 5–7 天 |
+| 最佳窗口 | **9 月中 – 10 月中**最稳；马年 / 萨嘎达瓦节选 5 月中下旬 |
+| 攻略涵盖 | 南线 / 大北线 / 飞阿里三线对比、10 天行程时间轴、冈仁波齐转山三日 / 两日、四季 12 个月双指数、边防证门票、高反装备 |
+
+**[在线预览](https://ttlook111.github.io/travel-guides/tibet-ali-guide/)**　·　**[源码目录](tibet-ali-guide/)**
+
+---
+
 ## 仓库结构
 
 ```text
@@ -142,6 +159,9 @@ travel-guides/
 │   ├── index.html
 │   └── assets/
 ├── ejina-guide/            内蒙古·额济纳旗攻略
+│   ├── index.html
+│   └── assets/
+├── tibet-ali-guide/        西藏阿里·珠峰/冈仁波齐攻略
 │   ├── index.html
 │   └── assets/
 ├── .gitignore
@@ -166,6 +186,7 @@ python -m http.server 8000
 - http://localhost:8000/jiuzhaigou-guide/
 - http://localhost:8000/shangri-la-meili-guide/
 - http://localhost:8000/ejina-guide/
+- http://localhost:8000/tibet-ali-guide/
 
 ## 部署到 GitHub Pages
 
@@ -181,10 +202,11 @@ python -m http.server 8000
 | 九寨沟 | https://ttlook111.github.io/travel-guides/jiuzhaigou-guide/ |
 | 香格里拉·梅里/雨崩 | https://ttlook111.github.io/travel-guides/shangri-la-meili-guide/ |
 | 内蒙古·额济纳旗 | https://ttlook111.github.io/travel-guides/ejina-guide/ |
+| 西藏阿里·珠峰/冈仁波齐 | https://ttlook111.github.io/travel-guides/tibet-ali-guide/ |
 
 ## 说明
 
-- 六个页面均为纯静态页面，无后端、无框架、无构建步骤；
+- 七个页面均为纯静态页面，无后端、无框架、无构建步骤；
 - 图片全部使用 `assets/...` 相对路径引用，整个文件夹离线拷贝也能正常浏览；
 - `_shots/`、`_parts/` 是制作过程中的预览截图与中间文件，已通过 `.gitignore` 排除；
 - 仓库暂未添加开源协议，默认保留所有权利。

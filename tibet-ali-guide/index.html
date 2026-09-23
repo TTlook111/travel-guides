@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>西藏阿里 · 珠峰 / 冈仁波齐 | 四季指南与转山全攻略</title>
+<meta name="description" content="西藏阿里大北线与南线、珠峰绒布寺、冈仁波齐转山怎么玩：拉萨起止10天行程动线、三条路线对比、四季12个月景色与最佳季节、边防证门票交通高反装备全指南。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23123848'/%3E%3Cpath d='M4 23l7-11 4 5 3-4 10 10z' fill='%23e6edf0'/%3E%3Cpath d='M11 12l4 5 3-4 3 3.5' fill='none' stroke='%238fb8c2' stroke-width='1'/%3E%3Ccircle cx='23' cy='9' r='2.6' fill='%23cf8a2e'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --ink:#22323b;--ink-soft:#51636d;--ink-faint:#75848c;
+  --paper:#f6f2ea;--paper-2:#efe8db;--card:#ffffff;
+  --pine:#1d5160;--pine-deep:#123848;--teal:#2f8f96;--teal-soft:#dcebed;
+  --gold:#cf8a2e;--gold-soft:#f5e7cf;--rust:#a83c2c;--rust-soft:#f3ddd7;--line:#e3dccd;
+  --shadow:0 14px 38px -18px rgba(18,56,72,.34);--radius:16px;
+  --serif:"Noto Serif SC","Songti SC","STSong",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+.serif{font-family:var(--serif)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,box-shadow .3s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:19px;color:#fff;letter-spacing:2px}
+.brand svg{width:26px;height:26px}
+.nav-links{display:flex;gap:28px}
+.nav-links a{color:rgba(255,255,255,.88);font-size:15px;font-weight:400;position:relative;padding:4px 0}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .25s}
+.nav-links a:hover::after{width:100%}
+.nav.scrolled{background:rgba(18,56,72,.93);backdrop-filter:blur(10px);box-shadow:0 6px 24px -12px rgba(0,0,0,.5)}
+.nav.scrolled .brand,.nav.scrolled .nav-links a{color:#fff}
+.hero{position:relative;height:100vh;min-height:620px;max-height:920px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 44%}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,32,44,.5) 0%,rgba(10,32,44,.12) 38%,rgba(10,32,44,.52) 70%,rgba(10,32,44,.9) 100%)}
+.hero-inner{position:relative;z-index:2;width:min(1120px,92vw);max-width:92%;min-width:0;margin:0 auto;padding-bottom:64px;color:#fff}
+.hero-kicker{font-size:14px;letter-spacing:6px;text-transform:uppercase;color:var(--gold-soft);margin-bottom:18px;font-weight:500}
+.hero-kicker span{display:inline-block;width:34px;height:1px;background:var(--gold);vertical-align:middle;margin-right:14px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,7vw,82px);line-height:1.08;letter-spacing:5px;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.hero-sub{margin-top:18px;font-size:clamp(16px,2.1vw,21px);font-weight:300;letter-spacing:2px;color:rgba(255,255,255,.92);max-width:36em;overflow-wrap:break-word}
+.hero-stats{display:flex;flex-wrap:wrap;gap:0;margin-top:40px;border-top:1px solid rgba(255,255,255,.25)}
+.hero-stat{flex:1 1 130px;padding:18px 22px 0;border-left:1px solid rgba(255,255,255,.2)}
+.hero-stat:first-child{border-left:none;padding-left:0}
+.hero-stat b{display:block;font-family:var(--serif);font-size:clamp(19px,2.3vw,27px);font-weight:700;color:#fff;line-height:1.2}
+.hero-stat span{font-size:13px;color:rgba(255,255,255,.78);letter-spacing:1px}
+.scroll-hint{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.7);font-size:12px;letter-spacing:3px;text-align:center}
+.scroll-hint svg{width:20px;height:20px;margin:6px auto 0;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+section{padding:88px 0}
+.sec-head{max-width:780px;margin-bottom:52px}
+.sec-index{font-family:var(--serif);color:var(--gold);font-size:15px;letter-spacing:3px;font-weight:600;display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.sec-index::before{content:"";width:30px;height:1px;background:var(--gold)}
+.sec-head h2{font-family:var(--serif);font-size:clamp(28px,4vw,42px);font-weight:700;color:var(--pine-deep);letter-spacing:2px;line-height:1.25}
+.sec-head p{margin-top:16px;color:var(--ink-soft);font-size:16px}
+.alt{background:var(--paper-2)}
+.overview-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.overview-text p{margin-bottom:18px;color:var(--ink-soft);font-size:16.5px}
+.overview-text p strong{color:var(--pine-deep);font-weight:600}
+.overview-photo{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.overview-photo img{width:100%;height:460px;object-fit:cover;object-position:center 55%}
+.overview-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 22px 16px;background:linear-gradient(transparent,rgba(13,40,52,.84));color:#fff;font-size:13.5px;letter-spacing:1px}
+.year-banner{display:flex;gap:16px;align-items:flex-start;margin-top:36px;background:linear-gradient(120deg,#7a2a1e,#a83c2c);border-radius:var(--radius);padding:24px 28px;color:#fbeee9;box-shadow:var(--shadow)}
+.year-banner .yb-ico{width:34px;height:34px;flex-shrink:0;color:#f2c27a}
+.year-banner h4{font-family:var(--serif);font-size:19px;color:#ffd9a8;margin-bottom:5px;letter-spacing:1px}
+.year-banner p{font-size:14px;line-height:1.7;color:#f6e3dc}
+.peaks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.peak{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;text-align:center}
+.peak .pico{width:40px;height:40px;margin:0 auto 12px;color:var(--teal)}
+.peak h4{font-family:var(--serif);font-size:18px;color:var(--pine-deep);font-weight:700}
+.peak .alt-m{font-size:13px;color:var(--gold);font-weight:600;margin:3px 0 8px;letter-spacing:1px}
+.peak p{font-size:13px;color:var(--ink-faint);line-height:1.6}
+.trans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.trans-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow)}
+.trans-card .tico{width:42px;height:42px;color:var(--pine);margin-bottom:16px}
+.trans-card h4{font-family:var(--serif);font-size:20px;color:var(--pine-deep);margin-bottom:4px}
+.trans-tag{display:inline-block;font-size:12px;padding:2px 11px;border-radius:20px;margin-bottom:14px;letter-spacing:1px}
+.tag-rec{background:var(--teal-soft);color:var(--pine)}
+.tag-fast{background:var(--gold-soft);color:var(--gold)}
+.tag-econ{background:#e7e3d8;color:var(--ink-soft)}
+.trans-card ul{list-style:none;margin-top:6px}
+.trans-card li{font-size:14px;color:var(--ink-soft);padding:7px 0 7px 20px;position:relative;border-bottom:1px dashed var(--line)}
+.trans-card li:last-child{border-bottom:none}
+.trans-card li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.trans-card li b{color:var(--ink);font-weight:600}
+.chart-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:34px 30px 20px;margin-top:56px}
+.chart-card h4{font-family:var(--serif);font-size:20px;color:var(--pine-deep);margin-bottom:4px}
+.chart-card .csub{font-size:13.5px;color:var(--ink-faint);margin-bottom:10px}
+.chart{width:100%;height:380px}
+.flow-bar{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);margin-bottom:48px}
+.flow-step{flex:1 1 140px;padding:24px 16px;position:relative;text-align:center}
+.flow-step:not(:last-child)::after{content:"";position:absolute;right:-9px;top:50%;z-index:2;width:18px;height:18px;background:var(--paper);border-top:2px solid var(--teal);border-right:2px solid var(--teal);transform:translateY(-50%) rotate(45deg)}
+.flow-step .fnum{font-family:var(--serif);font-size:13px;color:var(--gold);letter-spacing:2px;font-weight:600}
+.flow-step .fico{width:34px;height:34px;margin:10px auto;color:var(--pine)}
+.flow-step h5{font-size:14.5px;color:var(--pine-deep);font-family:var(--serif)}
+.flow-step p{font-size:12px;color:var(--ink-faint);margin-top:4px;line-height:1.5}
+.routes3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.routes{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.route{border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.route-photo{position:relative;height:210px;overflow:hidden}
+.route-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.route:hover .route-photo img{transform:scale(1.05)}
+.route-badge{position:absolute;top:14px;left:14px;padding:5px 13px;border-radius:24px;font-size:12.5px;font-weight:600;letter-spacing:1px;color:#fff}
+.badge-short{background:linear-gradient(120deg,#2f8f96,#1d5160)}
+.badge-long{background:linear-gradient(120deg,#cf8a2e,#a83c2c)}
+.badge-fly{background:linear-gradient(120deg,#5a7c99,#123848)}
+.route-body{padding:24px 22px 26px;flex:1;display:flex;flex-direction:column}
+.route-body h4{font-family:var(--serif);font-size:20px;color:var(--pine-deep);margin-bottom:2px}
+.route-meta{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 14px}
+.route-meta span{font-size:12px;background:var(--paper-2);color:var(--ink-soft);padding:3px 11px;border-radius:20px}
+.route-path{font-size:13px;color:var(--teal);font-weight:500;line-height:1.7;margin-bottom:12px;padding:10px 12px;background:var(--teal-soft);border-radius:10px}
+.route-body ul{list-style:none;margin-bottom:14px}
+.route-body li{font-size:13.3px;color:var(--ink-soft);padding:5px 0 5px 20px;position:relative;line-height:1.6}
+.route-body li::before{content:"";position:absolute;left:2px;top:12px;width:8px;height:2px;background:var(--gold)}
+.route-fit{margin-top:auto;font-size:13px;padding:11px 14px;border-radius:10px;background:var(--paper);color:var(--ink-soft)}
+.route-fit b{color:var(--pine-deep)}
+.timeline{position:relative;margin-top:20px;--date:140px;--axis:48px}
+.timeline::before{content:"";position:absolute;top:42px;bottom:42px;left:calc(var(--date) + var(--axis)/2 - 1px);width:2px;background:var(--line)}
+.tl-item{display:grid;grid-template-columns:var(--date) var(--axis) 1fr;gap:0;align-items:stretch}
+.tl-day{text-align:right;padding:26px 22px 26px 0}
+.tl-day b{display:block;font-family:var(--serif);font-size:19px;color:var(--pine-deep)}
+.tl-day span{font-size:12.5px;color:var(--ink-faint)}
+.tl-axis{position:relative;display:flex;justify-content:center}
+.tl-dot{width:16px;height:16px;border-radius:50%;background:var(--card);border:3px solid var(--teal);margin-top:30px;z-index:1;justify-self:center}
+.tl-item.hl .tl-dot{border-color:var(--gold);background:var(--gold-soft)}
+.tl-card{margin:14px 0 22px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 24px;box-shadow:var(--shadow)}
+.tl-item.hl .tl-card{border-left:4px solid var(--gold)}
+.tl-card h5{font-family:var(--serif);font-size:17px;color:var(--pine-deep);margin-bottom:5px}
+.tl-card p{font-size:14px;color:var(--ink-soft)}
+.tl-card .tl-tags{margin-top:9px;display:flex;flex-wrap:wrap;gap:7px}
+.tl-card .tl-tags span{font-size:12px;color:var(--pine);background:var(--teal-soft);padding:2px 10px;border-radius:14px}
+.tl-note{margin-top:26px;background:var(--pine-deep);color:#e9f1f2;border-radius:var(--radius);padding:24px 28px;display:flex;gap:16px;align-items:flex-start}
+.tl-note svg{width:26px;height:26px;flex-shrink:0;color:var(--gold)}
+.tl-note p{font-size:14.5px;line-height:1.75}
+.tl-note b{color:var(--gold-soft)}
+.season-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.season{border-radius:var(--radius);overflow:hidden;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);display:flex;flex-direction:column}
+.season-photo{height:240px;position:relative;overflow:hidden}
+.season-photo img{width:100%;height:100%;object-fit:cover}
+.season-photo .s-label{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.94);padding:6px 16px;border-radius:24px;font-family:var(--serif);font-weight:700;font-size:15px;letter-spacing:1px}
+.season-photo .s-months{position:absolute;bottom:0;left:0;right:0;padding:26px 18px 12px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:13px;letter-spacing:1px}
+.season-body{padding:26px 28px 28px;flex:1;display:flex;flex-direction:column}
+.season-body h4{font-family:var(--serif);font-size:22px;color:var(--pine-deep)}
+.stars{margin:8px 0 14px;letter-spacing:3px;font-size:15px;color:var(--gold)}
+.stars .off{color:var(--line)}
+.season-body .s-desc{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px}
+.pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:auto;font-size:13.5px}
+.pros-cons .pc-t{font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:6px;font-size:13px}
+.pc-good .pc-t{color:var(--teal)}
+.pc-bad .pc-t{color:var(--rust)}
+.pros-cons ul{list-style:none}
+.pros-cons li{color:var(--ink-soft);padding:3px 0 3px 14px;position:relative;line-height:1.55}
+.pc-good li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:2px;background:var(--teal)}
+.pc-bad li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-right:2px solid var(--rust);border-bottom:2px solid var(--rust);transform:rotate(45deg)}
+.shot-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.shot{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:3/2;margin:0}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.shot:hover img{transform:scale(1.06)}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 44%,rgba(13,40,52,.84));pointer-events:none}
+.shot figcaption{position:absolute;left:22px;right:22px;bottom:16px;z-index:2;color:#fff}
+.shot figcaption b{display:block;font-family:var(--serif);font-size:18px;letter-spacing:1px;margin-bottom:3px}
+.shot figcaption span{font-size:13px;color:rgba(255,255,255,.86);line-height:1.55}
+.best{position:relative;border-radius:22px;overflow:hidden;margin-top:64px;box-shadow:0 26px 60px -28px rgba(18,56,72,.55)}
+.best-img{position:absolute;inset:0}
+.best-img img{width:100%;height:100%;object-fit:cover;object-position:center 50%}
+.best-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,42,54,.94) 0%,rgba(16,42,54,.82) 42%,rgba(16,42,54,.30) 100%)}
+.best-inner{position:relative;z-index:2;padding:58px 54px;color:#fff;max-width:62%}
+.best-crown{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:#3a2a08;font-weight:700;font-size:13.5px;letter-spacing:2px;padding:7px 18px;border-radius:24px;margin-bottom:22px}
+.best-crown svg{width:17px;height:17px}
+.best-inner h3{font-family:var(--serif);font-size:clamp(27px,3.4vw,40px);font-weight:900;letter-spacing:2px;line-height:1.25;margin-bottom:16px}
+.best-inner > p{color:rgba(255,255,255,.9);font-size:15.5px;margin-bottom:24px}
+.best-points{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.best-point{display:flex;gap:12px;align-items:flex-start}
+.best-point svg{width:22px;height:22px;color:var(--gold);flex-shrink:0;margin-top:2px}
+.best-point b{display:block;font-size:14.5px;color:#fff;font-family:var(--serif)}
+.best-point span{font-size:13px;color:rgba(255,255,255,.78);line-height:1.55}
+.best-chips{display:flex;flex-wrap:wrap;gap:12px;margin:-6px 0 26px}
+.best-chips span{border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.2);color:#ffd98a;padding:8px 18px;border-radius:24px;font-size:14px;font-weight:600;letter-spacing:1px}
+.tips-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
+.tip .tico2{width:40px;height:40px;color:var(--pine);margin-bottom:14px}
+.tip h4{font-family:var(--serif);font-size:19px;color:var(--pine-deep);margin-bottom:12px}
+.tip ul{list-style:none}
+.tip li{font-size:13.8px;color:var(--ink-soft);padding:7px 0 7px 18px;position:relative;border-bottom:1px dashed var(--line);line-height:1.6}
+.tip li:last-child{border-bottom:none}
+.tip li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.tip li b{color:var(--pine-deep);font-weight:600}
+.tip.wide{grid-column:span 3;background:linear-gradient(135deg,#fff,var(--teal-soft))}
+.ticket-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:6px}
+.ticket{text-align:left;background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:12px;padding:16px}
+.ticket b{display:block;font-family:var(--serif);font-size:18px;color:var(--pine-deep)}
+.ticket span{font-size:12.5px;color:var(--ink-faint);line-height:1.5;display:block;margin-top:3px}
+.policy-note{grid-column:span 3;font-size:12.5px;color:var(--ink-faint);margin-top:2px;line-height:1.6}
+.gear-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:2px}
+.gear-tags span{font-size:13px;background:var(--paper-2);border:1px solid var(--line);color:var(--ink-soft);padding:6px 14px;border-radius:20px}
+.trek-strip{display:grid;grid-template-columns:1.1fr .9fr;gap:0;margin-top:40px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line);background:var(--card)}
+.trek-strip img{width:100%;height:100%;min-height:300px;object-fit:cover}
+.trek-strip .ts-body{padding:32px 32px 30px;display:flex;flex-direction:column;justify-content:center}
+.trek-strip .ts-tag{font-size:12.5px;color:var(--gold);letter-spacing:2px;font-weight:600;margin-bottom:8px}
+.trek-strip h4{font-family:var(--serif);font-size:22px;color:var(--pine-deep);margin-bottom:12px}
+.trek-strip p{font-size:14.3px;color:var(--ink-soft);margin-bottom:10px}
+.trek-strip .ts-warn{background:var(--gold-soft);border-radius:10px;padding:12px 16px;font-size:13.5px;color:#7a5417;line-height:1.65}
+.trek-strip .ts-warn b{color:var(--rust)}
+footer{background:var(--pine-deep);color:rgba(255,255,255,.75);padding:54px 0 40px}
+.foot-inner{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:flex-start}
+.foot-brand{font-family:var(--serif);font-size:22px;color:#fff;letter-spacing:3px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.foot-brand svg{width:26px;height:26px}
+.foot-inner p{font-size:13px;max-width:580px;line-height:1.8}
+.foot-disc{font-size:12px;color:rgba(255,255,255,.5);margin-top:18px;max-width:620px;line-height:1.7;border-top:1px solid rgba(255,255,255,.12);padding-top:16px}
+.foot-anchor{display:flex;flex-direction:column;gap:10px;font-size:14px}
+.foot-anchor a{color:rgba(255,255,255,.8)}
+.foot-anchor a:hover{color:var(--gold)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media (max-width:900px){
+  section{padding:64px 0}
+  .overview-grid{grid-template-columns:1fr;gap:34px}
+  .overview-photo img{height:340px}
+  .trans-grid,.tips-grid,.routes3{grid-template-columns:1fr}
+  .tip.wide{grid-column:span 1}
+  .ticket-row{grid-template-columns:1fr 1fr}
+  .policy-note{grid-column:span 1}
+  .routes,.season-grid{grid-template-columns:1fr}
+  .shot-grid{grid-template-columns:1fr}
+  .trek-strip{grid-template-columns:1fr}
+  .trek-strip img{min-height:240px;max-height:300px}
+  .pros-cons{grid-template-columns:1fr 1fr}
+  .best-inner{max-width:100%;padding:44px 30px}
+  .best-veil{background:linear-gradient(180deg,rgba(16,42,54,.9),rgba(16,42,54,.78))}
+  .best-points{grid-template-columns:1fr}
+  .timeline{--date:88px;--axis:32px}
+  .tl-day{padding:24px 10px 24px 0}
+  .tl-day b{font-size:16px}
+  .peaks{grid-template-columns:1fr}
+  .nav-links{gap:15px}
+  .nav-links a{font-size:13px}
+  .hero{flex-direction:column;justify-content:flex-end}
+  .hero-inner{width:92%;max-width:92%;padding-bottom:42px}
+  .hero-kicker{margin-bottom:12px;font-size:12px;letter-spacing:4px}
+  .hero h1{font-size:clamp(34px,9.5vw,48px);letter-spacing:3px}
+  .hero-sub{margin-top:14px;font-size:15px;letter-spacing:1px}
+  .hero-stats{margin-top:26px}
+  .hero-stat{flex:1 1 45%;border-left:none;padding:12px 0 0}
+  .hero-stat:nth-child(odd){padding-right:14px}
+  .hero-stat b{font-size:19px}
+  .scroll-hint{display:none}
+  .chart{height:320px}
+}
+@media (max-width:560px){
+  .brand{font-size:16px;letter-spacing:1px}
+  .nav-links a:nth-child(n+4){display:none}
+  .hero-kicker{display:none}
+  .hero h1{font-size:36px;letter-spacing:2px}
+  .hero-stats{margin-top:22px}
+  .timeline{--date:54px;--axis:28px}
+  .tl-day{padding-right:8px}
+  .tl-day span{display:none}
+  .tl-day b{font-size:14px}
+  .pros-cons{grid-template-columns:1fr}
+  .ticket-row{grid-template-columns:1fr}
+  .flow-step{flex:1 1 40%}
+  .flow-step:nth-child(2n)::after{display:none}
+}
+</style>
+</head>
+<body>
+<!-- ===== 导航 ===== -->
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" fill="none"><path d="M4 23l7-11 4 5 3-4 10 10z" fill="#e8f0f2"/><path d="M11 12l4 5 3-4 3 3.5" fill="none" stroke="#8fb8c2" stroke-width="1.2"/><circle cx="23" cy="9" r="2.6" fill="#cf8a2e"/></svg>
+      西藏阿里 · 珠峰
+    </div>
+    <div class="nav-links">
+      <a href="#overview">认识这片土地</a>
+      <a href="#route">行程动线</a>
+      <a href="#gallery">风景图鉴</a>
+      <a href="#trek">转山朝圣</a>
+      <a href="#seasons">四季指南</a>
+      <a href="#tips">实用贴士</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero ===== -->
+<header class="hero">
+  <div class="hero-img"><img src="assets/hero.jpg" alt="冈仁波齐峰黄昏日照金山，前景大片五彩经幡"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-inner">
+    <div class="hero-kicker"><span></span>XIZANG · ALI · KAILASH &amp; EVEREST</div>
+    <h1>西藏阿里 · 珠峰</h1>
+    <div class="hero-sub">无阿里，不西藏——在世界屋脊的尽头，望一座最高峰，转一座最神山</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><b>珠峰 8848.86 m</b><span>世界第一高峰 · 游客至绒布寺约 5150 m</span></div>
+      <div class="hero-stat"><b>冈仁波齐 6656 m</b><span>转山最高点卓玛拉山口 5630 m</span></div>
+      <div class="hero-stat"><b>南线 8–10 天</b><span>大北线环线 13–16 天</span></div>
+      <div class="hero-stat"><b>9 中 – 10 中</b><span>公认最佳窗口</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">向下探索
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+  </div>
+</header>
+
+<!-- ===== 认识这片土地 ===== -->
+<section id="overview">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">01 / 认识这片土地</div>
+      <h2>西藏以西，是「世界屋脊的屋脊」</h2>
+    </div>
+    <div class="overview-grid">
+      <div class="overview-text">
+        <p><strong>阿里地区</strong>位于西藏自治区西部，平均海拔 4500 米以上，被称作「世界屋脊的屋脊」「西藏的西藏」。这里在喜马拉雅山脉与冈底斯山脉之间铺展，地广人稀、湖泊星罗棋布，南线 G219 国道一路向西，直抵中印、中尼边境。</p>
+        <p><strong>冈仁波齐</strong>是冈底斯山脉主峰，海拔 6656 米，终年积雪的圆顶金字塔山形，南壁冰槽与岩层天然构成十字。它被藏传佛教、印度教、苯教、耆那教共同奉为「世界中心」，<strong>转山一圈约 52 公里</strong>；在神山本命年的<strong>马年转一圈，相当于常年十三圈</strong>。山下是圣湖玛旁雍错（约 4588 米）、鬼湖拉昂错与海拔 7694 米的纳木那尼峰。</p>
+        <p><strong>珠穆朗玛峰</strong>，海拔 8848.86 米，为世界第一高峰，地处日喀则市定日县中尼边境。普通游客经加乌拉山口（约 5198 米，可同时眺望五座八千米级雪峰）抵达<strong>绒布寺一带（约 5150 米）</strong>即止——绒布寺以上核心区禁止旅游，登山大本营不对外开放。札达土林与古格王朝，则是阿里腹地七百年象雄文明留下的苍凉注脚。</p>
+      </div>
+      <figure class="overview-photo">
+        <img src="assets/overview.jpg" alt="冈仁波齐山脚下经幡柱与转山者，远处金字塔形雪峰">
+        <figcaption>冈仁波齐脚下 · 风马旗经幡柱与转山的僧人，神山终年洁白</figcaption>
+      </figure>
+    </div>
+
+    <div class="year-banner reveal">
+      <svg class="yb-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9 9.2c1.4-.8 4.6-.8 6 .3M9 14.6c1.4.8 4.6.8 6-.3"/></svg>
+      <div>
+        <h4>2026 年 · 藏历马年，冈仁波齐的本命年</h4>
+        <p>马年转山一圈，功德相当于常年十三圈，2026 年转山者将远多于常年，车辆、床位、机票都需更早预订，萨嘎达瓦节（藏历四月，2026 年公历 5 月 17 日起、满月日约在 5 月 31 日）前后尤盛。想避开人潮，可选择 9 月中旬 – 10 月中旬的秋季窗口。</p>
+      </div>
+    </div>
+
+    <div class="peaks">
+      <div class="peak">
+        <svg class="pico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="6" r="2"/><path d="M3 19l6-9 4 5 2-2.5 6 6.5z"/><path d="M9 10l4 5"/></svg>
+        <h4>珠峰片区</h4>
+        <div class="alt-m">日喀则定日 · 行程第 3–5 天</div>
+        <p>羊湖、卡若拉冰川、扎什伦布寺、加乌拉山口、绒布寺望珠峰</p>
+      </div>
+      <div class="peak">
+        <svg class="pico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 21s-6-5.2-6-10a4 4 0 016-3.5A4 4 0 0120 11c0 4.8-6 10-6 10z"/><circle cx="14" cy="11" r="1.3"/></svg>
+        <h4>神山圣湖片区</h4>
+        <div class="alt-m">普兰 · 塔钦约 4670 m</div>
+        <p>玛旁雍错、拉昂错、纳木那尼、冈仁波齐转山，全程精神高地</p>
+      </div>
+      <div class="peak">
+        <svg class="pico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c2-8 5-12 8-12s6 4 8 12"/><path d="M3 20h18"/><path d="M9 14l3-2 3 2"/></svg>
+        <h4>土林古格 · 北线诸措</h4>
+        <div class="alt-m">札达 / 日土 / 尼玛</div>
+        <p>札达土林、古格王朝、班公错、色林错、当惹雍错、纳木错</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== 行程动线 ===== -->
+<section id="route" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">02 / 行程动线</div>
+      <h2>南线进、转神山，再从北线「一错再错」回拉萨</h2>
+      <p>阿里无法从内地直达，须先到拉萨（或喀什）。最经典的走法是沿 G219 南线经日喀则、珠峰到神山圣湖与札达，时间充裕再从北线经色林错、纳木错环线返回——这是一条先升后降、再缓缓回落的海拔曲线。</p>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:21px;color:var(--pine-deep);margin-bottom:20px">第一步 · 怎么进入这片高原</h3>
+    <div class="trans-grid">
+      <div class="trans-card">
+        <svg class="tico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L11 18v-4.5z"/></svg>
+        <h4>飞机进藏</h4>
+        <span class="trans-tag tag-fast">最省时 · 可直飞阿里</span>
+        <ul>
+          <li>飞<b>拉萨贡嘎机场</b>，机场到市区约 65 km</li>
+          <li>也可直飞阿里：<b>昆莎机场（狮泉河）</b>、<b>普兰机场</b>（近神山圣湖）</li>
+          <li>拉萨飞阿里约 <b>2 小时</b>，可省约 4 天往返车程</li>
+        </ul>
+      </div>
+      <div class="trans-card">
+        <svg class="tico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="13" rx="2"/><path d="M4 11h16"/><circle cx="8" cy="20" r="1.6"/><circle cx="16" cy="20" r="1.6"/><path d="M8 7h3M8 9h5"/></svg>
+        <h4>火车进藏</h4>
+        <span class="trans-tag tag-rec">最推荐适应 · 青藏铁路</span>
+        <ul>
+          <li>乘火车至<b>拉萨站</b>，经青藏铁路翻越唐古拉山口</li>
+          <li>海拔随车厢缓慢抬升，<b>有利于逐步适应高原</b></li>
+          <li>旺季车票紧张，优先选白天过可可西里的车次看风景</li>
+        </ul>
+      </div>
+      <div class="trans-card">
+        <svg class="tico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11"/><rect x="3" y="11" width="18" height="6" rx="2"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></svg>
+        <h4>包车 / 自驾 / 拼车</h4>
+        <span class="trans-tag tag-econ">阿里主流 · 里程极长</span>
+        <ul>
+          <li>阿里景点相距上百公里，<b>包车或拼车是主流</b>，南线全程油路</li>
+          <li>自驾建议硬派 SUV / 越野，备双备胎、熟悉高原驾驶</li>
+          <li>马年车辆紧张，<b>提前订正规旅游车与司机</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <h4>大环线全程海拔起伏示意</h4>
+      <div class="csub">南线经羊湖、珠峰抬升至神山，转山最高点为卓玛拉山口约 5630 米；之后下到札达、狮泉河，再从北线经色林错、纳木错回落拉萨 · 数值为约数、仅作强度示意</div>
+      <div class="chart" id="altChart"></div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:21px;color:var(--pine-deep);margin:60px 0 20px">第二步 · 全程动线一图看懂</h3>
+    <div class="flow-bar">
+      <div class="flow-step">
+        <div class="fnum">D1–2</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V8l8-5 8 5v12"/><rect x="9" y="13" width="6" height="7"/></svg>
+        <h5>拉萨适应</h5>
+        <p>布达拉宫 · 大昭寺<br>适应 3650 m</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">D3</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14c2-1 3-1 5 0s3 1 5 0 3-1 5 0"/><circle cx="12" cy="8" r="2.4"/></svg>
+        <h5>羊湖日喀则</h5>
+        <p>羊卓雍错 · 卡若拉<br>扎什伦布寺</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">D4–5</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="6" r="2"/><path d="M3 19l6-9 4 5 2-2.5 6 6.5z"/></svg>
+        <h5>珠峰</h5>
+        <p>加乌拉山口<br>绒布寺望珠峰</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">D5</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14c2.5-1.5 4.5-1.5 7 0s4.5 1.5 7 0"/><circle cx="12" cy="9" r="2.4"/></svg>
+        <h5>西进萨嘎</h5>
+        <p>希夏邦马 · 佩枯错<br>宿萨嘎</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">D6</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9"/></svg>
+        <h5>神山圣湖</h5>
+        <p>玛旁雍错 · 拉昂错<br>宿塔钦</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">D7–9</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 21s-6-5.2-6-10a4 4 0 016-3.5A4 4 0 0120 11c0 4.8-6 10-6 10z"/></svg>
+        <h5>转山</h5>
+        <p>止热寺 · 卓玛拉<br>约 52 km</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">D10</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20c2-8 5-12 8-12s6 4 8 12"/><path d="M3 20h18"/></svg>
+        <h5>土林古格</h5>
+        <p>札达土林<br>古格王朝日落</p>
+      </div>
+      <div class="flow-step">
+        <div class="fnum">北线</div>
+        <svg class="fico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14c2-1 3-1 5 0s3 1 5 0 3-1 5 0"/><path d="M4 18c2.5-1.5 4.5-1.5 7 0s4.5 1.5 7 0"/></svg>
+        <h5>北线回（可选）</h5>
+        <p>班公错 · 色林错<br>纳木错 → 拉萨</p>
+      </div>
+    </div>
+    <h3 style="font-family:var(--serif);font-size:21px;color:var(--pine-deep);margin-bottom:22px">第三步 · 三条路线，按假期与体力对号入座</h3>
+    <div class="routes3">
+      <div class="route reveal">
+        <div class="route-photo">
+          <img src="assets/route-everest.jpg" alt="珠峰景区绒布河谷帐篷营地，炊烟河流与珠峰">
+          <span class="route-badge badge-short">阿里南线 · 经典</span>
+        </div>
+        <div class="route-body">
+          <h4>南线 · 珠峰 + 神山圣湖</h4>
+          <div class="route-meta"><span>8–10 天</span><span>拉萨往返</span><span>强度中</span></div>
+          <div class="route-path">拉萨 → 日喀则 → 珠峰 → 萨嘎 → 塔钦（转山）→ 札达古格 → 狮泉河 → 原路回拉萨</div>
+          <ul>
+            <li>第一次去阿里的首选，核心景点一次到齐</li>
+            <li>全程油路、配套成熟，含冈仁波齐转山 2–3 天</li>
+            <li>往返有一段回头路，景观密度南线最高</li>
+          </ul>
+          <div class="route-fit"><b>适合：</b>假期 10 天上下、第一次进阿里、想转山又看珠峰的人。</div>
+        </div>
+      </div>
+      <div class="route reveal">
+        <div class="route-photo">
+          <img src="assets/namtso.jpg" alt="纳木错湛蓝湖水与念青唐古拉雪山、白牦牛">
+          <span class="route-badge badge-long">大北线 · 全景</span>
+        </div>
+        <div class="route-body">
+          <h4>大北线 · 一错再错环线</h4>
+          <div class="route-meta"><span>13–16 天</span><span>环线不回头</span><span>车程长</span></div>
+          <div class="route-path">南线进 → 狮泉河 → 班公错 → 改则 / 措勤 → 当惹雍错 → 色林错 → 纳木错 → 拉萨</div>
+          <ul>
+            <li>南线人文雪山 + 北线野生动物与密集高原湖泊</li>
+            <li>色林错、当惹雍错、扎日南木错等「一措再措」</li>
+            <li>里程最长、部分路段海拔高，需更多车程日</li>
+          </ul>
+          <div class="route-fit"><b>适合：</b>假期充裕、二刷西藏或摄影爱好者，追求不走回头路的全景。</div>
+        </div>
+      </div>
+      <div class="route reveal">
+        <div class="route-photo">
+          <img src="assets/route-fly.jpg" alt="阿里普兰塔钦小镇民居加油站，远处冈仁波齐">
+          <span class="route-badge badge-fly">飞机短线 · 省时</span>
+        </div>
+        <div class="route-body">
+          <h4>飞阿里 · 神山圣湖轻徒步</h4>
+          <div class="route-meta"><span>5–7 天</span><span>飞进飞出</span><span>强度可控</span></div>
+          <div class="route-path">拉萨飞昆莎 / 普兰 → 狮泉河 → 札达古格 → 玛旁雍错 → 塔钦（远观或轻转）→ 飞回</div>
+          <ul>
+            <li>省去 4 天长途车程，直达阿里核心</li>
+            <li>落地海拔即 4200 m 以上，需警惕高反</li>
+            <li>时间所限通常不完整转山，以观景为主</li>
+          </ul>
+          <div class="route-fit"><b>适合：</b>假期短、不耐长途车程、只想看神山圣湖与土林的人。</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--serif);font-size:21px;color:var(--pine-deep);margin:60px 0 8px">典型行程 · 南线 + 转山 10 天 9 晚（拉萨起止）</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 1</b><span>抵达拉萨</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>飞机 / 火车抵达，宿拉萨</h5>
+          <p>入住后只做轻活动、多喝水早休息。<b>当天不洗澡、不饮酒、不跑跳</b>，让身体适应 3650 米海拔；火车进藏者适应通常更好。</p>
+          <div class="tl-tags"><span>适应海拔</span><span>清淡饮食</span><span>早睡</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 2</b><span>拉萨市内</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>布达拉宫、大昭寺、八廓街，继续宿拉萨</h5>
+          <p>上午按预约参观布达拉宫，下午大昭寺、随转经人流走八廓街。慢走慢看、累了就进甜茶馆歇脚，把这一天当作完整的适应日，为后段高海拔打底。</p>
+          <div class="tl-tags"><span>布达拉宫</span><span>大昭寺</span><span>八廓街</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 3</b><span>羊湖 · 日喀则</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>拉萨 → 羊卓雍错 → 卡若拉冰川 → 日喀则</h5>
+          <p>翻岗巴拉山口俯瞰珊瑚枝状的羊卓雍错，经卡若拉冰川、江孜古堡抵达日喀则（约 3836 米），宿日喀则。海拔有起伏，沿途观景台动作放慢。</p>
+          <div class="tl-tags"><span>羊卓雍错</span><span>卡若拉冰川</span><span>宿日喀则</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 4</b><span>进山 · 珠峰</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>扎什伦布寺 → 加乌拉山口 → 扎西宗换乘 → 绒布寺</h5>
+          <p>上午可看扎什伦布寺，之后翻加乌拉山口（约 5198 米）同时眺望珠峰等五座八千米雪峰；到扎西宗换乘景区环保车约 50 分钟到绒布寺一带，宿绒布寺帐篷或下撤海拔约 4200 米的巴松村。</p>
+          <div class="tl-tags"><span>加乌拉山口</span><span>环保车换乘</span><span>绒布寺 5150 m</span></div>
+        </div>
+      </div>
+      <div class="tl-item hl">
+        <div class="tl-day"><b>Day 5</b><span>珠峰 · 萨嘎</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>清晨望珠峰，经希夏邦马、佩枯错到萨嘎</h5>
+          <p>清晨在绒布寺看晨光点亮珠峰，随后原路下撤，沿 G219 经唯一全境在中国的八千米峰希夏邦马、蓝宝石般的佩枯错，傍晚抵萨嘎（约 4500 米）宿。</p>
+          <div class="tl-tags"><span>珠峰晨光</span><span>希夏邦马</span><span>宿萨嘎</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 6</b><span>神山圣湖</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>萨嘎 → 仲巴 / 帕羊 → 玛旁雍错 → 塔钦</h5>
+          <p>沿马泉河湿地西行，午后到圣湖玛旁雍错、吉乌寺，可远眺鬼湖拉昂错与纳木那尼，傍晚抵转山起点塔钦（约 4670 米）宿，早休息为转山蓄力。</p>
+          <div class="tl-tags"><span>玛旁雍错</span><span>拉昂错</span><span>宿塔钦</span></div>
+        </div>
+      </div>
+      <div class="tl-item hl">
+        <div class="tl-day"><b>Day 7</b><span>转山 D1</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>塔钦 → 经幡广场 → 止热寺（约 20 km）</h5>
+          <p>游客中心可乘观光车至经幡广场，沿拉曲峡谷缓上，一路仰望冈仁波齐西壁、北壁，傍晚到止热寺（约 5080 米）宿。今日路缓、距离长，控制节奏。</p>
+          <div class="tl-tags"><span>经幡广场</span><span>拉曲峡谷</span><span>止热寺 5080 m</span></div>
+        </div>
+      </div>
+      <div class="tl-item hl">
+        <div class="tl-day"><b>Day 8</b><span>转山 D2</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>止热寺 → 卓玛拉山口 5630 m → 塔钦（约 32 km）</h5>
+          <p>凌晨出发，经「绝望坡」翻全程最高的卓玛拉山口（约 5630 米），下山口后是陡峭碎石大下坡，经尊最普一路回到塔钦。体力一般者在尊最普住一晚、Day 9 上午出山。</p>
+          <div class="tl-tags"><span>卓玛拉 5630 m</span><span>绝望坡</span><span>陡峭下撤</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 9</b><span>土林 · 古格</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>塔钦 → 巴尔兵站 → 札达土林 → 古格王朝日落</h5>
+          <p>翻越龙嘎拉达坂进入札达，穿行连绵数十公里的札达土林，傍晚登古格王朝遗址看夕阳照亮层层废墟与土林，宿札达（约 3700 米，海拔回落、睡眠改善）。</p>
+          <div class="tl-tags"><span>札达土林</span><span>古格日落</span><span>宿札达</span></div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-day"><b>Day 10</b><span>狮泉河 · 返程</span></div>
+        <div class="tl-axis"><div class="tl-dot"></div></div>
+        <div class="tl-card">
+          <h5>札达 → 狮泉河，昆莎机场返程（或续程）</h5>
+          <p>上午抵地区行署所在地狮泉河镇（噶尔，约 4300 米），从昆莎机场飞回拉萨 / 内地；走大北线者由此北上，原路回拉萨还需约 2 天车程。</p>
+          <div class="tl-tags"><span>狮泉河</span><span>昆莎机场</span><span>行程结束</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="tl-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+      <p><b>按假期伸缩：</b>转山拆成 3 天（止热寺、尊最普各住一晚）全程为 <b>11 天</b>；<b>大北线</b>在 Day 10 后北上，加 3–5 天走班公错、色林错、纳木错回拉萨，共 13–16 天；假期只有 5–7 天，建议<b>飞阿里</b>只看神山圣湖与土林。<b>雨季（7–8 月）</b>北线便道易陷车、部分河谷有泥石流，尽量选择 5–6 月或 9–10 月出行。</p>
+    </div>
+  </div>
+</section>
+<!-- ===== 风景图鉴 ===== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">03 / 风景图鉴</div>
+      <h2>从蓝宝石圣湖，到土林深处的千年废墟</h2>
+      <p>这条线把高原最极致的层次一路铺开：珊瑚枝状的蓝湖、一字排开的八千米雪峰、倒映雪山的圣湖、金字塔般的神山、风化千万年的土林——下面八处，是沿途最值得停留的画面。</p>
+    </div>
+    <div class="shot-grid">
+      <figure class="shot reveal">
+        <img src="assets/yamdrok.jpg" alt="羊卓雍错绿松石蓝湖水在群山间蜿蜒，盘山公路">
+        <figcaption><b>羊卓雍错</b><span>西藏三大圣湖之一，湖岸如珊瑚枝在群山间蜿蜒，绿松石蓝的湖水随光线变幻深浅</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/jiawula.jpg" alt="加乌拉山口眺望珠峰等五座雪峰，盘山公路发卡弯">
+        <figcaption><b>加乌拉山口</b><span>海拔约 5198 米，是世界上唯一可同时眺望五座八千米级雪峰的观景台，脚下盘山公路一百零八弯</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/rongbuk.jpg" alt="珠峰下绒布寺白塔僧舍，珠峰巨大山体晨光">
+        <figcaption><b>绒布寺 · 珠峰</b><span>世界海拔最高的寺庙之一，普通游客到此望珠峰，白塔、经幡与世界第一高峰同框</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/manasarovar.jpg" alt="玛旁雍错碧蓝湖水倒映纳木那尼雪峰，牦牛饮水">
+        <figcaption><b>玛旁雍错</b><span>海拔约 4588 米的圣湖，湖水碧蓝、倒映纳木那尼，被视为永恒不败的碧玉之湖</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/kailash.jpg" alt="冈仁波齐峰金字塔山形与南壁十字冰槽">
+        <figcaption><b>冈仁波齐</b><span>海拔 6656 米，圆顶金字塔山形，南壁冰槽与岩层天然成十字，四教共尊的世界中心</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/zhada.jpg" alt="札达土林连绵黄褐色土柱陡崖，象泉河蜿蜒">
+        <figcaption><b>札达土林</b><span>世界分布面积最大的第三系地层风化土林，千万根土柱沿象泉河绵延数十公里，苍凉壮阔</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/guge.jpg" alt="古格王朝遗址黄土山上层层佛塔宫殿废墟">
+        <figcaption><b>古格王朝</b><span>七百年古格文明在三百米土山上留下层层洞窟、佛塔与宫殿废墟，晨光中如悬空的神秘王国</span></figcaption>
+      </figure>
+      <figure class="shot reveal">
+        <img src="assets/bangong.jpg" alt="班公错狭长蓝绿湖水倒映山峦，水鸟低飞">
+        <figcaption><b>班公错</b><span>海拔约 4242 米的狭长界湖，湖水由近及远由碧绿转深蓝，水鸟成群、湖光潋滟</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<!-- ===== 转山朝圣 ===== -->
+<section id="trek" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">04 / 转山朝圣</div>
+      <h2>用双脚绕世界中心一圈，约 52 公里</h2>
+      <p>冈仁波齐外转（外圈）是一条成熟的朝圣路线，沿途补给点与客栈齐全，开山约在每年 4 月下旬、11 月初封闭。多数人用 3 天、体力好可 2 天完成；藏传佛教传统顺时针绕行，苯教则逆时针。</p>
+    </div>
+
+    <div class="routes">
+      <div class="route reveal">
+        <div class="route-photo">
+          <img src="assets/zhire.jpg" alt="止热寺红墙僧舍与冈仁波齐北壁冰川">
+          <span class="route-badge badge-short">三日转山 · 稳妥推荐</span>
+        </div>
+        <div class="route-body">
+          <h4>三日 · 大多数人的选择</h4>
+          <div class="route-meta"><span>约 52 km</span><span>3 天 2 晚</span><span>最高 5630 m</span></div>
+          <div class="route-path">D1 塔钦 → 止热寺（约20km）　D2 止热寺 → 卓玛拉 → 尊最普（约18km）　D3 尊最普 → 塔钦（约12km）</div>
+          <ul>
+            <li>D1 沿拉曲峡谷缓上，傍晚仰望神山北壁</li>
+            <li>D2 翻卓玛拉山口、下到尊最普，是最考验的一天</li>
+            <li>D3 一路缓下出山，体力压力小、恢复从容</li>
+          </ul>
+          <div class="route-fit"><b>适合：</b>普通体力、第一次转山、想认真走完又不硬撑的人。</div>
+        </div>
+      </div>
+      <div class="route reveal">
+        <div class="route-photo">
+          <img src="assets/zhuoma.jpg" alt="卓玛拉山口漫山经幡、残雪与碧绿小湖">
+          <span class="route-badge badge-long">两日速转 · 体力挑战</span>
+        </div>
+        <div class="route-body">
+          <h4>两日 · 一天翻山一天出山</h4>
+          <div class="route-meta"><span>约 52 km</span><span>2 天 1 晚</span><span>D2 约 32 km</span></div>
+          <div class="route-path">D1 塔钦 → 止热寺（约20km）　D2 凌晨出发 → 卓玛拉 5630 m → 一路下撤回塔钦（约32km）</div>
+          <ul>
+            <li>D2 通常凌晨 3–4 点头灯出发，当天连续走 12–14 小时</li>
+            <li>翻绝望坡、再走超长碎石下坡，对膝盖与耐力要求高</li>
+            <li>优点是少住一晚高海拔、行程更紧凑</li>
+          </ul>
+          <div class="route-fit"><b>适合：</b>有高海拔徒步经验、体力与耐力较好的人；不建议新手。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trek-strip reveal">
+      <img src="assets/trek-kailash.jpg" alt="冈仁波齐转山起点经幡广场，朝圣者人群与巨大经幡柱">
+      <div class="ts-body">
+        <div class="ts-tag">转山须知 · 门票 / 内转 / 背夫</div>
+        <h4>外转是主线，内转并非常规游客路线</h4>
+        <p><b style="color:var(--pine-deep)">门票：</b>冈仁波齐门票约 150 元 / 人、3 天有效，途中有检票；玛旁雍错门票约 150 元 / 人；游客接待中心至经幡广场观光车约 60 元 / 人（价格以现场为准）。</p>
+        <p><b style="color:var(--pine-deep)">内转：</b>指绕因揭陀山的小环线，传统上需外转满 13 圈才被允许，普通游客与初次转山者走外转即可。</p>
+        <p><b style="color:var(--pine-deep)">背夫 / 向导：</b>塔钦可请背夫驮包、轻装上路；马年人多，背夫与床位都要提前一天安排。</p>
+        <div class="ts-warn"><b>安全警示：</b>卓玛拉山口海拔约 5630 米、氧气稀薄，垭口附近曾发生游客高反遇险事故。务必在拉萨充分适应、量力而行，一旦剧烈头痛、呕吐、呼吸困难立即下撤，切勿在垭口硬撑；恶劣天气宁可放弃，转山没有「必须走完」。</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== 四季指南 ===== -->
+<section id="seasons">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">05 / 四季指南</div>
+      <h2>能不能看清神山珠峰，季节要负七成责任</h2>
+      <p>阿里与珠峰旱雨季分明：旱季（约 10 月–次年 5 月）天高云淡、雪峰尽露；雨季（6–9 月）云雾增多、土路便道易陷。与此同时，春天有节庆与花海、夏天有绿野、秋天有金山土林、冬天则严寒封路，四季的阿里几乎是四个世界。</p>
+    </div>
+
+    <div class="season-grid">
+      <article class="season reveal">
+        <div class="season-photo">
+          <img src="assets/spring.jpg" alt="五月冈仁波齐雪山、融冰湖面与粉紫杜鹃">
+          <span class="s-label" style="color:#2f7d5b">春</span>
+          <div class="s-months">约 3 月 – 5 月 · 开山节庆</div>
+        </div>
+        <div class="season-body">
+          <h4>转山开山，萨嘎达瓦</h4>
+          <div class="stars">★★★★<span class="off">★</span></div>
+          <p class="s-desc">转山路段约 4 月下旬开山，雪峰积雪厚重、湖面陆续解冻，5 月高山杜鹃初开。2026 马年的萨嘎达瓦节（公历 5 月 17 日起）信众云集、神山脚下立塔钦，是一年中最殊胜也最热闹的时段；旱季未结束，晴天概率仍高，唯一要留意的是高原大风与早晚严寒。</p>
+          <div class="pros-cons">
+            <div class="pc-good"><div class="pc-t">优势</div><ul><li>马年萨嘎达瓦极殊胜</li><li>雪峰洁白、晴天多</li><li>杜鹃初开、人比国庆少</li></ul></div>
+            <div class="pc-bad"><div class="pc-t">留意</div><ul><li>高原大风、早晚严寒</li><li>节庆期间床位紧张</li><li>4 月前转山仍封闭</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="season reveal">
+        <div class="season-photo">
+          <img src="assets/summer.jpg" alt="雨季阿里浓绿草甸野花、溪流与云雾中的神山光束">
+          <span class="s-label" style="color:#2f8f96">夏</span>
+          <div class="s-months">约 6 月 – 8 月 · 雨季绿野</div>
+        </div>
+        <div class="season-body">
+          <h4>草甸滴翠，神山靠缘分</h4>
+          <div class="stars">★★<span class="off">★★★</span></div>
+          <p class="s-desc">雨季草甸浓绿、野花遍地、湿地丰沛，是野生动物最活跃的季节，气温也最温和。但阿里降雨虽不及藏东南集中，北线便道却容易陷车、河谷有泥石流，云雾起时神山珠峰连日不露面，又逢暑期与马年人潮，是专程看雪山最不划算的季节。</p>
+          <div class="pros-cons">
+            <div class="pc-good"><div class="pc-t">优势</div><ul><li>草甸最绿、野花盛开</li><li>气温温和、野生动物多</li><li>含氧量相对略高</li></ul></div>
+            <div class="pc-bad"><div class="pc-t">留意</div><ul><li>神山珠峰易被云遮</li><li>便道陷车、泥石流风险</li><li>暑期马年人多价高</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="season reveal">
+        <div class="season-photo">
+          <img src="assets/autumn.jpg" alt="金秋十月阿里金黄草甸牦牛、冈仁波齐清晰巍峨">
+          <span class="s-label" style="color:#bd5538">秋</span>
+          <div class="s-months">约 9 月 – 10 月 · 黄金季节</div>
+        </div>
+        <div class="season-body">
+          <h4>金山土林，全年巅峰</h4>
+          <div class="stars">★★★★★</div>
+          <p class="s-desc">9 月中旬雨季收尾，10 月天高云淡、空气通透，<b>神山珠峰能见度全年最高</b>，草甸与札达土林一片金黄，圣湖诸错蓝得深邃，转山干爽、路况稳定，是公认的黄金窗口。唯一缺点是国庆人潮与涨价，首选 9 月中旬或 10 月 8 日之后错峰。</p>
+          <div class="pros-cons">
+            <div class="pc-good"><div class="pc-t">优势</div><ul><li>能见度全年最高</li><li>土林金秋、诸错湛蓝</li><li>路况稳定、转山干爽</li></ul></div>
+            <div class="pc-bad"><div class="pc-t">留意</div><ul><li>国庆人潮、房价高峰</li><li>10 月夜间转冷</li><li>旺季车房需早订</li></ul></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="season reveal">
+        <div class="season-photo">
+          <img src="assets/winter.jpg" alt="冬季阿里冰封湖面、银白大地、极深蓝天与雪雾">
+          <span class="s-label" style="color:#5a7c99">冬</span>
+          <div class="s-months">约 11 月 – 次年 2 月 · 严寒封路</div>
+        </div>
+        <div class="season-body">
+          <h4>千里冰封，阿里淡季</h4>
+          <div class="stars">★★<span class="off">★★★</span></div>
+          <p class="s-desc">转山路段 11 月初封闭，阿里气温低至零下二三十度、狂风肆虐，部分高海拔路段冰雪封路，昼夜温差极大；好处是游客极少、旱季晴天多，「冬游西藏」期间部分景区免票或半价。但阿里冬季条件严酷，普通游客一般不建议此时深入，拉萨、日喀则短途尚可。</p>
+          <div class="pros-cons">
+            <div class="pc-good"><div class="pc-t">优势</div><ul><li>游客极少、部分门票优惠</li><li>旱季晴天多</li><li>高原雪域风光纯粹</li></ul></div>
+            <div class="pc-bad"><div class="pc-t">留意</div><ul><li>零下二三十度、极寒大风</li><li>转山封闭、或道路封阻</li><li>白昼短、配套减少</li></ul></div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="chart-card reveal">
+      <h4>全年 12 个月 · 综合适宜度与晴天见山概率</h4>
+      <div class="csub">金线综合天气、景观、路况与转山开放；青线为晴天看见神山 / 珠峰的相对概率（经验性示意，非官方统计）。可见 9–10 月两线同时高位；冬季晴天虽多，却因严寒封路综合适宜度探底。</div>
+      <div class="chart" id="monthChart" style="height:380px"></div>
+    </div>
+
+    <!-- 最佳季节 -->
+    <div class="best reveal">
+      <div class="best-img"><img src="assets/best-autumn.jpg" alt="金秋神山圣湖全景，金黄草甸、碧蓝湖水与金色冈仁波齐晚霞"></div>
+      <div class="best-veil"></div>
+      <div class="best-inner">
+        <span class="best-crown">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16l-2-9 6 4 3-7 3 7 6-4-2 9z"/><path d="M5 16h14v2H5z"/></svg>
+          最推荐 · 秋季
+        </span>
+        <h3>9 月中旬 – 10 月中旬<br>是走阿里 / 珠峰最稳的时间</h3>
+        <p>雨季结束、空气通透，神山珠峰能见度登顶，土林与草甸金黄、诸错湛蓝，路况与转山体感同时达到全年最好；马年若想赶节庆，则选 5 月中下旬的萨嘎达瓦。</p>
+        <div class="best-chips">
+          <span>5 月中 – 6 月中 · 马年萨嘎达瓦、雪山节庆</span>
+          <span>9 月中 – 10 月中 · 金山土林、能见度巅峰</span>
+        </div>
+        <div class="best-points">
+          <div class="best-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="20" cy="6" r="2"/><path d="M3 19l6-9 4 5 2-2.5 6 6.5z"/></svg>
+            <div><b>能见度最高</b><span>10 月通透，神山珠峰不被云遮</span></div>
+          </div>
+          <div class="best-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 20c2-8 5-12 8-12s6 4 8 12"/><path d="M3 20h18"/></svg>
+            <div><b>土林金秋</b><span>札达土林与草甸一片金黄</span></div>
+          </div>
+          <div class="best-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 14c2-1 3-1 5 0s3 1 5 0 3-1 5 0"/><circle cx="12" cy="8" r="2.2"/></svg>
+            <div><b>路况最稳</b><span>无陷车泥泞，转山干爽安全</span></div>
+          </div>
+          <div class="best-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9"/></svg>
+            <div><b>诸错湛蓝</b><span>圣湖与北线错湖蓝得深邃</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== 实用贴士 ===== -->
+<section id="tips" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-index">06 / 实用贴士</div>
+      <h2>边防证、门票交通、高原反应与装备</h2>
+      <p>阿里 / 珠峰是全程高海拔、多为边境县的线路，证件与身体准备比什么都重要。以下票价政策整理自公开渠道，均为参考价，出行前请通过各景区官方渠道核对当年公告。</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip wide reveal">
+        <svg class="tico2" viewBox="0 0 24 24" fill="none" stroke="#1d5160" stroke-width="1.6" style="width:38px;height:38px;margin-bottom:10px"><rect x="3" y="5" width="18" height="15" rx="2"/><path d="M3 9h18M8 14h3M8 17h6"/></svg>
+        <h4>主要门票与交通（参考）</h4>
+        <div class="ticket-row">
+          <div class="ticket"><b>珠峰 旺160 / 淡80</b><span>旺季 5–10 月、淡季半价；普通游客至绒布寺一带，登山大本营不开放</span></div>
+          <div class="ticket"><b>环保车 120 元</b><span>扎西宗往返必购；自驾车辆进山环保费约 320 元 / 车；绒布寺 30 元自愿</span></div>
+          <div class="ticket"><b>冈仁波齐 150 元</b><span>门票 3 天有效、途中检票；游客中心至经幡广场观光车约 60 元 / 人</span></div>
+          <div class="ticket"><b>玛旁雍错 150 元</b><span>圣湖门票参考价；布达拉宫需提前实名预约，扎什伦布寺等另购票</span></div>
+        </div>
+        <p class="policy-note">提示：「冬游西藏」期间部分景区执行免票 / 半价（通常为上年 11 月至次年 3 月，具体起止以当年公告为准）。以上票价、观光车与进山费近年有调整，马年或有临时管控，出发前务必查景区与文旅厅最新通告。</p>
+      </div>
+
+      <div class="tip reveal">
+        <svg class="tico2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="10" r="2.6"/><path d="M8 15h8M8 18h5"/></svg>
+        <h4>边防证（必备）</h4>
+        <ul>
+          <li>珠峰、阿里多为边境县，<b>须办《边境管理区通行证》</b>，免费</li>
+          <li>首选在<b>户籍地出入境 / 政务大厅办理</b>，手续最简；拉萨也可代办、较费时</li>
+          <li>地区写明日喀则<b>定日县</b>、阿里<b>普兰、札达、日土、噶尔</b>等，或直接写「日喀则地区、阿里地区」</li>
+          <li>马年人多、尽早办理，随身与身份证一同保管；护照不能简单替代</li>
+        </ul>
+      </div>
+
+      <div class="tip reveal">
+        <svg class="tico2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6-7-11a7 7 0 1114 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/><path d="M5 12h-2M21 12h-2"/></svg>
+        <h4>高原反应应对</h4>
+        <ul>
+          <li>全程海拔 <b>4500–5630 m</b>，务必在拉萨（3650 m）适应 2–3 天再西进</li>
+          <li>抵达首日<b>不洗澡、不饮酒、不跑跳</b>，多喝温水、清淡饮食、早睡</li>
+          <li>备葡萄糖、巧克力、便携氧气；转山放慢节奏、小口多次补水</li>
+          <li>剧烈头痛、呕吐、气喘立即<b>下撤低海拔</b>就医；感冒未愈勿上高原</li>
+        </ul>
+      </div>
+
+      <div class="tip reveal">
+        <svg class="tico2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l4 4v5a6 6 0 01-8 0V7z"/><path d="M9 3h6"/><rect x="4" y="10" width="3" height="9" rx="1"/><path d="M17 10h3v9h-3z"/></svg>
+        <h4>穿衣与转山装备</h4>
+        <ul>
+          <li>高原昼夜温差极大，<b>羽绒服 / 冲锋衣 + 抓绒分层</b>，转山垭口常年零下体感</li>
+          <li>中高帮防水徒步鞋、登山杖（卓玛拉大下坡护膝）、速干袜</li>
+          <li>SPF50+ 防晒、墨镜、遮阳帽、润唇膏，高原紫外线极强</li>
+          <li>头灯（两日转山凌晨出发）、充电宝、适量现金，北线部分路段信号弱</li>
+        </ul>
+        <div class="gear-tags" style="margin-top:12px">
+          <span>羽绒服</span><span>徒步鞋</span><span>登山杖</span><span>墨镜</span><span>氧气</span><span>头灯</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <div class="foot-brand">
+        <svg viewBox="0 0 32 32" fill="none"><path d="M4 23l7-11 4 5 3-4 10 10z" fill="#e8f0f2"/><path d="M11 12l4 5 3-4 3 3.5" fill="none" stroke="#8fb8c2" stroke-width="1.2"/><circle cx="23" cy="9" r="2.6" fill="#cf8a2e"/></svg>
+        西藏阿里 · 珠峰
+      </div>
+      <p>从拉萨的灯火出发，翻加乌拉望世界第一高峰，沿 G219 走到神山圣湖，用双脚绕冈仁波齐一圈，再在札达土林深处目送古格的夕阳——最通透的十月，会把这一路的雪白、湛蓝与金黄都给你。</p>
+      <p class="foot-disc">本页为旅行信息整理与行程参考，海拔、里程、票价、进山与转山开放政策会随季节、道路施工与景区公告调整（转山开山 / 封闭时间、珠峰环保车与马年临时管控尤其请以当年最新通告为准），出行前请通过官方渠道核实，并结合自身体力量力而行。本页风景配图由 AI 生成，仅供示意，实际景观以当地为准。</p>
+    </div>
+    <div class="foot-anchor">
+      <a href="#overview">认识这片土地</a>
+      <a href="#route">行程动线</a>
+      <a href="#gallery">风景图鉴</a>
+      <a href="#trek">转山朝圣</a>
+      <a href="#seasons">四季指南</a>
+      <a href="#tips">实用贴士</a>
+    </div>
+  </div>
+</footer>
+<script>
+/* ===== 导航滚动态 ===== */
+const nav=document.getElementById('nav');
+const onScroll=()=>{nav.classList.toggle('scrolled',window.scrollY>60)};
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* ===== 滚动揭示 ===== */
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== 通用：平滑折线 ===== */
+function smoothPath(pts){
+  if(pts.length<2)return'';
+  let d=`M${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
+    const c1x=p1[0]+(p2[0]-p0[0])/6,c1y=p1[1]+(p2[1]-p0[1])/6;
+    const c2x=p2[0]-(p3[0]-p1[0])/6,c2y=p2[1]-(p3[1]-p1[1])/6;
+    d+=` C${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+  }
+  return d;
+}
+const FF="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif";
+
+/* ===== 大环线全程海拔起伏图 ===== */
+(function(){
+  const el=document.getElementById('altChart');if(!el)return;
+  const W=780,H=400,L=56,R=28,T=42,B=72,pW=W-L-R,pH=H-T-B;
+  const ymin=3000,ymax=6000;
+  const Y=v=>T+(ymax-v)/(ymax-ymin)*pH;
+  const data=[3650,4441,5039,3836,5198,5150,4588,4670,5630,3700,4300,4530,4718,3650];
+  const labs=[['拉萨','3650m'],['羊湖','4441m'],['卡若拉','5039m'],['日喀则','3836m'],['加乌拉','5198m'],['绒布寺','5150m'],['玛旁雍错','4588m'],['塔钦','4670m'],['卓玛拉','5630m'],['札达','3700m'],['狮泉河','4300m'],['色林错','4530m'],['纳木错','4718m'],['拉萨','3650m']];
+  const mark=new Set([4,5,8]);   /* 只标注关键点位数值，避免拥挤 */
+  const X=i=>L+i*pW/(data.length-1);
+  const pts=data.map((v,i)=>[X(i),Y(v)]);
+  const line=smoothPath(pts);
+  const area=line+` L${X(data.length-1).toFixed(1)},${(T+pH).toFixed(1)} L${X(0).toFixed(1)},${(T+pH).toFixed(1)} Z`;
+  let g='';
+  [3500,4000,4500,5000,5500].forEach(v=>{const y=Y(v);
+    g+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#e6e0d3" stroke-dasharray="4 4"/>`;
+    g+=`<text x="${L-9}" y="${y+4}" text-anchor="end" font-size="11" fill="#75848c" font-family="${FF}">${v}</text>`;});
+  const yp=Y(5630);
+  g+=`<line x1="${L}" y1="${yp}" x2="${W-R}" y2="${yp}" stroke="#a83c2c" stroke-dasharray="6 5" stroke-width="1.6"/>`;
+  g+=`<text x="${L+6}" y="${yp-7}" font-size="11.5" fill="#a83c2c" font-weight="600" font-family="${FF}">最高点 · 卓玛拉山口约 5630m（转山量力而行）</text>`;
+  labs.forEach((lb,i)=>{
+    g+=`<text x="${X(i)}" y="${T+pH+24}" text-anchor="middle" font-size="11" fill="#33464f" font-weight="600" font-family="${FF}">${lb[0]}</text>`;
+    g+=`<text x="${X(i)}" y="${T+pH+41}" text-anchor="middle" font-size="9.5" fill="#8a979e" font-family="${FF}">${lb[1]}</text>`;});
+  g+=`<path d="${area}" fill="url(#altGrad)"/>`;
+  g+=`<path d="${line}" fill="none" stroke="#2f8f96" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>`;
+  pts.forEach((p,i)=>{
+    const top=i===8;
+    g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${top?6:4.6}" fill="${top?'#a83c2c':'#2f8f96'}" stroke="#fff" stroke-width="${top?2.2:1.8}"><title>${labs[i][0]} · 海拔约 ${data[i]} 米</title></circle>`;
+    if(mark.has(i)){
+      const up=(i===4||i===8);
+      g+=`<text x="${p[0]}" y="${up?p[1]-11:p[1]+19}" text-anchor="middle" font-size="11" font-weight="700" fill="#1d5160" font-family="${FF}">${data[i]}</text>`;
+    }});
+  el.style.height='auto';
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="大环线全程海拔起伏示意图">
+    <defs><linearGradient id="altGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f8f96" stop-opacity="0.32"/><stop offset="1" stop-color="#2f8f96" stop-opacity="0.03"/>
+    </linearGradient></defs>${g}</svg>`;
+})();
+
+/* ===== 12 月：适宜度 + 晴天见山概率 双折线 ===== */
+(function(){
+  const el=document.getElementById('monthChart');if(!el)return;
+  const W=760,H=380,L=48,R=26,T=46,B=44,pW=W-L-R,pH=H-T-B;
+  const ymin=0,ymax=100;
+  const Y=v=>T+(ymax-v)/(ymax-ymin)*pH;
+  const months=['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'];
+  const score=[30,32,42,62,88,80,52,50,85,96,55,34];   /* 综合适宜度 */
+  const sunny=[80,78,70,72,75,60,38,40,75,90,82,80];   /* 晴天见神山珠峰概率 */
+  const X=i=>L+i*pW/(months.length-1),step=pW/(months.length-1);
+  const p1=score.map((v,i)=>[X(i),Y(v)]);
+  const p2=sunny.map((v,i)=>[X(i),Y(v)]);
+  const l1=smoothPath(p1),l2=smoothPath(p2);
+  const a1=l1+` L${X(11).toFixed(1)},${(T+pH).toFixed(1)} L${X(0).toFixed(1)},${(T+pH).toFixed(1)} Z`;
+  let g='';
+  /* 黄金窗口高亮：9-10月 */
+  const ax=X(8)-step/2,bx=X(9)+step/2;
+  g+=`<rect x="${ax}" y="${T}" width="${bx-ax}" height="${pH}" fill="#bd5538" opacity="0.10"/>`;
+  g+=`<text x="${(ax+bx)/2}" y="${T+pH-12}" text-anchor="middle" font-size="12.5" font-weight="700" fill="#bd5538" font-family="${FF}" style="paint-order:stroke;stroke:#efe8db;stroke-width:3.5px;stroke-linejoin:round">黄金窗口 · 9月中–10月中</text>`;
+  [0,25,50,75,100].forEach(v=>{const y=Y(v);
+    g+=`<line x1="${L}" y1="${y}" x2="${W-R}" y2="${y}" stroke="#e6e0d3" stroke-dasharray="4 4"/>`;
+    g+=`<text x="${L-9}" y="${y+4}" text-anchor="end" font-size="11" fill="#75848c" font-family="${FF}">${v}</text>`;});
+  months.forEach((m,i)=>{g+=`<text x="${X(i)}" y="${T+pH+24}" text-anchor="middle" font-size="12" fill="#51636d" font-family="${FF}">${m}</text>`;});
+  /* 图例 */
+  g+=`<rect x="${L}" y="6" width="12" height="3.5" fill="#cf8a2e"/><text x="${L+17}" y="11" font-size="11.5" fill="#7a5a1e" font-family="${FF}">综合适宜度</text>`;
+  g+=`<rect x="${L+105}" y="6" width="12" height="3.5" fill="#2f8f96"/><text x="${L+122}" y="11" font-size="11.5" fill="#1d5160" font-family="${FF}">晴天见神山 / 珠峰概率</text>`;
+  g+=`<path d="${a1}" fill="url(#monGrad)"/>`;
+  g+=`<path d="${l2}" fill="none" stroke="#2f8f96" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>`;
+  g+=`<path d="${l1}" fill="none" stroke="#cf8a2e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+  p1.forEach((p,i)=>{
+    const peak=i===9;
+    g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${peak?6.5:4}" fill="${peak?'#bd5538':'#cf8a2e'}" stroke="#fff" stroke-width="${peak?2.5:1.8}"><title>${months[i]} · 综合适宜度 ${score[i]} / 100</title></circle>`;
+    if(peak)g+=`<text x="${p[0]}" y="${p[1]-13}" text-anchor="middle" font-size="13.5" font-weight="800" fill="#bd5538" font-family="${FF}">96</text>`;
+    if(i===0)g+=`<text x="${p[0]}" y="${p[1]-11}" text-anchor="middle" font-size="11.5" font-weight="700" fill="#a8781f" font-family="${FF}">30</text>`;
+  });
+  p2.forEach((p,i)=>{
+    g+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.4" fill="#2f8f96" stroke="#fff" stroke-width="1.4"><title>${months[i]} · 晴天见山概率约 ${sunny[i]}%</title></circle>`;
+  });
+  el.style.height='auto';
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="全年12个月综合适宜度与晴天见山概率">
+    <defs><linearGradient id="monGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cf8a2e" stop-opacity="0.28"/><stop offset="1" stop-color="#cf8a2e" stop-opacity="0.03"/>
+    </linearGradient></defs>${g}</svg>`;
+})();
+</script>
+</body>
+</html>
+</body>
+</html>
